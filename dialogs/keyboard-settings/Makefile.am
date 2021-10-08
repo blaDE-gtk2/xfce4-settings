@@ -1,4 +1,5 @@
 AM_CPPFLAGS = \
+	-DGLIB_DISABLE_DEPRECATION_WARNINGS \
 	-I${top_srcdir} \
 	-DDATADIR=\"$(datadir)\" \
 	-DBINDIR=\"$(bindir)\" \
@@ -22,11 +23,11 @@ xfce4_keyboard_settings_CFLAGS = \
 	$(GTK_CFLAGS) \
 	$(LIBXKLAVIER_CFLAGS) \
 	$(LIBXKLAVIER_0_4_CFLAGS) \
-	$(LIBXFCE4UTIL_CFLAGS) \
-	$(LIBXFCE4UI_CFLAGS) \
+	$(LIBBLADEUTIL_CFLAGS) \
+	$(LIBBLADEUI_CFLAGS) \
 	$(LIBXFCE4KBD_PRIVATE_CFLAGS) \
-	$(EXO_CFLAGS) \
-	$(XFCONF_CFLAGS) \
+	$(BLXO_CFLAGS) \
+	$(BLCONF_CFLAGS) \
 	$(PLATFORM_CFLAGS)
 
 xfce4_keyboard_settings_LDFLAGS = \
@@ -37,11 +38,11 @@ xfce4_keyboard_settings_LDADD = \
 	$(GTK_LIBS) \
 	$(LIBXKLAVIER_LIBS) \
 	$(LIBXKLAVIER_0_4_LIBS) \
-	$(LIBXFCE4UTIL_LIBS) \
-	$(LIBXFCE4UI_LIBS) \
+	$(LIBBLADEUTIL_LIBS) \
+	$(LIBBLADEUI_LIBS) \
 	$(LIBXFCE4KBD_PRIVATE_LIBS) \
-	$(EXO_LIBS) \
-	$(XFCONF_LIBS)
+	$(BLXO_LIBS) \
+	$(BLCONF_LIBS)
 
 if MAINTAINER_MODE
 
@@ -49,7 +50,7 @@ BUILT_SOURCES = \
 	keyboard-dialog_ui.h
 
 keyboard-dialog_ui.h: keyboard-dialog.glade
-	exo-csource --static --strip-comments --strip-content --name=keyboard_dialog_ui $< >$@
+	blxo-csource --static --strip-comments --strip-content --name=keyboard_dialog_ui $< >$@
 
 endif
 

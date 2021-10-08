@@ -21,7 +21,7 @@ Mouse Settings (Nick)
 Settings Manager
 ------------------------------------------------------------------------
 
-  * Add embed support to all dialogs (not only those in xfce4-settings).
+  * Add embed support to all dialogs (not only those in blade-settings).
   * Figure out a way to avoid the black glitches that happen when 
     embedding dialogs into the main dialog sometimes.
   * Come up with a solution for help buttons (maybe using an additonal

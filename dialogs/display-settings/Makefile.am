@@ -1,4 +1,5 @@
 AM_CPPFLAGS = \
+	-DGLIB_DISABLE_DEPRECATION_WARNINGS \
 	-I${top_srcdir} \
 	-DDATADIR=\"$(datadir)\" \
 	-DSRCDIR=\"$(top_srcdir)\" \
@@ -28,9 +29,9 @@ xfce4_display_settings_SOURCES = \
 
 xfce4_display_settings_CFLAGS = \
 	$(GTK_CFLAGS) \
-	$(LIBXFCE4UI_CFLAGS) \
-	$(XFCONF_CFLAGS) \
-	$(EXO_CFLAGS) \
+	$(LIBBLADEUI_CFLAGS) \
+	$(BLCONF_CFLAGS) \
+	$(BLXO_CFLAGS) \
 	$(XRANDR_CFLAGS) \
 	$(LIBX11_CFLAGS) \
 	$(PLATFORM_CFLAGS)
@@ -41,9 +42,9 @@ xfce4_display_settings_LDFLAGS = \
 
 xfce4_display_settings_LDADD = \
 	$(GTK_LIBS) \
-	$(LIBXFCE4UI_LIBS) \
-	$(XFCONF_LIBS) \
-	$(EXO_LIBS) \
+	$(LIBBLADEUI_LIBS) \
+	$(BLCONF_LIBS) \
+	$(BLXO_LIBS) \
 	$(LIBX11_LIBS) -lm \
 	$(XRANDR_LIBS) \
 	$(GLIB_LIBS)
@@ -57,16 +58,16 @@ BUILT_SOURCES = \
 	identity-popup_ui.h
 
 confirmation-dialog_ui.h: confirmation-dialog.glade
-	exo-csource --static --strip-comments --strip-content --name=confirmation_dialog_ui $< >$@
+	blxo-csource --static --strip-comments --strip-content --name=confirmation_dialog_ui $< >$@
 
 display-dialog_ui.h: display-dialog.glade
-	exo-csource --static --strip-comments --strip-content --name=display_dialog_ui $< >$@
+	blxo-csource --static --strip-comments --strip-content --name=display_dialog_ui $< >$@
 
 minimal-display-dialog_ui.h: minimal-display-dialog.glade
-	exo-csource --static --strip-comments --strip-content --name=minimal_display_dialog_ui $< >$@
+	blxo-csource --static --strip-comments --strip-content --name=minimal_display_dialog_ui $< >$@
 	
 identity-popup_ui.h: identity-popup.glade
-	exo-csource --static --strip-comments --strip-content --name=identity_popup_ui $< >$@
+	blxo-csource --static --strip-comments --strip-content --name=identity_popup_ui $< >$@
 
 endif
 

@@ -1,6 +1,6 @@
 4.12.4
 ======
-- Fix: xfsettingsd --replace does not replace old daemon (Xfce #14381)
+- Fix: blsettingsd --replace does not replace old daemon (Xfce #14381)
 - Fix: Uninitialized scalar variables (CID #292062, #292063)
 - Fix: -Wcast-function-type (GCC 8)
 - Fix: Redefinition of DISTCLEANFILES
@@ -50,7 +50,7 @@
 - Fix: /Xft/Hinting is never set (Xfce #12086)
 - Fix: Segfault in convert_xfce_output_info when plugging in
   an external model, fallback on 640x480 (Xfce #12580, RH #1317382)
-- Fix: xfsettingsd resets TV mode to NULL on power cycle (Xfce #11107)
+- Fix: blsettingsd resets TV mode to NULL on power cycle (Xfce #11107)
 - Make sure icon == NULL if no icon is found
 - Make the 'Settings Editor Dialog' pluggable.
 - Translation updates: Arabic, Asturian, Bulgarian, Catalan,
@@ -102,7 +102,7 @@
 ======
 - Reapply settings when external keyboard connects
 - New display settings dialog
-- Update the settings editor to match xfconf
+- Update the settings editor to match blconf
 - Fix overlap variable shadowing a global function
 - Fork before gtk/dbus init (bug #10918)
 - Add support for upower 0.99 (bug #10918)
@@ -156,12 +156,12 @@
 - Make sure AccessXKeys control is disabled by default.
 - Lots of improvements in XKB code.
 - Xsettingsd: Unset input method properties (bug #5437).
-- Xfsettingsd: Check service name of NameOwnerChanged (bug #9273).
+- Blsettingsd: Check service name of NameOwnerChanged (bug #9273).
 - Appearance: Fix gtk3 theme detection in install script (bug #9272).
-- Show Strv arrays in the xfconf settings editor renderer.
+- Show Strv arrays in the blconf settings editor renderer.
 - Lot of improvements in the display code: support extended desktop
   mode for 2 monitors, improve minimal dialog.
-- Xfsettingsd: Check for NoSuchExtension (bug #9390).
+- Blsettingsd: Check for NoSuchExtension (bug #9390).
 
 4.10.0
 ======
@@ -196,11 +196,11 @@
 
 4.9.3
 =====
-- Xfsettingsd: Don't set large dpi in xrdb (bug #8415).
+- Blsettingsd: Don't set large dpi in xrdb (bug #8415).
 - Include xscreensaver in the manager dialog.
 - Complete theme installation script.
 - Settings editor: Set sensitivity of save button on init.
-- Xfsettingsd: Properly round display refresh rate to find match.
+- Blsettingsd: Properly round display refresh rate to find match.
 - Translation updates: Arabic, Catalan (Valencian), Czech, Danish,
   German, Spanish (Castilian), Basque, French, Indonesian, Korean,
   Lithuanian, Portuguese, Russian, Slovak, Swedish, Telugu, Turkish,
@@ -209,7 +209,7 @@
 4.9.2
 =====
 - Add mime icons in the mime-editor treeview.
-- Store window and column sizes in xfconf.
+- Store window and column sizes in blconf.
 - Add cateogry based settings manager.
 - Re-add support for pluggable dialogs and enable them always.
 - Rework settings editor.
@@ -219,8 +219,8 @@
 
 4.9.1
 =====
-- Use daemon() for xfsettingsd if available.
-- Hide the xfconfd-already running message completely.
+- Use daemon() for blsettingsd if available.
+- Hide the blconfd-already running message completely.
 - Excluded items with NoDisplay=true in the settings dialog.
 - Remove duplicated accelerators (bug #7734).
 - Add theme dnd-installation by dropping in a treeview.
@@ -233,8 +233,8 @@
 4.9.0
 =====
 - Depend on Gtk+ 2.20 and Glib 2.24.
-- Merge xfce4-settings-helper into xfsettingsd.
-- Add support to xfsettingsd for pointing device properties.
+- Merge blade-settings-helper into blsettingsd.
+- Add support to blsettingsd for pointing device properties.
 - Rework the mouse dialog and add support for basic synaptics
   and wacom settings.
 - Add option to enable assistive technologies during login.
@@ -268,7 +268,7 @@
 
 4.7.7
 =====
-- Remove duplicated terminal entry in xfce4-settings-helper autostart
+- Remove duplicated terminal entry in blade-settings-helper autostart
   desktop file (bug #6919).
 - Set sensitivity of the corrent sound checkbox.
 - Drop Glib 2.22 functions.
@@ -283,7 +283,7 @@
 
 4.7.5
 =====
-- Use xfconf_channel_get instead of xfconf_channel_new.
+- Use blconf_channel_get instead of blconf_channel_new.
 - Don't activate numlock on first launch.
 - Fix wrong capitalizations of Xfce.
 - Fix compiler warnings.
@@ -317,11 +317,11 @@
 
 4.7.2
 =====
-- Rework the randr support in xfce4-settings, this requires
+- Rework the randr support in blade-settings, this requires
   randr 1.2 or higher.
 - Add a minimal dialog for quick display setup (--minimal, -m).
 - Port to libxklavier 5.0 API.
-- Be consistent in the check for exo-1.
+- Be consistent in the check for blxo-1.
 - Require the correct version of xi and inputproto (bug #6033).
 - Fix the old shortcut duplicate after editing a command.
 - Set value after setting the range and digits.
@@ -341,22 +341,22 @@
 =====
 - Fix possible crash in the clipboard manager (bug #6125).
 - Allow the user to edit, reset and create properties using
-  xfce4-settings-editor.
-- Allow the user to reset channels in xfce4-settings-editor.
-- Edit properties when doubled-clicked in xfce4-settings-editor.
-- Revert properties when DEL is pressed in xfce4-settings-editor.
-- Plug some leaks in xfce4-settings-editor.
-- Do not draw a gradient on xfce4-settings-editor's toolbar.
-- Respect HIG in xfce4-settings-editor's dialogs.
-- Remember the geometry of xfce4-settings-editor's window.
-- Monitor the existing properties in xfce4-settings-editor.
+  blade-settings-editor.
+- Allow the user to reset channels in blade-settings-editor.
+- Edit properties when doubled-clicked in blade-settings-editor.
+- Revert properties when DEL is pressed in blade-settings-editor.
+- Plug some leaks in blade-settings-editor.
+- Do not draw a gradient on blade-settings-editor's toolbar.
+- Respect HIG in blade-settings-editor's dialogs.
+- Remember the geometry of blade-settings-editor's window.
+- Monitor the existing properties in blade-settings-editor.
 - Translation updates (pt, gl, ja, nl, zh_CN, da, cs).
 
 4.7.0
 =====
-- Add clipboard manager to xfce4-settings-helper (bug #4333).
-- Port to libxfce4ui.
-- Port to exo 0.5.
+- Add clipboard manager to blade-settings-helper (bug #4333).
+- Port to libbladeui.
+- Port to blxo 0.5.
 - Use new XDT macros, required xfce-dev-tools 4.7.2.
 
 4.6.4
@@ -369,7 +369,7 @@
 4.6.2/4.6.3
 ===========
 - Avoid causing xfce4-session to time out on startup (bug #5040).
-- Fix type in xfconf property name (debian bug #527238).
+- Fix type in blconf property name (debian bug #527238).
 - Fix mnemonic widgets in accessibility dialog (bug #5550).
 - Fix translation macros in settings helper (bug #5554).
 - Always restore the default displa scheme on startup (bug #5311).
@@ -400,16 +400,16 @@
 - Fix DPI calculation when DPI settings are set to '-1', (eg default) since we
   can not depend on pango, cairo or fontconfig to do the right thing.
 - Fix typing error in the ToolbarStyle default XSETTINGS registry value
-- Do not fill the xsettings channel from the settings-dialog, xfsettingsd takes
+- Do not fill the xsettings channel from the settings-dialog, blsettingsd takes
   care of this.
 - Add Gtk/IMModule XSETTINGS key (Bug #4961)
 
 4.5.99.1 (Xfce 4.6rc1)
 ======================
-- Properly handle missing RandR extension in xfce4-settings-helper
+- Properly handle missing RandR extension in blade-settings-helper
   and xfce4-display-settings (bug #4836).
-- Fix possible segfault in xfce4-settings-helper (bug #4813).
-- Fix xfsettingsd segfault due to strings defaulting to NULL. Patch
+- Fix possible segfault in blade-settings-helper (bug #4813).
+- Fix blsettingsd segfault due to strings defaulting to NULL. Patch
   by Lars-Peter Clausen (bug #4797).
 - Translation updates: Brazilian Portuguese, Catalan, Czech, Danish,
   Finnish, French, Japanese, Simplified Chinese, Spanish and Swedish.
@@ -417,20 +417,20 @@
 4.5.93 (Xfce 4.6 beta3)
 =======================
 - Allow the settings manager window to be minimized (bug #4596).
-- Fix xfce4-settings-helper not setting workspace count.
+- Fix blade-settings-helper not setting workspace count.
 - Improve the UI of the shortcut command dialog and
-  xfce4-settings-editor a bit.
+  blade-settings-editor a bit.
 - Fix label wrapping in the settings manager icon view (bug #4743).
 - Make workspaces helper multi-screen aware.
 - Set SmRestartIfRunning if started in debug mode.
 - Add XfceTextRenderer for prelit/follow-state and keyboard navigation
   support in the settings manager dialog.
 - Add --dialog=<dialog name> command line parameter to
-  xfce4-settings-manager so that one can make it show any of its
+  blade-settings-manager so that one can make it show any of its
   children at startup.
 - Review strings.
 - Fully update the appearance dialog when the settings are changed in
-  another dialog or with xfconf-query.
+  another dialog or with blconf-query.
 - Set a DPI size based on a calculation when a custom DPI is disabled,
   this instead of the hard-coded 96 DPI.
 - Translation updates: Basque, Brazilian Portuguese, Catalan, Czech,
@@ -441,10 +441,10 @@
 =======================
 - Add an option to disable keyboard settings.
 - Default to "Rodent" icon theme instead of "hicolor" (Bug 4545).
-- Use XfcePosixSignalHandler in xfce4-settings-helper to handle
+- Use XfcePosixSignalHandler in blade-settings-helper to handle
   signals, since calling gtk_main_quit() from a signal handler may
   not be safe.
-- Make xfce4-settings-helper connect to the session manager and use
+- Make blade-settings-helper connect to the session manager and use
   the SmRestartImmediately facility to make sure it keeps running.
   Disable the autostart .desktop file if we were restored from a
   saved session.  Attempt to acquire an X selection on startup to
@@ -452,13 +452,13 @@
 
 4.5.91 (Xfce 4.6 beta1)
 =======================
-- Add workspace name handling to xfce4-settings-helper.
-- Add support for embedding dialogs into xfce4-settings-manager (based
+- Add workspace name handling to blade-settings-helper.
+- Add support for embedding dialogs into blade-settings-manager (based
   on the X-XfcePluggable and X-XfceHelpFile desktop file keys).
 - Add embedding support to the accessibility, appearance, mouse and
   keyboard settings dialogs.
 - Don't use g_hash_table_get_keys() which requires GLib 2.14 (bug 4377).
-- Move xfsettingsd from xfconf into xfce4-settings.
+- Move blsettingsd from blconf into blade-settings.
 - Rework the way keyboard shortcuts are organized. Support default
   shortcuts using /default and /custom base properties.
 - Add optional UI options to enable/disable sounds in Canberra (bug 4367).

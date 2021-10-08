@@ -222,7 +222,7 @@ msgstr "마우스(_M)"
 #: ../dialogs/appearance-settings/main.c:116
 #: ../dialogs/display-settings/main.c:120
 #: ../dialogs/keyboard-settings/main.c:39 ../dialogs/mouse-settings/main.c:83
-#: ../xfce4-settings-editor/main.c:48
+#: ../blade-settings-editor/main.c:48
 msgid "Settings manager socket"
 msgstr "설정 관리자 소켓"
 
@@ -230,7 +230,7 @@ msgstr "설정 관리자 소켓"
 #: ../dialogs/appearance-settings/main.c:116
 #: ../dialogs/display-settings/main.c:120
 #: ../dialogs/keyboard-settings/main.c:39 ../dialogs/mouse-settings/main.c:83
-#: ../xfce4-settings-editor/main.c:48
+#: ../blade-settings-editor/main.c:48
 msgid "SOCKET ID"
 msgstr "소켓 ID"
 
@@ -238,8 +238,8 @@ msgstr "소켓 ID"
 #: ../dialogs/appearance-settings/main.c:117
 #: ../dialogs/display-settings/main.c:121
 #: ../dialogs/keyboard-settings/main.c:40 ../dialogs/mime-settings/main.c:40
-#: ../dialogs/mouse-settings/main.c:84 ../xfce4-settings-editor/main.c:49
-#: ../xfsettingsd/main.c:78 ../xfce4-settings-manager/main.c:40
+#: ../dialogs/mouse-settings/main.c:84 ../blade-settings-editor/main.c:49
+#: ../blsettingsd/main.c:78 ../blade-settings-manager/main.c:40
 msgid "Version information"
 msgstr "버전 정보"
 
@@ -247,9 +247,9 @@ msgstr "버전 정보"
 #: ../dialogs/appearance-settings/main.c:1488
 #: ../dialogs/display-settings/main.c:3029
 #: ../dialogs/keyboard-settings/main.c:77 ../dialogs/mime-settings/main.c:62
-#: ../dialogs/mouse-settings/main.c:1871 ../xfce4-settings-editor/main.c:119
-#: ../xfsettingsd/main.c:191 ../xfsettingsd/main.c:229
-#: ../xfce4-settings-manager/main.c:61
+#: ../dialogs/mouse-settings/main.c:1871 ../blade-settings-editor/main.c:119
+#: ../blsettingsd/main.c:191 ../blsettingsd/main.c:229
+#: ../blade-settings-manager/main.c:61
 #, c-format
 msgid "Type '%s --help' for usage."
 msgstr "사용 방법을 보려면 '%s --help'를 입력하십시오."
@@ -258,8 +258,8 @@ msgstr "사용 방법을 보려면 '%s --help'를 입력하십시오."
 #: ../dialogs/appearance-settings/main.c:1507
 #: ../dialogs/display-settings/main.c:3048
 #: ../dialogs/keyboard-settings/main.c:93 ../dialogs/mime-settings/main.c:81
-#: ../dialogs/mouse-settings/main.c:1890 ../xfce4-settings-editor/main.c:138
-#: ../xfsettingsd/main.c:207 ../xfce4-settings-manager/main.c:77
+#: ../dialogs/mouse-settings/main.c:1890 ../blade-settings-editor/main.c:138
+#: ../blsettingsd/main.c:207 ../blade-settings-manager/main.c:77
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce 개발 팀. All rights reserved."
 
@@ -267,8 +267,8 @@ msgstr "Xfce 개발 팀. All rights reserved."
 #: ../dialogs/appearance-settings/main.c:1508
 #: ../dialogs/display-settings/main.c:3049
 #: ../dialogs/keyboard-settings/main.c:94 ../dialogs/mime-settings/main.c:82
-#: ../dialogs/mouse-settings/main.c:1891 ../xfce4-settings-editor/main.c:139
-#: ../xfsettingsd/main.c:208 ../xfce4-settings-manager/main.c:78
+#: ../dialogs/mouse-settings/main.c:1891 ../blade-settings-editor/main.c:139
+#: ../blsettingsd/main.c:208 ../blade-settings-manager/main.c:78
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "<%s>(으)로 버그를 알려주십시오."
@@ -588,7 +588,7 @@ msgstr "주 디스플레이(_P)"
 
 #: ../dialogs/display-settings/display-dialog.glade.h:10
 msgid ""
-"This is a hint for panels, docks and desktop to show on this display "
+"This is a hint for bars, docks and desktop to show on this display "
 "preferably."
 msgstr "취향에 따라 디스플레이에 표시할 패널, 도크, 데스크톱의 힌트입니다."
 
@@ -963,8 +963,8 @@ msgstr "GTK+를 초기화 할 수 없습니다."
 
 #: ../dialogs/keyboard-settings/main.c:103
 #, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "xfconf 데몬에 연결하는데 실패했습니다. 이유는 다음과 같습니다: %s"
+msgid "Failed to connect to blconf daemon. Reason: %s"
+msgstr "blconf 데몬에 연결하는데 실패했습니다. 이유는 다음과 같습니다: %s"
 
 #: ../dialogs/keyboard-settings/main.c:114
 msgid "Could not create the settings dialog."
@@ -1380,175 +1380,175 @@ msgstr "펜(절대적)"
 msgid "Mouse (relative)"
 msgstr "마우스(상대적)"
 
-#: ../xfce4-settings-editor/main.c:162
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:1
+#: ../blade-settings-editor/main.c:162
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:1
 msgid "Settings Editor"
 msgstr "설정 편집기"
 
-#: ../xfce4-settings-editor/main.c:169
-msgid "Customize settings stored by Xfconf"
-msgstr "Xfconf가 저장하는 설정을 사용자 정의합니다"
+#: ../blade-settings-editor/main.c:169
+msgid "Customize settings stored by Blconf"
+msgstr "Blconf가 저장하는 설정을 사용자 정의합니다"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:243
+#: ../blade-settings-editor/blade-settings-editor-box.c:243
 msgid "Channel"
 msgstr "채널"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:277
+#: ../blade-settings-editor/blade-settings-editor-box.c:277
 msgid "Property"
 msgstr "속성"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:284
+#: ../blade-settings-editor/blade-settings-editor-box.c:284
 msgid "Type"
 msgstr "형식"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:291
+#: ../blade-settings-editor/blade-settings-editor-box.c:291
 msgid "Locked"
 msgstr "잠김"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:298
+#: ../blade-settings-editor/blade-settings-editor-box.c:298
 msgid "Value"
 msgstr "값"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:315
+#: ../blade-settings-editor/blade-settings-editor-box.c:315
 msgid "New property"
 msgstr "새 속성"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:326
+#: ../blade-settings-editor/blade-settings-editor-box.c:326
 msgid "Edit selected property"
 msgstr "선택한 속성 편집"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:334
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1022
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1365
+#: ../blade-settings-editor/blade-settings-editor-box.c:334
+#: ../blade-settings-editor/blade-settings-editor-box.c:1022
+#: ../blade-settings-editor/blade-settings-editor-box.c:1365
 msgid "_Reset"
 msgstr "초기화(_R)"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:337
+#: ../blade-settings-editor/blade-settings-editor-box.c:337
 msgid "Reset selected property"
 msgstr "선택한 속성 초기화"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:444
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:535
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:654
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:90
+#: ../blade-settings-editor/blade-settings-editor-box.c:444
+#: ../blade-settings-editor/blade-settings-editor-box.c:535
+#: ../blade-settings-editor/blade-settings-editor-box.c:654
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:90
 msgid "Empty"
 msgstr "비어 있음"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:447
+#: ../blade-settings-editor/blade-settings-editor-box.c:447
 msgid "Array"
 msgstr "배열"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:452
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:91
+#: ../blade-settings-editor/blade-settings-editor-box.c:452
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:91
 msgid "String"
 msgstr "문자열"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:460
+#: ../blade-settings-editor/blade-settings-editor-box.c:460
 msgid "Integer"
 msgstr "정수"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:463
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:92
+#: ../blade-settings-editor/blade-settings-editor-box.c:463
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:92
 msgid "Boolean"
 msgstr "부울린"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:466
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:94
+#: ../blade-settings-editor/blade-settings-editor-box.c:466
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:94
 msgid "Double"
 msgstr "배정도 실수"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:800
+#: ../blade-settings-editor/blade-settings-editor-box.c:800
 msgid "_Reset Channel"
 msgstr "채널 초기화(_R)"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:801
+#: ../blade-settings-editor/blade-settings-editor-box.c:801
 msgid "Resetting a channel will permanently remove those custom settings."
 msgstr "채널을 초기화 하면 사용자 설정 내용을 완전히 제거합니다."
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:802
+#: ../blade-settings-editor/blade-settings-editor-box.c:802
 #, c-format
 msgid "Are you sure you want to reset channel \"%s\" and all its properties?"
 msgstr "\"%s\" 채널과 이 채널의 기본 설정을 초기화 하시렵니까?"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:877
+#: ../blade-settings-editor/blade-settings-editor-box.c:877
 msgid "reset"
 msgstr "초기화"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:934
+#: ../blade-settings-editor/blade-settings-editor-box.c:934
 #, c-format
 msgid "Monitor %s"
 msgstr "모니터 %s"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:942
-msgid "Watch an Xfconf channel for property changes"
-msgstr "프로퍼티 바꾸기에 대해 Xfconf 채널 감시하기"
+#: ../blade-settings-editor/blade-settings-editor-box.c:942
+msgid "Watch an Blconf channel for property changes"
+msgstr "프로퍼티 바꾸기에 대해 Blconf 채널 감시하기"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:978
+#: ../blade-settings-editor/blade-settings-editor-box.c:978
 #, c-format
 msgid "start monitoring channel \"%s\""
 msgstr "\"%s\" 채널 감시 시작"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1032
+#: ../blade-settings-editor/blade-settings-editor-box.c:1032
 msgid "_Monitor"
 msgstr "모니터(_M)"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1366
+#: ../blade-settings-editor/blade-settings-editor-box.c:1366
 msgid "Resetting a property will permanently remove those custom settings."
 msgstr "속성을 초기화하면 사용자 정의 설정을 완전히 제거합니다."
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1367
+#: ../blade-settings-editor/blade-settings-editor-box.c:1367
 #, c-format
 msgid "Are you sure you want to reset property \"%s\"?"
 msgstr "\"%s\" 속성을 정말로 초기화하시렵니까?"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:93
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:93
 msgid "Int"
 msgstr "정수"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:95
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:95
 msgid "Unsigned Int"
 msgstr "비부호 정수"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:96
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:96
 msgid "Int64"
 msgstr "64비트 정수"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:97
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:97
 msgid "Unsigned Int64"
 msgstr "비부호 64비트 정수"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:141
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:141
 msgid "New Property"
 msgstr "새 속성"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:158
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:158
 msgid "_Property:"
 msgstr "속성(_P):"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:173
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:173
 msgid "_Type:"
 msgstr "형식(_T):"
 
 #. strings
 #. integers
 #. bool
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:204
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:215
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:227
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:204
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:215
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:227
 msgid "_Value:"
 msgstr "값(_V):"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:385
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:385
 #, c-format
 msgid "Property names must start with a '/' character"
 msgstr "속성 이름은 반드시 '/' 문자로 시작해야 합니다"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:396
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:396
 #, c-format
 msgid "The root element ('/') is not a valid property name"
 msgstr "최상위 요소 ('/')는 유효한 속성 이름이 아닙니다"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:413
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:413
 #, c-format
 msgid ""
 "Property names can only include the ASCII characters A-Z, a-z, 0-9, '_', "
@@ -1558,109 +1558,109 @@ msgstr ""
 "속성이름은 A-Z, a-z, 0-9, '_', '-', ':', '.', ',', '[', ']', '{', '}', '<', '>' 만"
 " 포함할 수 있으며 '/' 문자는 구분 기호로 포함할 수 있습니다"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:427
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:427
 #, c-format
 msgid "Property names cannot have two or more consecutive '/' characters"
 msgstr "속성 이름은 둘 이상의 연속된 '/' 문자를 가질 수 없습니다"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:441
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:441
 #, c-format
 msgid "Property names cannot end with a '/' character"
 msgstr "속성 이름은 '/' 문자로 끝날 수 없습니다"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:654
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:654
 msgid "Edit Property"
 msgstr "속성 편집"
 
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:2
-msgid "Graphical settings editor for Xfconf"
-msgstr "Xfconf 그래픽 설정 편집기"
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:2
+msgid "Graphical settings editor for Blconf"
+msgstr "Blconf 그래픽 설정 편집기"
 
-#: ../xfsettingsd/accessibility.c:412
+#: ../blsettingsd/accessibility.c:412
 msgid "Sticky keys are enabled"
 msgstr "끈적이 키를 활성화했습니다"
 
-#: ../xfsettingsd/accessibility.c:414
+#: ../blsettingsd/accessibility.c:414
 msgid "Sticky keys are disabled"
 msgstr "끈적이 키를 비활성화했습니다"
 
-#: ../xfsettingsd/accessibility.c:416
+#: ../blsettingsd/accessibility.c:416
 msgid "Sticky keys"
 msgstr "끈적이 키"
 
-#: ../xfsettingsd/accessibility.c:421
+#: ../blsettingsd/accessibility.c:421
 msgid "Slow keys are enabled"
 msgstr "느린 키를 활성화했습니다"
 
-#: ../xfsettingsd/accessibility.c:423
+#: ../blsettingsd/accessibility.c:423
 msgid "Slow keys are disabled"
 msgstr "느린 키를 비활성화했습니다"
 
-#: ../xfsettingsd/accessibility.c:425
+#: ../blsettingsd/accessibility.c:425
 msgid "Slow keys"
 msgstr "느린 키"
 
-#: ../xfsettingsd/accessibility.c:430
+#: ../blsettingsd/accessibility.c:430
 msgid "Bounce keys are enabled"
 msgstr "탄력 키를 활성화했습니다"
 
-#: ../xfsettingsd/accessibility.c:432
+#: ../blsettingsd/accessibility.c:432
 msgid "Bounce keys are disabled"
 msgstr "탄력 키를 비활성화했습니다"
 
-#: ../xfsettingsd/accessibility.c:434
+#: ../blsettingsd/accessibility.c:434
 msgid "Bounce keys"
 msgstr "탄력 키"
 
-#: ../xfsettingsd/keyboard-shortcuts.c:244
+#: ../blsettingsd/keyboard-shortcuts.c:244
 #, c-format
 msgid "Failed to launch shortcut \"%s\""
 msgstr "\"%s\" 바로 가기를 실행할 수 없습니다"
 
-#: ../xfsettingsd/main.c:79
+#: ../blsettingsd/main.c:79
 msgid "Do not fork to the background"
 msgstr "백그라운드에서 실행하지 않습니다"
 
-#: ../xfsettingsd/main.c:80
+#: ../blsettingsd/main.c:80
 msgid "Replace running xsettings daemon (if any)"
 msgstr "(실행 중일 때) 실행 중인 xsettings 데몬으로 바꾸기"
 
-#. value in xfconf isn't a string, so make a default one
-#: ../xfsettingsd/workspaces.c:338 ../xfsettingsd/workspaces.c:396
+#. value in blconf isn't a string, so make a default one
+#: ../blsettingsd/workspaces.c:338 ../blsettingsd/workspaces.c:396
 #, c-format
 msgid "Workspace %d"
 msgstr "작업공간 %d"
 
-#: ../xfsettingsd/xfsettingsd.desktop.in.h:1
+#: ../blsettingsd/blsettingsd.desktop.in.h:1
 msgid "The Xfce Settings Daemon"
 msgstr "Xfce 설정 데몬"
 
-#: ../xfce4-settings-manager/main.c:41
+#: ../blade-settings-manager/main.c:41
 msgid "Settings dialog to show"
 msgstr "표시할 대화 상자 설정"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:193
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:193
 msgid "All _Settings"
 msgstr "전체 설정(_S)"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:390
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:390
 msgid "Settings"
 msgstr "설정"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:392
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:392
 msgid "Customize your desktop"
 msgstr "데스크톱 사용자 정의"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:885
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:896
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:885
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:896
 #, c-format
 msgid "Unable to start \"%s\""
 msgstr "\"%s\"을(를) 시작할 수 없습니다"
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:1
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:1
 msgid "Settings Manager"
 msgstr "설정 관리자"
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:2
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:2
 msgid "Graphical Settings Manager for Xfce 4"
 msgstr "Xfce 4 그래픽 설정 관리자"

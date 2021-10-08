@@ -20,7 +20,7 @@ msgstr ""
 "POT-Creation-Date: 2017-02-15 18:30+0100\n"
 "PO-Revision-Date: 2017-09-23 19:02+0000\n"
 "Last-Translator: Silvère Latchurié <slatchurie@gmail.com>\n"
-"Language-Team: French (http://www.transifex.com/xfce/xfce4-settings/language/fr/)\n"
+"Language-Team: French (http://www.transifex.com/xfce/blade-settings/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -217,7 +217,7 @@ msgstr "_Souris"
 #: ../dialogs/appearance-settings/main.c:118
 #: ../dialogs/display-settings/main.c:121
 #: ../dialogs/keyboard-settings/main.c:40 ../dialogs/mouse-settings/main.c:84
-#: ../xfce4-settings-editor/main.c:49
+#: ../blade-settings-editor/main.c:49
 msgid "Settings manager socket"
 msgstr "Socket du gestionnaire de paramètres"
 
@@ -225,7 +225,7 @@ msgstr "Socket du gestionnaire de paramètres"
 #: ../dialogs/appearance-settings/main.c:118
 #: ../dialogs/display-settings/main.c:121
 #: ../dialogs/keyboard-settings/main.c:40 ../dialogs/mouse-settings/main.c:84
-#: ../xfce4-settings-editor/main.c:49
+#: ../blade-settings-editor/main.c:49
 msgid "SOCKET ID"
 msgstr "ID SOCKET"
 
@@ -233,8 +233,8 @@ msgstr "ID SOCKET"
 #: ../dialogs/appearance-settings/main.c:119
 #: ../dialogs/display-settings/main.c:122
 #: ../dialogs/keyboard-settings/main.c:41 ../dialogs/mime-settings/main.c:40
-#: ../dialogs/mouse-settings/main.c:85 ../xfce4-settings-editor/main.c:50
-#: ../xfsettingsd/main.c:78 ../xfce4-settings-manager/main.c:43
+#: ../dialogs/mouse-settings/main.c:85 ../blade-settings-editor/main.c:50
+#: ../blsettingsd/main.c:78 ../blade-settings-manager/main.c:43
 msgid "Version information"
 msgstr "Informations sur la version"
 
@@ -242,9 +242,9 @@ msgstr "Informations sur la version"
 #: ../dialogs/appearance-settings/main.c:1303
 #: ../dialogs/display-settings/main.c:3018
 #: ../dialogs/keyboard-settings/main.c:78 ../dialogs/mime-settings/main.c:62
-#: ../dialogs/mouse-settings/main.c:1871 ../xfce4-settings-editor/main.c:120
-#: ../xfsettingsd/main.c:191 ../xfsettingsd/main.c:229
-#: ../xfce4-settings-manager/main.c:64
+#: ../dialogs/mouse-settings/main.c:1871 ../blade-settings-editor/main.c:120
+#: ../blsettingsd/main.c:191 ../blsettingsd/main.c:229
+#: ../blade-settings-manager/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage."
 msgstr "Taper « %s --help » pour plus d'aide."
@@ -253,8 +253,8 @@ msgstr "Taper « %s --help » pour plus d'aide."
 #: ../dialogs/appearance-settings/main.c:1322
 #: ../dialogs/display-settings/main.c:3037
 #: ../dialogs/keyboard-settings/main.c:94 ../dialogs/mime-settings/main.c:81
-#: ../dialogs/mouse-settings/main.c:1890 ../xfce4-settings-editor/main.c:139
-#: ../xfsettingsd/main.c:207 ../xfce4-settings-manager/main.c:80
+#: ../dialogs/mouse-settings/main.c:1890 ../blade-settings-editor/main.c:139
+#: ../blsettingsd/main.c:207 ../blade-settings-manager/main.c:80
 msgid "The Xfce development team. All rights reserved."
 msgstr "L'équipe de développement Xfce. Tous droits réservés."
 
@@ -262,8 +262,8 @@ msgstr "L'équipe de développement Xfce. Tous droits réservés."
 #: ../dialogs/appearance-settings/main.c:1323
 #: ../dialogs/display-settings/main.c:3038
 #: ../dialogs/keyboard-settings/main.c:95 ../dialogs/mime-settings/main.c:82
-#: ../dialogs/mouse-settings/main.c:1891 ../xfce4-settings-editor/main.c:140
-#: ../xfsettingsd/main.c:208 ../xfce4-settings-manager/main.c:81
+#: ../dialogs/mouse-settings/main.c:1891 ../blade-settings-editor/main.c:140
+#: ../blsettingsd/main.c:208 ../blade-settings-manager/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Veuillez signaler les bogues à <%s>."
@@ -595,7 +595,7 @@ msgstr "Écran _principal"
 
 #: ../dialogs/display-settings/display-dialog.glade.h:10
 msgid ""
-"This is a hint for panels, docks and desktop to show on this display "
+"This is a hint for bars, docks and desktop to show on this display "
 "preferably."
 msgstr "Ceci est une indication pour que les tableaux de bord, les docks et le bureau s’affichent de préférence sur cet écran."
 
@@ -783,7 +783,7 @@ msgstr "Raccourci de commande"
 #: ../dialogs/mime-settings/xfce-mime-chooser.c:134
 #: ../dialogs/mime-settings/xfce-mime-chooser.c:382
 #: ../dialogs/mime-settings/xfce-mime-window.c:932
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:144
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:144
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -994,8 +994,8 @@ msgstr "Impossible d'initialiser GTK+."
 
 #: ../dialogs/keyboard-settings/main.c:104
 #, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "Impossible de se connecter au démon xfconf. Raison : %s"
+msgid "Failed to connect to blconf daemon. Reason: %s"
+msgstr "Impossible de se connecter au démon blconf. Raison : %s"
 
 #: ../dialogs/keyboard-settings/main.c:115
 msgid "Could not create the settings dialog."
@@ -1420,200 +1420,200 @@ msgstr "Prévisualisation"
 msgid "_Theme"
 msgstr "_Thème"
 
-#: ../xfce4-settings-editor/main.c:163
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:1
+#: ../blade-settings-editor/main.c:163
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:1
 msgid "Settings Editor"
 msgstr "Éditeur de paramètres"
 
-#: ../xfce4-settings-editor/main.c:170
-msgid "Customize settings stored by Xfconf"
-msgstr "Modifier les paramètres stockés par Xfconf"
+#: ../blade-settings-editor/main.c:170
+msgid "Customize settings stored by Blconf"
+msgstr "Modifier les paramètres stockés par Blconf"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:243
+#: ../blade-settings-editor/blade-settings-editor-box.c:243
 msgid "Channel"
 msgstr "Canal"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:277
+#: ../blade-settings-editor/blade-settings-editor-box.c:277
 msgid "Property"
 msgstr "Propriété"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:284
+#: ../blade-settings-editor/blade-settings-editor-box.c:284
 msgid "Type"
 msgstr "Type"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:291
+#: ../blade-settings-editor/blade-settings-editor-box.c:291
 msgid "Locked"
 msgstr "Verrouillé"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:298
+#: ../blade-settings-editor/blade-settings-editor-box.c:298
 msgid "Value"
 msgstr "Valeur"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:312
+#: ../blade-settings-editor/blade-settings-editor-box.c:312
 msgid "New"
 msgstr "Nouveau"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:315
+#: ../blade-settings-editor/blade-settings-editor-box.c:315
 msgid "New property"
 msgstr "Nouvelle propriété"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:323
+#: ../blade-settings-editor/blade-settings-editor-box.c:323
 msgid "Edit"
 msgstr "Éditer"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:326
+#: ../blade-settings-editor/blade-settings-editor-box.c:326
 msgid "Edit selected property"
 msgstr "Éditer la propriété sélectionnée"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:334
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1021
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1356
+#: ../blade-settings-editor/blade-settings-editor-box.c:334
+#: ../blade-settings-editor/blade-settings-editor-box.c:1021
+#: ../blade-settings-editor/blade-settings-editor-box.c:1356
 msgid "_Reset"
 msgstr "_Réinitialiser"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:337
+#: ../blade-settings-editor/blade-settings-editor-box.c:337
 msgid "Reset selected property"
 msgstr "Réinitialiser la propriété sélectionnée"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:444
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:535
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:654
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:90
+#: ../blade-settings-editor/blade-settings-editor-box.c:444
+#: ../blade-settings-editor/blade-settings-editor-box.c:535
+#: ../blade-settings-editor/blade-settings-editor-box.c:654
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:90
 msgid "Empty"
 msgstr "Vide"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:447
+#: ../blade-settings-editor/blade-settings-editor-box.c:447
 msgid "Array"
 msgstr "Tableau"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:452
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:91
+#: ../blade-settings-editor/blade-settings-editor-box.c:452
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:91
 msgid "String"
 msgstr "Chaîne"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:460
+#: ../blade-settings-editor/blade-settings-editor-box.c:460
 msgid "Integer"
 msgstr "Entier"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:463
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:92
+#: ../blade-settings-editor/blade-settings-editor-box.c:463
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:92
 msgid "Boolean"
 msgstr "Booléen"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:466
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:94
+#: ../blade-settings-editor/blade-settings-editor-box.c:466
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:94
 msgid "Double"
 msgstr "Double"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:800
+#: ../blade-settings-editor/blade-settings-editor-box.c:800
 msgid "_Reset Channel"
 msgstr "_Réinitialiser le canal"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:801
+#: ../blade-settings-editor/blade-settings-editor-box.c:801
 msgid "Resetting a channel will permanently remove those custom settings."
 msgstr "Réinitialiser un canal effacera de manière permanente les modifications personnalisées."
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:802
+#: ../blade-settings-editor/blade-settings-editor-box.c:802
 #, c-format
 msgid "Are you sure you want to reset channel \"%s\" and all its properties?"
 msgstr "Êtes-vous sûr de vouloir réinitialiser le canal « %s » et toutes ses propriétés ?"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:877
+#: ../blade-settings-editor/blade-settings-editor-box.c:877
 msgid "reset"
 msgstr "réinitialiser"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:934
+#: ../blade-settings-editor/blade-settings-editor-box.c:934
 #, c-format
 msgid "Monitor %s"
 msgstr "Surveiller %s"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:942
-msgid "Watch an Xfconf channel for property changes"
-msgstr "Surveiller les changements de propriété d'un canal Xfconf"
+#: ../blade-settings-editor/blade-settings-editor-box.c:942
+msgid "Watch an Blconf channel for property changes"
+msgstr "Surveiller les changements de propriété d'un canal Blconf"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:944
+#: ../blade-settings-editor/blade-settings-editor-box.c:944
 msgid "Clear"
 msgstr "Effacer"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:945
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:207
+#: ../blade-settings-editor/blade-settings-editor-box.c:945
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:207
 msgid "Close"
 msgstr "Fermer"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:978
+#: ../blade-settings-editor/blade-settings-editor-box.c:978
 #, c-format
 msgid "start monitoring channel \"%s\""
 msgstr "démarrer la surveillance du canal « %s »"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1027
+#: ../blade-settings-editor/blade-settings-editor-box.c:1027
 msgid "_Monitor"
 msgstr "_Surveiller"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1037
+#: ../blade-settings-editor/blade-settings-editor-box.c:1037
 msgid "Refresh"
 msgstr "Rafraîchir"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1357
+#: ../blade-settings-editor/blade-settings-editor-box.c:1357
 msgid "Resetting a property will permanently remove those custom settings."
 msgstr "Réinitialiser une propriété effacera de manière permanente les modifications personnalisées."
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1358
+#: ../blade-settings-editor/blade-settings-editor-box.c:1358
 #, c-format
 msgid "Are you sure you want to reset property \"%s\"?"
 msgstr "Voulez-vous vraiment réinitialiser la propriété « %s » ?"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:93
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:93
 msgid "Int"
 msgstr "Int"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:95
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:95
 msgid "Unsigned Int"
 msgstr "Int non signé"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:96
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:96
 msgid "Int64"
 msgstr "Int64"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:97
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:97
 msgid "Unsigned Int64"
 msgstr "Int64 non signé"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:141
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:141
 msgid "New Property"
 msgstr "Nouvelle propriété"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:145
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:145
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:158
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:158
 msgid "_Property:"
 msgstr "_Propriété :"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:175
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:175
 msgid "_Type:"
 msgstr "_Type :"
 
 #. strings
 #. integers
 #. bool
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:208
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:218
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:229
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:208
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:218
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:229
 msgid "_Value:"
 msgstr "_Valeur :"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:386
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:386
 #, c-format
 msgid "Property names must start with a '/' character"
 msgstr "Les noms d'une propriété doivent commencer par le caractère « / »"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:397
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:397
 #, c-format
 msgid "The root element ('/') is not a valid property name"
 msgstr "L'élément racine (« / ») n'est pas un nom de propriété valide"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:414
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:414
 #, c-format
 msgid ""
 "Property names can only include the ASCII characters A-Z, a-z, 0-9, '_', "
@@ -1621,113 +1621,113 @@ msgid ""
 "separator"
 msgstr "Les noms de propriété ne peuvent seulement inclure les caractères ASCII A-Z, a-z, 0-9, « _ », « - », « : », « . », « , », « [ », « ] », « { », « } », « < » et « > », ainsi que « / » en guise de séparateur"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:428
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:428
 #, c-format
 msgid "Property names cannot have two or more consecutive '/' characters"
 msgstr "Les noms de propriétés ne peuvent pas contenir plusieurs caractères « / » consécutifs"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:442
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:442
 #, c-format
 msgid "Property names cannot end with a '/' character"
 msgstr "Les noms de propriétés ne peuvent pas se terminer par le caractère « / »"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:655
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:655
 msgid "Edit Property"
 msgstr "Éditer la propriété"
 
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:2
-msgid "Graphical settings editor for Xfconf"
-msgstr "Éditeur graphique des paramètres Xfconf"
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:2
+msgid "Graphical settings editor for Blconf"
+msgstr "Éditeur graphique des paramètres Blconf"
 
-#: ../xfsettingsd/accessibility.c:412
+#: ../blsettingsd/accessibility.c:412
 msgid "Sticky keys are enabled"
 msgstr "Les touches collantes sont activées"
 
-#: ../xfsettingsd/accessibility.c:414
+#: ../blsettingsd/accessibility.c:414
 msgid "Sticky keys are disabled"
 msgstr "Les touches collantes sont désactivées"
 
-#: ../xfsettingsd/accessibility.c:416
+#: ../blsettingsd/accessibility.c:416
 msgid "Sticky keys"
 msgstr "Touches collantes"
 
-#: ../xfsettingsd/accessibility.c:421
+#: ../blsettingsd/accessibility.c:421
 msgid "Slow keys are enabled"
 msgstr "Les touches lentes sont activées"
 
-#: ../xfsettingsd/accessibility.c:423
+#: ../blsettingsd/accessibility.c:423
 msgid "Slow keys are disabled"
 msgstr "Les touches lentes sont désactivées"
 
-#: ../xfsettingsd/accessibility.c:425
+#: ../blsettingsd/accessibility.c:425
 msgid "Slow keys"
 msgstr "Touches lentes"
 
-#: ../xfsettingsd/accessibility.c:430
+#: ../blsettingsd/accessibility.c:430
 msgid "Bounce keys are enabled"
 msgstr "Les touches répétées sont activées"
 
-#: ../xfsettingsd/accessibility.c:432
+#: ../blsettingsd/accessibility.c:432
 msgid "Bounce keys are disabled"
 msgstr "Les touches répétées sont désactivées"
 
-#: ../xfsettingsd/accessibility.c:434
+#: ../blsettingsd/accessibility.c:434
 msgid "Bounce keys"
 msgstr "Touches répétées"
 
-#: ../xfsettingsd/keyboard-shortcuts.c:244
+#: ../blsettingsd/keyboard-shortcuts.c:244
 #, c-format
 msgid "Failed to launch shortcut \"%s\""
 msgstr "Impossible de lancer le raccourci « %s »"
 
-#: ../xfsettingsd/main.c:79
+#: ../blsettingsd/main.c:79
 msgid "Do not fork to the background"
 msgstr "Ne pas démarrer en arrière-plan"
 
-#: ../xfsettingsd/main.c:80
+#: ../blsettingsd/main.c:80
 msgid "Replace running xsettings daemon (if any)"
 msgstr "Remplacer le démon xsettings en cours d'exécution (s'il y en a un)"
 
-#. value in xfconf isn't a string, so make a default one
-#: ../xfsettingsd/workspaces.c:338 ../xfsettingsd/workspaces.c:396
+#. value in blconf isn't a string, so make a default one
+#: ../blsettingsd/workspaces.c:338 ../blsettingsd/workspaces.c:396
 #, c-format
 msgid "Workspace %d"
 msgstr "Espace de travail %d"
 
-#: ../xfsettingsd/xfsettingsd.desktop.in.h:1
+#: ../blsettingsd/blsettingsd.desktop.in.h:1
 msgid "The Xfce Settings Daemon"
 msgstr "Le démon des paramètres Xfce"
 
-#: ../xfce4-settings-manager/main.c:44
+#: ../blade-settings-manager/main.c:44
 msgid "Settings dialog to show"
 msgstr "Fenêtre de paramètres à afficher"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:194
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:194
 msgid "All _Settings"
 msgstr "Tous les _paramètres"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:204
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:204
 msgid "Help"
 msgstr "Aide"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:396
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:396
 msgid "Settings"
 msgstr "Paramètres"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:398
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:398
 msgid "Customize your desktop"
 msgstr "Personnaliser votre environnement de bureau"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:893
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:904
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:893
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:904
 #, c-format
 msgid "Unable to start \"%s\""
 msgstr "Impossible de démarrer « %s »"
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:1
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:1
 msgid "Settings Manager"
 msgstr "Gestionnaire de paramètres"
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:2
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:2
 msgid "Graphical Settings Manager for Xfce 4"
 msgstr "Gestionnaire graphique de paramètres pour Xfce 4"

@@ -1,4 +1,5 @@
 AM_CPPFLAGS = \
+	-DGLIB_DISABLE_DEPRECATION_WARNINGS \
 	-I${top_srcdir} \
 	-DBINDIR=\"$(bindir)\" \
 	-DLOCALEDIR=\"$(localedir)\" \
@@ -19,8 +20,8 @@ xfce4_mime_settings_CFLAGS = \
 	$(GTK_CFLAGS) \
 	$(GIO_CFLAGS) \
 	$(GIO_UNIX_CFLAGS) \
-	$(LIBXFCE4UI_CFLAGS) \
-	$(XFCONF_CFLAGS) \
+	$(LIBBLADEUI_CFLAGS) \
+	$(BLCONF_CFLAGS) \
 	$(PLATFORM_CFLAGS)
 
 xfce4_mime_settings_LDFLAGS = \
@@ -29,10 +30,10 @@ xfce4_mime_settings_LDFLAGS = \
 
 xfce4_mime_settings_LDADD = \
 	$(GTK_LIBS) \
-	$(LIBXFCE4UI_LIBS) \
+	$(LIBBLADEUI_LIBS) \
 	$(GIO_LIBS) \
 	$(GIO_UNIX_LIBS) \
-	$(XFCONF_LIBS)
+	$(BLCONF_LIBS)
 
 desktopdir = $(datadir)/applications
 desktop_in_files = xfce4-mime-settings.desktop.in

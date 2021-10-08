@@ -11,7 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2017-02-15 18:30+0100\n"
 "PO-Revision-Date: 2017-09-19 18:02+0000\n"
 "Last-Translator: Xfce Bot <transifex@xfce.org>\n"
-"Language-Team: Bengali (http://www.transifex.com/xfce/xfce4-settings/language/bn/)\n"
+"Language-Team: Bengali (http://www.transifex.com/xfce/blade-settings/language/bn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -208,7 +208,7 @@ msgstr "মাউস (_M)"
 #: ../dialogs/appearance-settings/main.c:118
 #: ../dialogs/display-settings/main.c:121
 #: ../dialogs/keyboard-settings/main.c:40 ../dialogs/mouse-settings/main.c:84
-#: ../xfce4-settings-editor/main.c:49
+#: ../blade-settings-editor/main.c:49
 msgid "Settings manager socket"
 msgstr "সেটিংস ব্যবস্থাপক সকেট"
 
@@ -216,7 +216,7 @@ msgstr "সেটিংস ব্যবস্থাপক সকেট"
 #: ../dialogs/appearance-settings/main.c:118
 #: ../dialogs/display-settings/main.c:121
 #: ../dialogs/keyboard-settings/main.c:40 ../dialogs/mouse-settings/main.c:84
-#: ../xfce4-settings-editor/main.c:49
+#: ../blade-settings-editor/main.c:49
 msgid "SOCKET ID"
 msgstr "SOCKET ID"
 
@@ -224,8 +224,8 @@ msgstr "SOCKET ID"
 #: ../dialogs/appearance-settings/main.c:119
 #: ../dialogs/display-settings/main.c:122
 #: ../dialogs/keyboard-settings/main.c:41 ../dialogs/mime-settings/main.c:40
-#: ../dialogs/mouse-settings/main.c:85 ../xfce4-settings-editor/main.c:50
-#: ../xfsettingsd/main.c:78 ../xfce4-settings-manager/main.c:43
+#: ../dialogs/mouse-settings/main.c:85 ../blade-settings-editor/main.c:50
+#: ../blsettingsd/main.c:78 ../blade-settings-manager/main.c:43
 msgid "Version information"
 msgstr "সংস্করণ তথ্যাবলী"
 
@@ -233,9 +233,9 @@ msgstr "সংস্করণ তথ্যাবলী"
 #: ../dialogs/appearance-settings/main.c:1303
 #: ../dialogs/display-settings/main.c:3018
 #: ../dialogs/keyboard-settings/main.c:78 ../dialogs/mime-settings/main.c:62
-#: ../dialogs/mouse-settings/main.c:1871 ../xfce4-settings-editor/main.c:120
-#: ../xfsettingsd/main.c:191 ../xfsettingsd/main.c:229
-#: ../xfce4-settings-manager/main.c:64
+#: ../dialogs/mouse-settings/main.c:1871 ../blade-settings-editor/main.c:120
+#: ../blsettingsd/main.c:191 ../blsettingsd/main.c:229
+#: ../blade-settings-manager/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage."
 msgstr "ব্যবহারের জন্য '%s --সহায়তা' টাইপ করুন।"
@@ -244,8 +244,8 @@ msgstr "ব্যবহারের জন্য '%s --সহায়তা' ট�
 #: ../dialogs/appearance-settings/main.c:1322
 #: ../dialogs/display-settings/main.c:3037
 #: ../dialogs/keyboard-settings/main.c:94 ../dialogs/mime-settings/main.c:81
-#: ../dialogs/mouse-settings/main.c:1890 ../xfce4-settings-editor/main.c:139
-#: ../xfsettingsd/main.c:207 ../xfce4-settings-manager/main.c:80
+#: ../dialogs/mouse-settings/main.c:1890 ../blade-settings-editor/main.c:139
+#: ../blsettingsd/main.c:207 ../blade-settings-manager/main.c:80
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce ডেভেলপমেন্ট টিম। সকল অধিকার সংরক্ষিত।"
 
@@ -253,8 +253,8 @@ msgstr "Xfce ডেভেলপমেন্ট টিম। সকল অধি�
 #: ../dialogs/appearance-settings/main.c:1323
 #: ../dialogs/display-settings/main.c:3038
 #: ../dialogs/keyboard-settings/main.c:95 ../dialogs/mime-settings/main.c:82
-#: ../dialogs/mouse-settings/main.c:1891 ../xfce4-settings-editor/main.c:140
-#: ../xfsettingsd/main.c:208 ../xfce4-settings-manager/main.c:81
+#: ../dialogs/mouse-settings/main.c:1891 ../blade-settings-editor/main.c:140
+#: ../blsettingsd/main.c:208 ../blade-settings-manager/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "অনুগ্রহ করে বাগগুলো <%s>-এ রিপোর্ট করুন।"
@@ -586,7 +586,7 @@ msgstr ""
 
 #: ../dialogs/display-settings/display-dialog.glade.h:10
 msgid ""
-"This is a hint for panels, docks and desktop to show on this display "
+"This is a hint for bars, docks and desktop to show on this display "
 "preferably."
 msgstr ""
 
@@ -774,7 +774,7 @@ msgstr "শর্টকাট কমান্ড "
 #: ../dialogs/mime-settings/xfce-mime-chooser.c:134
 #: ../dialogs/mime-settings/xfce-mime-chooser.c:382
 #: ../dialogs/mime-settings/xfce-mime-window.c:932
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:144
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:144
 msgid "Cancel"
 msgstr ""
 
@@ -985,8 +985,8 @@ msgstr "GTK+ আরম্ভ করতে ব্যর্থ।"
 
 #: ../dialogs/keyboard-settings/main.c:104
 #, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "xfconf ডিমনের সাথে সংযুক্ত করতে ব্যর্থ। কারণ: %s"
+msgid "Failed to connect to blconf daemon. Reason: %s"
+msgstr "blconf ডিমনের সাথে সংযুক্ত করতে ব্যর্থ। কারণ: %s"
 
 #: ../dialogs/keyboard-settings/main.c:115
 msgid "Could not create the settings dialog."
@@ -1411,200 +1411,200 @@ msgstr "প্রাকদর্শন"
 msgid "_Theme"
 msgstr ""
 
-#: ../xfce4-settings-editor/main.c:163
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:1
+#: ../blade-settings-editor/main.c:163
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:1
 msgid "Settings Editor"
 msgstr "সেটিংস সম্পাদক"
 
-#: ../xfce4-settings-editor/main.c:170
-msgid "Customize settings stored by Xfconf"
-msgstr "Xfconf দ্বারা সংরক্ষিত স্বনির্ধারিত সেটিংসমূহ"
+#: ../blade-settings-editor/main.c:170
+msgid "Customize settings stored by Blconf"
+msgstr "Blconf দ্বারা সংরক্ষিত স্বনির্ধারিত সেটিংসমূহ"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:243
+#: ../blade-settings-editor/blade-settings-editor-box.c:243
 msgid "Channel"
 msgstr "চ্যানেল"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:277
+#: ../blade-settings-editor/blade-settings-editor-box.c:277
 msgid "Property"
 msgstr "বৈশিষ্ট্য"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:284
+#: ../blade-settings-editor/blade-settings-editor-box.c:284
 msgid "Type"
 msgstr "ধরন"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:291
+#: ../blade-settings-editor/blade-settings-editor-box.c:291
 msgid "Locked"
 msgstr "আবদ্ধ"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:298
+#: ../blade-settings-editor/blade-settings-editor-box.c:298
 msgid "Value"
 msgstr "মান"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:312
+#: ../blade-settings-editor/blade-settings-editor-box.c:312
 msgid "New"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:315
+#: ../blade-settings-editor/blade-settings-editor-box.c:315
 msgid "New property"
 msgstr "নতুন বৈশিষ্ট্য"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:323
+#: ../blade-settings-editor/blade-settings-editor-box.c:323
 msgid "Edit"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:326
+#: ../blade-settings-editor/blade-settings-editor-box.c:326
 msgid "Edit selected property"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:334
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1021
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1356
+#: ../blade-settings-editor/blade-settings-editor-box.c:334
+#: ../blade-settings-editor/blade-settings-editor-box.c:1021
+#: ../blade-settings-editor/blade-settings-editor-box.c:1356
 msgid "_Reset"
 msgstr "পুনঃনির্ধারণ (_R)"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:337
+#: ../blade-settings-editor/blade-settings-editor-box.c:337
 msgid "Reset selected property"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:444
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:535
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:654
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:90
+#: ../blade-settings-editor/blade-settings-editor-box.c:444
+#: ../blade-settings-editor/blade-settings-editor-box.c:535
+#: ../blade-settings-editor/blade-settings-editor-box.c:654
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:90
 msgid "Empty"
 msgstr "খালি"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:447
+#: ../blade-settings-editor/blade-settings-editor-box.c:447
 msgid "Array"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:452
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:91
+#: ../blade-settings-editor/blade-settings-editor-box.c:452
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:91
 msgid "String"
 msgstr "স্ট্রিং"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:460
+#: ../blade-settings-editor/blade-settings-editor-box.c:460
 msgid "Integer"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:463
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:92
+#: ../blade-settings-editor/blade-settings-editor-box.c:463
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:92
 msgid "Boolean"
 msgstr "বুলিয়ান"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:466
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:94
+#: ../blade-settings-editor/blade-settings-editor-box.c:466
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:94
 msgid "Double"
 msgstr "ডবল"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:800
+#: ../blade-settings-editor/blade-settings-editor-box.c:800
 msgid "_Reset Channel"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:801
+#: ../blade-settings-editor/blade-settings-editor-box.c:801
 msgid "Resetting a channel will permanently remove those custom settings."
 msgstr "কোন চ্যানেল পুনঃনির্ধারিত হলে স্বনির্ধারিত সেটিংসমূহ স্থায়ীভাবে অপসারিত হবে।"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:802
+#: ../blade-settings-editor/blade-settings-editor-box.c:802
 #, c-format
 msgid "Are you sure you want to reset channel \"%s\" and all its properties?"
 msgstr "আপনি কি নিশ্চিত আপনি \"%s\" চ্যানেল এবং এর সকল বৈশিষ্ট্যাবলী পুনঃনির্ধারণ করতে চান?"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:877
+#: ../blade-settings-editor/blade-settings-editor-box.c:877
 msgid "reset"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:934
+#: ../blade-settings-editor/blade-settings-editor-box.c:934
 #, c-format
 msgid "Monitor %s"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:942
-msgid "Watch an Xfconf channel for property changes"
+#: ../blade-settings-editor/blade-settings-editor-box.c:942
+msgid "Watch an Blconf channel for property changes"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:944
+#: ../blade-settings-editor/blade-settings-editor-box.c:944
 msgid "Clear"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:945
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:207
+#: ../blade-settings-editor/blade-settings-editor-box.c:945
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:207
 msgid "Close"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:978
+#: ../blade-settings-editor/blade-settings-editor-box.c:978
 #, c-format
 msgid "start monitoring channel \"%s\""
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1027
+#: ../blade-settings-editor/blade-settings-editor-box.c:1027
 msgid "_Monitor"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1037
+#: ../blade-settings-editor/blade-settings-editor-box.c:1037
 msgid "Refresh"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1357
+#: ../blade-settings-editor/blade-settings-editor-box.c:1357
 msgid "Resetting a property will permanently remove those custom settings."
 msgstr "কোন বৈশিষ্ট্য পুনঃনির্ধারিত হলে স্বনির্ধারিত সেটিংসমূহ স্থায়ীভাবে অপসারিত হবে।"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1358
+#: ../blade-settings-editor/blade-settings-editor-box.c:1358
 #, c-format
 msgid "Are you sure you want to reset property \"%s\"?"
 msgstr "আপনি কি নিশ্চিত আপনি \"%s\" বৈশিষ্ট্যটি পুনঃনির্ধারণ করতে চান?"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:93
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:93
 msgid "Int"
 msgstr "Int"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:95
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:95
 msgid "Unsigned Int"
 msgstr "স্বাক্ষরবিহীন Int"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:96
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:96
 msgid "Int64"
 msgstr "Int64"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:97
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:97
 msgid "Unsigned Int64"
 msgstr "স্বাক্ষরবিহীন Int64"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:141
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:141
 msgid "New Property"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:145
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:145
 msgid "Save"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:158
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:158
 msgid "_Property:"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:175
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:175
 msgid "_Type:"
 msgstr ""
 
 #. strings
 #. integers
 #. bool
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:208
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:218
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:229
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:208
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:218
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:229
 msgid "_Value:"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:386
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:386
 #, c-format
 msgid "Property names must start with a '/' character"
 msgstr "বৈশিষ্ট্যের নাম অবশ্যই '/' অক্ষর দিয়ে শুরু হতে হবে"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:397
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:397
 #, c-format
 msgid "The root element ('/') is not a valid property name"
 msgstr "মূল উপাদান ('/') কোন কার্যকর বৈশিষ্ট্যের নাম নয়"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:414
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:414
 #, c-format
 msgid ""
 "Property names can only include the ASCII characters A-Z, a-z, 0-9, '_', "
@@ -1612,113 +1612,113 @@ msgid ""
 "separator"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:428
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:428
 #, c-format
 msgid "Property names cannot have two or more consecutive '/' characters"
 msgstr "বৈশিষ্ট্যের নামে পরপর দুই বা ততোধিকবার '/' অক্ষর থাকতে পারবে না "
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:442
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:442
 #, c-format
 msgid "Property names cannot end with a '/' character"
 msgstr "বৈশিষ্ট্যের নাম '/' অক্ষর দিয়ে সমাপ্ত হতে পারবে না"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:655
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:655
 msgid "Edit Property"
 msgstr "বৈশিষ্ট্য সম্পাদনা"
 
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:2
-msgid "Graphical settings editor for Xfconf"
-msgstr "Xfconf-র জন্য গ্রাফিকাল সেটিংস সম্পাদক"
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:2
+msgid "Graphical settings editor for Blconf"
+msgstr "Blconf-র জন্য গ্রাফিকাল সেটিংস সম্পাদক"
 
-#: ../xfsettingsd/accessibility.c:412
+#: ../blsettingsd/accessibility.c:412
 msgid "Sticky keys are enabled"
 msgstr "স্টিকি কী সক্রিয়"
 
-#: ../xfsettingsd/accessibility.c:414
+#: ../blsettingsd/accessibility.c:414
 msgid "Sticky keys are disabled"
 msgstr "স্টিকি কী নিষ্ক্রিয়"
 
-#: ../xfsettingsd/accessibility.c:416
+#: ../blsettingsd/accessibility.c:416
 msgid "Sticky keys"
 msgstr "স্টিকি কী"
 
-#: ../xfsettingsd/accessibility.c:421
+#: ../blsettingsd/accessibility.c:421
 msgid "Slow keys are enabled"
 msgstr "ধীর কী সক্রিয়"
 
-#: ../xfsettingsd/accessibility.c:423
+#: ../blsettingsd/accessibility.c:423
 msgid "Slow keys are disabled"
 msgstr "ধীর কী নিষ্ক্রিয়"
 
-#: ../xfsettingsd/accessibility.c:425
+#: ../blsettingsd/accessibility.c:425
 msgid "Slow keys"
 msgstr "ধীর কী"
 
-#: ../xfsettingsd/accessibility.c:430
+#: ../blsettingsd/accessibility.c:430
 msgid "Bounce keys are enabled"
 msgstr "লাফানো কী সক্রিয়"
 
-#: ../xfsettingsd/accessibility.c:432
+#: ../blsettingsd/accessibility.c:432
 msgid "Bounce keys are disabled"
 msgstr "লাফানো কী নিষ্ক্রিয়"
 
-#: ../xfsettingsd/accessibility.c:434
+#: ../blsettingsd/accessibility.c:434
 msgid "Bounce keys"
 msgstr "লাফানো কী"
 
-#: ../xfsettingsd/keyboard-shortcuts.c:244
+#: ../blsettingsd/keyboard-shortcuts.c:244
 #, c-format
 msgid "Failed to launch shortcut \"%s\""
 msgstr ""
 
-#: ../xfsettingsd/main.c:79
+#: ../blsettingsd/main.c:79
 msgid "Do not fork to the background"
 msgstr ""
 
-#: ../xfsettingsd/main.c:80
+#: ../blsettingsd/main.c:80
 msgid "Replace running xsettings daemon (if any)"
 msgstr "বর্তমান xsettings ডিমনকে প্রতিস্থাপন (যদি থাকে)"
 
-#. value in xfconf isn't a string, so make a default one
-#: ../xfsettingsd/workspaces.c:338 ../xfsettingsd/workspaces.c:396
+#. value in blconf isn't a string, so make a default one
+#: ../blsettingsd/workspaces.c:338 ../blsettingsd/workspaces.c:396
 #, c-format
 msgid "Workspace %d"
 msgstr "কর্মপরিসর %d"
 
-#: ../xfsettingsd/xfsettingsd.desktop.in.h:1
+#: ../blsettingsd/blsettingsd.desktop.in.h:1
 msgid "The Xfce Settings Daemon"
 msgstr ""
 
-#: ../xfce4-settings-manager/main.c:44
+#: ../blade-settings-manager/main.c:44
 msgid "Settings dialog to show"
 msgstr "যে সেটিংস ডায়ালগ প্রদর্শন করা হবে"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:194
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:194
 msgid "All _Settings"
 msgstr ""
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:204
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:204
 msgid "Help"
 msgstr ""
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:396
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:396
 msgid "Settings"
 msgstr "সেটিংসমূহ"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:398
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:398
 msgid "Customize your desktop"
 msgstr "আপনার ডেস্কটপ স্বনির্ধারণ করুন"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:893
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:904
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:893
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:904
 #, c-format
 msgid "Unable to start \"%s\""
 msgstr "\"%s\" আরম্ভ করতে ব্যর্থ"
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:1
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:1
 msgid "Settings Manager"
 msgstr "সেটিংস ব্যবস্থাপক"
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:2
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:2
 msgid "Graphical Settings Manager for Xfce 4"
 msgstr "Xfce 4-এর জন্য গ্রাফিকাল সেটিংস ব্যবস্থাপক"

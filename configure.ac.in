@@ -9,32 +9,32 @@ dnl
 dnl ***************************
 dnl *** Version information ***
 dnl ***************************
-m4_define([xfce4_settings_version_major], [4])
-m4_define([xfce4_settings_version_minor], [12])
-m4_define([xfce4_settings_version_micro], [4])
-m4_define([xfce4_settings_version_nano], [])
-m4_define([xfce4_settings_version_build], [@REVISION@])
-m4_define([xfce4_settings_version_tag], []) # Leave empty for releases
-m4_define([xfce4_settings_version], [xfce4_settings_version_major().xfce4_settings_version_minor().xfce4_settings_version_micro()ifelse(xfce4_settings_version_nano(), [], [], [.xfce4_settings_version_nano()])ifelse(xfce4_settings_version_tag(), [git], [xfce4_settings_version_tag()-xfce4_settings_version_build()], [xfce4_settings_version_tag()])])
+m4_define([blade_settings_version_major], [4])
+m4_define([blade_settings_version_minor], [12])
+m4_define([blade_settings_version_micro], [4])
+m4_define([blade_settings_version_nano], [])
+m4_define([blade_settings_version_build], [@REVISION@])
+m4_define([blade_settings_version_tag], []) # Leave empty for releases
+m4_define([blade_settings_version], [blade_settings_version_major().blade_settings_version_minor().blade_settings_version_micro()ifelse(blade_settings_version_nano(), [], [], [.blade_settings_version_nano()])ifelse(blade_settings_version_tag(), [git], [blade_settings_version_tag()-blade_settings_version_build()], [blade_settings_version_tag()])])
 
-dnl define a short version string for xfce4-settings
-m4_append([xfce4_settings_version_short], ["])
-m4_append([xfce4_settings_version_short], [xfce4_settings_version_major])
-m4_append([xfce4_settings_version_short], [.])
-m4_append([xfce4_settings_version_short], [xfce4_settings_version_minor])
-m4_append([xfce4_settings_version_short], ["])
+dnl define a short version string for blade-settings
+m4_append([blade_settings_version_short], ["])
+m4_append([blade_settings_version_short], [blade_settings_version_major])
+m4_append([blade_settings_version_short], [.])
+m4_append([blade_settings_version_short], [blade_settings_version_minor])
+m4_append([blade_settings_version_short], ["])
 
 dnl *******************************************
 dnl *** Debugging support for GIT snapshots ***
 dnl *******************************************
-m4_define([xfce4_settings_debug_default], [ifelse(xfce4_settings_version_tag(), [git], [full], [minimum])])
+m4_define([blade_settings_debug_default], [ifelse(blade_settings_version_tag(), [git], [full], [minimum])])
 
 dnl ***************************
 dnl *** Initialize autoconf ***
 dnl ***************************
 AC_COPYRIGHT([Copyright (c) 2008-2015
         The Xfce development team. All rights reserved.])
-AC_INIT([xfce4-settings], [xfce4_settings_version], [http://bugzilla.xfce.org/])
+AC_INIT([blade-settings], [blade_settings_version], [http://bugzilla.xfce.org/])
 AC_PREREQ([2.60])
 AC_CONFIG_MACRO_DIRS([m4])
 AC_REVISION([@REVISION@])
@@ -83,20 +83,20 @@ XDT_I18N([@LINGUAS@])
 dnl ***********************************
 dnl *** Version string for the docs ***
 dnl ***********************************
-AC_DEFINE([XFCE4_SETTINGS_VERSION_SHORT], [xfce4_settings_version_short], [Short version string of xfce4-settings])
+AC_DEFINE([BLADE_SETTINGS_VERSION_SHORT], [blade_settings_version_short], [Short version string of blade-settings])
 
 dnl ***********************************
 dnl *** Check for required packages ***
 dnl ***********************************
-XDT_CHECK_PACKAGE([EXO], [exo-1], [0.7.1])
+XDT_CHECK_PACKAGE([BLXO], [blxo-1], [0.7.1])
 XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.20.0])
 XDT_CHECK_PACKAGE([GLIB], [glib-2.0], [2.24.0])
 XDT_CHECK_PACKAGE([GIO], [gio-2.0], [2.24.0])
-XDT_CHECK_PACKAGE([GARCON], [garcon-1], [0.1.10])
-XDT_CHECK_PACKAGE([LIBXFCE4UTIL], [libxfce4util-1.0], [4.9.0])
-XDT_CHECK_PACKAGE([LIBXFCE4UI], [libxfce4ui-1], [4.11.0])
+XDT_CHECK_PACKAGE([POJK], [pojk-1], [0.1.10])
+XDT_CHECK_PACKAGE([LIBBLADEUTIL], [libbladeutil-1.0], [4.9.0])
+XDT_CHECK_PACKAGE([LIBBLADEUI], [libbladeui-1], [4.11.0])
 XDT_CHECK_PACKAGE([LIBXFCE4KBD_PRIVATE], [libxfce4kbd-private-2], [4.9.0])
-XDT_CHECK_PACKAGE([XFCONF], [libxfconf-0], [4.9.0])
+XDT_CHECK_PACKAGE([BLCONF], [libblconf-0], [4.9.0])
 XDT_CHECK_PACKAGE([DBUS_GLIB], [dbus-glib-1], [0.84])
 XDT_CHECK_PACKAGE([FONTCONFIG], [fontconfig], [2.6.0])
 
@@ -228,7 +228,7 @@ AC_SUBST([HELPER_PATH_PREFIX])
 dnl ***********************************
 dnl *** Check for debugging support ***
 dnl ***********************************
-XDT_FEATURE_DEBUG([xfce4_settings_debug_default])
+XDT_FEATURE_DEBUG([blade_settings_debug_default])
 
 dnl **************************************
 dnl *** Check for linker optimizations ***
@@ -258,9 +258,9 @@ dialogs/display-settings/Makefile
 dialogs/keyboard-settings/Makefile
 dialogs/mime-settings/Makefile
 dialogs/mouse-settings/Makefile
-xfsettingsd/Makefile
-xfce4-settings-manager/Makefile
-xfce4-settings-editor/Makefile
+blsettingsd/Makefile
+blade-settings-manager/Makefile
+blade-settings-editor/Makefile
 ])
 
 dnl ***************************

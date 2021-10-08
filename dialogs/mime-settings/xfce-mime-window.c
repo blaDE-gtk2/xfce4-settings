@@ -26,10 +26,10 @@
 
 #include <gtk/gtk.h>
 #include <gio/gio.h>
-#include <libxfce4util/libxfce4util.h>
-#include <libxfce4ui/libxfce4ui.h>
+#include <libbladeutil/libbladeutil.h>
+#include <libbladeui/libbladeui.h>
 #include <gio/gdesktopappinfo.h>
-#include <xfconf/xfconf.h>
+#include <blconf/blconf.h>
 
 #include "xfce-mime-window.h"
 #include "xfce-mime-chooser.h"
@@ -75,7 +75,7 @@ struct _XfceMimeWindow
 {
     XfceTitledDialog  __parent__;
 
-    XfconfChannel *channel;
+    BlconfChannel *channel;
 
     GtkWidget     *treeview;
 
@@ -164,7 +164,7 @@ xfce_mime_window_init (XfceMimeWindow *window)
     GtkTreeViewColumn *column;
     GtkCellRenderer   *renderer;
 
-    window->channel = xfconf_channel_new ("xfce4-mime-settings");
+    window->channel = blconf_channel_new ("xfce4-mime-settings");
 
     window->attrs_bold = pango_attr_list_new ();
     pango_attr_list_insert (window->attrs_bold, pango_attr_weight_new (PANGO_WEIGHT_BOLD));
@@ -179,8 +179,8 @@ xfce_mime_window_init (XfceMimeWindow *window)
 
     /* restore old user size */
     gtk_window_set_default_size (GTK_WINDOW (window),
-        xfconf_channel_get_int (window->channel, "/last/window-width", 550),
-        xfconf_channel_get_int (window->channel, "/last/window-height", 400));
+        blconf_channel_get_int (window->channel, "/last/window-width", 550),
+        blconf_channel_get_int (window->channel, "/last/window-height", 400));
 
     /* don't act like a dialog, hide the button box */
     area = gtk_dialog_get_action_area (GTK_DIALOG (window));
@@ -266,7 +266,7 @@ xfce_mime_window_init (XfceMimeWindow *window)
     /* HACK */
     /* https://bugzilla.gnome.org/show_bug.cgi?id=668428 */
     column->use_resized_width = TRUE;
-    column->resized_width = xfconf_channel_get_int (window->channel,
+    column->resized_width = blconf_channel_get_int (window->channel,
                                                     "/last/mime-width",
                                                     300);
 
@@ -294,7 +294,7 @@ xfce_mime_window_init (XfceMimeWindow *window)
 
     /* HACK */
     column->use_resized_width = TRUE;
-    column->resized_width = xfconf_channel_get_int (window->channel,
+    column->resized_width = blconf_channel_get_int (window->channel,
                                                     "/last/status-width",
                                                     75);
 
@@ -315,7 +315,7 @@ xfce_mime_window_init (XfceMimeWindow *window)
 
     /* HACK */
     column->use_resized_width = TRUE;
-    column->resized_width = xfconf_channel_get_int (window->channel,
+    column->resized_width = blconf_channel_get_int (window->channel,
                                                     "/last/default-width",
                                                     100);
 
@@ -365,7 +365,7 @@ xfce_mime_window_delete_event (GtkWidget   *widget,
     gchar              prop[32];
     GdkWindowState     state;
 
-    g_return_val_if_fail (XFCONF_IS_CHANNEL (window->channel), FALSE);
+    g_return_val_if_fail (BLCONF_IS_CHANNEL (window->channel), FALSE);
 
     /* don't save the state for full-screen windows */
     state = gdk_window_get_state (GTK_WIDGET (window)->window);
@@ -373,15 +373,15 @@ xfce_mime_window_delete_event (GtkWidget   *widget,
     {
         /* save window size */
         gtk_window_get_size (GTK_WINDOW (widget), &width, &height);
-        xfconf_channel_set_int (window->channel, "/last/window-width", width),
-        xfconf_channel_set_int (window->channel, "/last/window-height", height);
+        blconf_channel_set_int (window->channel, "/last/window-width", width),
+        blconf_channel_set_int (window->channel, "/last/window-height", height);
 
         /* save column positions */
         for (i = 0; i < G_N_ELEMENTS (columns); i++)
         {
             column = gtk_tree_view_get_column (GTK_TREE_VIEW (window->treeview), i);
             g_snprintf (prop, sizeof (prop), "/last/%s-width", columns[i]);
-            xfconf_channel_set_int (window->channel, prop,
+            blconf_channel_set_int (window->channel, prop,
                                     gtk_tree_view_column_get_width (column));
         }
     }

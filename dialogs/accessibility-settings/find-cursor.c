@@ -30,7 +30,7 @@
 #include <gdk/gdkx.h>
 #include <math.h>
 
-#include <xfconf/xfconf.h>
+#include <blconf/blconf.h>
 
 /* size of the window and circles */
 #define CIRCLE_SIZE 500
@@ -191,27 +191,27 @@ find_cursor_window_expose (GtkWidget       *widget,
 
 gint
 main (gint argc, gchar **argv) {
-    XfconfChannel *accessibility_channel = NULL;
+    BlconfChannel *accessibility_channel = NULL;
     GError        *error = NULL;
     GtkWidget     *window;
     GdkWindow     *root_window;
     gint           x,y;
     gboolean       composited;
 
-    /* initialize xfconf */
-    if (!xfconf_init (&error)) {
+    /* initialize blconf */
+    if (!blconf_init (&error)) {
         /* print error and exit */
-        g_error ("Failed to connect to xfconf daemon: %s.", error->message);
+        g_error ("Failed to connect to blconf daemon: %s.", error->message);
         g_error_free (error);
 
         return EXIT_FAILURE;
     }
 
     /* open the channels */
-    accessibility_channel = xfconf_channel_new ("accessibility");
+    accessibility_channel = blconf_channel_new ("accessibility");
 
     /* don't do anything if the /FindCursor setting is not enabled */
-    if (!xfconf_channel_get_bool (accessibility_channel, "/FindCursor", TRUE))
+    if (!blconf_channel_get_bool (accessibility_channel, "/FindCursor", TRUE))
         return 0;
 
     gtk_init (&argc, &argv);
@@ -264,7 +264,7 @@ main (gint argc, gchar **argv) {
 
     gtk_main ();
 
-    xfconf_shutdown ();
+    blconf_shutdown ();
 
     return 0;
 }

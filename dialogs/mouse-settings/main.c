@@ -31,7 +31,7 @@
 #include <math.h>
 #endif
 
-#include <xfsettingsd/pointers-defines.h>
+#include <blsettingsd/pointers-defines.h>
 #ifdef HAVE_XCURSOR
 #include <X11/Xcursor/Xcursor.h>
 #endif /* !HAVE_XCURSOR */
@@ -43,9 +43,9 @@
 #include <gtk/gtk.h>
 #include <gdk/gdkx.h>
 
-#include <xfconf/xfconf.h>
-#include <libxfce4util/libxfce4util.h>
-#include <libxfce4ui/libxfce4ui.h>
+#include <blconf/blconf.h>
+#include <libbladeutil/libbladeutil.h>
+#include <libbladeui/libbladeui.h>
 
 #include "mouse-dialog_ui.h"
 
@@ -59,8 +59,8 @@
 
 
 /* global setting channels */
-XfconfChannel *xsettings_channel;
-XfconfChannel *pointers_channel;
+BlconfChannel *xsettings_channel;
+BlconfChannel *pointers_channel;
 
 /* lock counter to avoid signals during updates */
 static gint locked = 0;
@@ -113,7 +113,7 @@ enum
 enum
 {
     COLUMN_DEVICE_NAME,
-    COLUMN_DEVICE_XFCONF_NAME,
+    COLUMN_DEVICE_BLCONF_NAME,
     COLUMN_DEVICE_XID,
     N_DEVICE_COLUMNS
 };
@@ -347,7 +347,7 @@ mouse_settings_themes_selection_changed (GtkTreeSelection *selection,
 
         /* write configuration (not during a lock) */
         if (locked == 0)
-            xfconf_channel_set_string (xsettings_channel, "/Gtk/CursorThemeName", name);
+            blconf_channel_set_string (xsettings_channel, "/Gtk/CursorThemeName", name);
 
         /* cleanup */
         g_free (path);
@@ -430,7 +430,7 @@ mouse_settings_themes_populate_store (GtkBuilder *builder)
     basedirs = g_strsplit (path, ":", -1);
 
     /* get the active theme */
-    active_theme = xfconf_channel_get_string (xsettings_channel, "/Gtk/CursorThemeName", "default");
+    active_theme = blconf_channel_get_string (xsettings_channel, "/Gtk/CursorThemeName", "default");
 
     /* create the store */
     store = gtk_list_store_new (N_THEME_COLUMNS, GDK_TYPE_PIXBUF, G_TYPE_STRING,
@@ -774,7 +774,7 @@ mouse_settings_device_get_int_property (XDevice *device,
 static gboolean
 mouse_settings_device_get_selected (GtkBuilder  *builder,
                                     XDevice    **device,
-                                    gchar      **xfconf_name)
+                                    gchar      **blconf_name)
 {
     GObject      *combobox;
     GtkTreeIter   iter;
@@ -791,8 +791,8 @@ mouse_settings_device_get_selected (GtkBuilder  *builder,
         model = gtk_combo_box_get_model (GTK_COMBO_BOX (combobox));
         gtk_tree_model_get (model, &iter, COLUMN_DEVICE_XID, &xid, -1);
 
-        if (xfconf_name != NULL)
-            gtk_tree_model_get (model, &iter, COLUMN_DEVICE_XFCONF_NAME, xfconf_name, -1);
+        if (blconf_name != NULL)
+            gtk_tree_model_get (model, &iter, COLUMN_DEVICE_BLCONF_NAME, blconf_name, -1);
 
         if (device != NULL)
         {
@@ -836,7 +836,7 @@ mouse_settings_wacom_set_rotation (GtkComboBox *combobox,
             gtk_tree_model_get (model, &iter, 0, &rotation, -1);
 
             prop = g_strconcat ("/", name, "/Properties/Wacom_Rotation", NULL);
-            xfconf_channel_set_int (pointers_channel, prop, rotation);
+            blconf_channel_set_int (pointers_channel, prop, rotation);
             g_free (prop);
         }
 
@@ -873,7 +873,7 @@ mouse_settings_wacom_set_mode (GtkComboBox *combobox,
             gtk_tree_model_get (model, &iter, 0, &mode, -1);
 
             prop = g_strconcat ("/", name, "/Mode", NULL);
-            xfconf_channel_set_string (pointers_channel, prop, mode);
+            blconf_channel_set_string (pointers_channel, prop, mode);
             g_free (prop);
 
             g_free (mode);
@@ -940,10 +940,10 @@ mouse_settings_synaptics_set_tap_to_click (GtkBuilder *builder)
                 }
 
                 prop = g_strconcat ("/", name, "/Properties/Synaptics_Tap_Action", NULL);
-                xfconf_channel_set_arrayv (pointers_channel, prop, array);
+                blconf_channel_set_arrayv (pointers_channel, prop, array);
                 g_free (prop);
 
-                xfconf_array_free (array);
+                blconf_array_free (array);
             }
 
             XFree (data);
@@ -953,7 +953,7 @@ mouse_settings_synaptics_set_tap_to_click (GtkBuilder *builder)
         /* Set the corresponding libinput property as well */
         prop = g_strdup_printf ("/%s/Properties/%s", name, LIBINPUT_PROP_TAP);
         g_strdelimit (prop, " ", '_');
-        xfconf_channel_set_int (pointers_channel, prop, (int) tap_to_click);
+        blconf_channel_set_int (pointers_channel, prop, (int) tap_to_click);
         g_free (prop);
 #endif /* HAVE_LIBINPUT */
     }
@@ -1056,7 +1056,7 @@ mouse_settings_synaptics_set_scrolling (GtkComboBox *combobox,
     {
         /* 3 values: vertical, horizontal, corner. */
         prop = g_strconcat ("/", name, "/Properties/Synaptics_Edge_Scrolling", NULL);
-        xfconf_channel_set_array (pointers_channel, prop,
+        blconf_channel_set_array (pointers_channel, prop,
                                   G_TYPE_INT, &edge_scroll[0],
                                   G_TYPE_INT, &edge_scroll[1],
                                   G_TYPE_INT, &edge_scroll[2],
@@ -1065,7 +1065,7 @@ mouse_settings_synaptics_set_scrolling (GtkComboBox *combobox,
 
         /* 2 values: vertical, horizontal. */
         prop = g_strconcat ("/", name, "/Properties/Synaptics_Two-Finger_Scrolling", NULL);
-        xfconf_channel_set_array (pointers_channel, prop,
+        blconf_channel_set_array (pointers_channel, prop,
                                   G_TYPE_INT, &two_scroll[0],
                                   G_TYPE_INT, &two_scroll[1],
                                   G_TYPE_INVALID);
@@ -1073,19 +1073,19 @@ mouse_settings_synaptics_set_scrolling (GtkComboBox *combobox,
 
         /* 1 value: circular. */
         prop = g_strconcat ("/", name, "/Properties/Synaptics_Circular_Scrolling", NULL);
-        xfconf_channel_set_int (pointers_channel, prop, circ_scroll);
+        blconf_channel_set_int (pointers_channel, prop, circ_scroll);
         g_free (prop);
 
         /* 1 value: location. */
         prop = g_strconcat ("/", name, "/Properties/Synaptics_Circular_Scrolling_Trigger", NULL);
-        xfconf_channel_set_int (pointers_channel, prop, circ_trigger);
+        blconf_channel_set_int (pointers_channel, prop, circ_trigger);
         g_free (prop);
 
 #ifdef HAVE_LIBINPUT
         /* Set the corresponding libinput property as well */
         prop = g_strdup_printf ("/%s/Properties/%s", name, LIBINPUT_PROP_SCROLL_METHOD_ENABLED);
         g_strdelimit (prop, " ", '_');
-        xfconf_channel_set_array (pointers_channel, prop,
+        blconf_channel_set_array (pointers_channel, prop,
                                   G_TYPE_INT, &two_scroll[0],
                                   G_TYPE_INT, &edge_scroll[0],
                                   G_TYPE_INT, &button_scroll,
@@ -1139,7 +1139,7 @@ mouse_settings_device_set_enabled (GtkToggleButton *button,
     if (mouse_settings_device_get_selected (builder, NULL, &name))
     {
         prop = g_strconcat ("/", name, "/Properties/Device_Enabled", NULL);
-        xfconf_channel_set_int (pointers_channel, prop, enabled);
+        blconf_channel_set_int (pointers_channel, prop, enabled);
         g_free (prop);
     }
 
@@ -1533,7 +1533,7 @@ mouse_settings_device_save (GtkBuilder *builder)
     {
         /* get device id and number of buttons */
         model = gtk_combo_box_get_model (GTK_COMBO_BOX (combobox));
-        gtk_tree_model_get (model, &iter, COLUMN_DEVICE_XFCONF_NAME, &name, -1);
+        gtk_tree_model_get (model, &iter, COLUMN_DEVICE_BLCONF_NAME, &name, -1);
 
         if (G_LIKELY (name))
         {
@@ -1541,30 +1541,30 @@ mouse_settings_device_save (GtkBuilder *builder)
             object = gtk_builder_get_object (builder, "device-right-handed");
             g_snprintf (property_name, sizeof (property_name), "/%s/RightHanded", name);
             righthanded = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (object));
-            if (!xfconf_channel_has_property (pointers_channel, property_name)
-                || xfconf_channel_get_bool (pointers_channel, property_name, TRUE) != righthanded)
-                xfconf_channel_set_bool (pointers_channel, property_name, righthanded);
+            if (!blconf_channel_has_property (pointers_channel, property_name)
+                || blconf_channel_get_bool (pointers_channel, property_name, TRUE) != righthanded)
+                blconf_channel_set_bool (pointers_channel, property_name, righthanded);
 
             /* store reverse scrolling */
             object = gtk_builder_get_object (builder, "device-reverse-scrolling");
             g_snprintf (property_name, sizeof (property_name), "/%s/ReverseScrolling", name);
             reverse_scrolling = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (object));
-            if (xfconf_channel_get_bool (pointers_channel, property_name, FALSE) != reverse_scrolling)
-                xfconf_channel_set_bool (pointers_channel, property_name, reverse_scrolling);
+            if (blconf_channel_get_bool (pointers_channel, property_name, FALSE) != reverse_scrolling)
+                blconf_channel_set_bool (pointers_channel, property_name, reverse_scrolling);
 
             /* store the threshold */
             object = gtk_builder_get_object (builder, "device-threshold-scale");
             g_snprintf (property_name, sizeof (property_name), "/%s/Threshold", name);
             threshold = gtk_range_get_value (GTK_RANGE (object));
-            if (xfconf_channel_get_int (pointers_channel, property_name, -1) != threshold)
-                xfconf_channel_set_int (pointers_channel, property_name, threshold);
+            if (blconf_channel_get_int (pointers_channel, property_name, -1) != threshold)
+                blconf_channel_set_int (pointers_channel, property_name, threshold);
 
             /* store the acceleration */
             object = gtk_builder_get_object (builder, "device-acceleration-scale");
             g_snprintf (property_name, sizeof (property_name), "/%s/Acceleration", name);
             acceleration = gtk_range_get_value (GTK_RANGE (object));
-            if (xfconf_channel_get_double (pointers_channel, property_name, -1) != acceleration)
-                xfconf_channel_set_double (pointers_channel, property_name, acceleration);
+            if (blconf_channel_get_double (pointers_channel, property_name, -1) != acceleration)
+                blconf_channel_set_double (pointers_channel, property_name, acceleration);
 
             /* cleanup */
             g_free (name);
@@ -1575,7 +1575,7 @@ mouse_settings_device_save (GtkBuilder *builder)
 
 
 static gchar *
-mouse_settings_device_xfconf_name (const gchar *name)
+mouse_settings_device_blconf_name (const gchar *name)
 {
     GString     *string;
     const gchar *p;
@@ -1615,7 +1615,7 @@ mouse_settings_device_populate_store (GtkBuilder *builder,
     GtkListStore    *store;
     GObject         *combobox;
     GtkCellRenderer *renderer;
-    gchar           *xfconf_name;
+    gchar           *blconf_name;
     gboolean         has_active_item = FALSE;
 
     /* lock */
@@ -1628,7 +1628,7 @@ mouse_settings_device_populate_store (GtkBuilder *builder,
     {
         store = gtk_list_store_new (N_DEVICE_COLUMNS,
                                     G_TYPE_STRING /* COLUMN_DEVICE_NAME */,
-                                    G_TYPE_STRING /* COLUMN_DEVICE_XFCONF_NAME */,
+                                    G_TYPE_STRING /* COLUMN_DEVICE_BLCONF_NAME */,
                                     G_TYPE_ULONG /* COLUMN_DEVICE_XID */);
         gtk_combo_box_set_model (GTK_COMBO_BOX (combobox), GTK_TREE_MODEL (store));
 
@@ -1670,12 +1670,12 @@ mouse_settings_device_populate_store (GtkBuilder *builder,
         if (device_info->name == NULL)
             continue;
 
-        /* create a valid xfconf device name */
-        xfconf_name = mouse_settings_device_xfconf_name (device_info->name);
+        /* create a valid blconf device name */
+        blconf_name = mouse_settings_device_blconf_name (device_info->name);
 
         /* insert in the store */
         gtk_list_store_insert_with_values (store, &iter, i,
-                                           COLUMN_DEVICE_XFCONF_NAME, xfconf_name,
+                                           COLUMN_DEVICE_BLCONF_NAME, blconf_name,
                                            COLUMN_DEVICE_NAME, device_info->name,
                                            COLUMN_DEVICE_XID, device_info->id,
                                            -1);
@@ -1690,7 +1690,7 @@ mouse_settings_device_populate_store (GtkBuilder *builder,
             has_active_item = TRUE;
         }
 
-        g_free (xfconf_name);
+        g_free (blconf_name);
 
     }
 
@@ -1757,7 +1757,7 @@ mouse_settings_device_reset (GtkWidget  *button,
     {
         /* get device id and number of buttons */
         model = gtk_combo_box_get_model (GTK_COMBO_BOX (combobox));
-        gtk_tree_model_get (model, &iter, COLUMN_DEVICE_XFCONF_NAME, &name, -1);
+        gtk_tree_model_get (model, &iter, COLUMN_DEVICE_BLCONF_NAME, &name, -1);
 
         if (G_LIKELY (name != NULL && timeout_id == 0))
         {
@@ -1766,12 +1766,12 @@ mouse_settings_device_reset (GtkWidget  *button,
 
             /* set the threshold to -1 */
             property_name = g_strdup_printf ("/%s/Threshold", name);
-            xfconf_channel_set_int (pointers_channel, property_name, -1);
+            blconf_channel_set_int (pointers_channel, property_name, -1);
             g_free (property_name);
 
             /* set the acceleration to -1 */
             property_name = g_strdup_printf ("/%s/Acceleration", name);
-            xfconf_channel_set_double (pointers_channel, property_name, -1.00);
+            blconf_channel_set_double (pointers_channel, property_name, -1.00);
             g_free (property_name);
 
             /* update the sliders in 500ms */
@@ -1834,8 +1834,8 @@ mouse_settings_dialog_response (GtkWidget *dialog,
                                 gint       response_id)
 {
     if (response_id == GTK_RESPONSE_HELP)
-        xfce_dialog_show_help_with_version (GTK_WINDOW (dialog), "xfce4-settings", "mouse",
-                                            NULL, XFCE4_SETTINGS_VERSION_SHORT);
+        xfce_dialog_show_help_with_version (GTK_WINDOW (dialog), "blade-settings", "mouse",
+                                            NULL, BLADE_SETTINGS_VERSION_SHORT);
     else
         gtk_main_quit ();
 }
@@ -1894,11 +1894,11 @@ main (gint argc, gchar **argv)
         return EXIT_SUCCESS;
     }
 
-    /* initialize xfconf */
-    if (G_UNLIKELY (!xfconf_init (&error)))
+    /* initialize blconf */
+    if (G_UNLIKELY (!blconf_init (&error)))
     {
         /* print error and leave */
-        g_critical ("Failed to connect to Xfconf daemon: %s", error->message);
+        g_critical ("Failed to connect to Blconf daemon: %s", error->message);
         g_error_free (error);
 
         return EXIT_FAILURE;
@@ -1922,13 +1922,13 @@ main (gint argc, gchar **argv)
         return EXIT_FAILURE;
     }
 
-    /* hook to make sure the libxfce4ui library is linked */
+    /* hook to make sure the libbladeui library is linked */
     if (xfce_titled_dialog_get_type () == 0)
         return EXIT_FAILURE;
 
     /* open the xsettings and pointers channel */
-    xsettings_channel = xfconf_channel_new ("xsettings");
-    pointers_channel = xfconf_channel_new ("pointers");
+    xsettings_channel = blconf_channel_new ("xsettings");
+    pointers_channel = blconf_channel_new ("pointers");
 
     if (G_LIKELY (pointers_channel && xsettings_channel))
     {
@@ -1981,7 +1981,7 @@ main (gint argc, gchar **argv)
             syndaemon = g_find_program_in_path ("syndaemon");
             gtk_widget_set_sensitive (GTK_WIDGET (object), syndaemon != NULL);
             g_free (syndaemon);
-            xfconf_g_property_bind (pointers_channel, "/DisableTouchpadWhileTyping",
+            blconf_g_property_bind (pointers_channel, "/DisableTouchpadWhileTyping",
                                     G_TYPE_BOOLEAN, G_OBJECT (synaptics_disable_while_type), "active");
 
             synaptics_disable_duration_table = gtk_builder_get_object (builder, "synaptics-disable-duration-box");
@@ -1995,7 +1995,7 @@ main (gint argc, gchar **argv)
                               G_CALLBACK (mouse_settings_format_value_s), NULL);
 
             object = gtk_builder_get_object (builder, "synaptics-disable-duration");
-            xfconf_g_property_bind (pointers_channel, "/DisableTouchpadDuration",
+            blconf_g_property_bind (pointers_channel, "/DisableTouchpadDuration",
                                     G_TYPE_DOUBLE, G_OBJECT (object), "value");
 
             object = gtk_builder_get_object (builder, "synaptics-tap-to-click");
@@ -2025,7 +2025,7 @@ main (gint argc, gchar **argv)
 
             /* connect the cursor size in the cursor tab */
             object = gtk_builder_get_object (builder, "theme-cursor-size");
-            xfconf_g_property_bind (xsettings_channel, "/Gtk/CursorThemeSize",
+            blconf_g_property_bind (xsettings_channel, "/Gtk/CursorThemeSize",
                                     G_TYPE_INT, G_OBJECT (object), "value");
 #else
             /* hide the themes tab */
@@ -2035,7 +2035,7 @@ main (gint argc, gchar **argv)
 
             /* connect sliders in the gtk tab */
             object = gtk_builder_get_object (builder, "dnd-threshold");
-            xfconf_g_property_bind (xsettings_channel, "/Net/DndDragThreshold",
+            blconf_g_property_bind (xsettings_channel, "/Net/DndDragThreshold",
                                     G_TYPE_INT, G_OBJECT (object), "value");\
 
             object = gtk_builder_get_object (builder, "dnd-threshold-scale");
@@ -2043,7 +2043,7 @@ main (gint argc, gchar **argv)
                               G_CALLBACK (mouse_settings_format_value_px), NULL);
 
             object = gtk_builder_get_object (builder, "dclick-time");
-            xfconf_g_property_bind (xsettings_channel, "/Net/DoubleClickTime",
+            blconf_g_property_bind (xsettings_channel, "/Net/DoubleClickTime",
                                     G_TYPE_INT, G_OBJECT (object), "value");
 
             object = gtk_builder_get_object (builder, "dclick-time-scale");
@@ -2051,7 +2051,7 @@ main (gint argc, gchar **argv)
                               G_CALLBACK (mouse_settings_format_value_ms), NULL);
 
             object = gtk_builder_get_object (builder, "dclick-distance");
-            xfconf_g_property_bind (xsettings_channel, "/Net/DoubleClickDistance",
+            blconf_g_property_bind (xsettings_channel, "/Net/DoubleClickDistance",
                                     G_TYPE_INT, G_OBJECT (object), "value");
 
             object = gtk_builder_get_object (builder, "dclick-distance-scale");
@@ -2121,8 +2121,8 @@ main (gint argc, gchar **argv)
         g_object_unref (G_OBJECT (pointers_channel));
     }
 
-    /* shutdown xfconf */
-    xfconf_shutdown ();
+    /* shutdown blconf */
+    blconf_shutdown ();
 
     /* cleanup */
     g_free (opt_device_name);

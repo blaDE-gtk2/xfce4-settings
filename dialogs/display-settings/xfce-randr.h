@@ -17,7 +17,7 @@
  *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  */
 
-#include <xfconf/xfconf.h>
+#include <blconf/blconf.h>
 #include <gdk/gdk.h>
 #include <X11/extensions/Xrandr.h>
 
@@ -117,16 +117,16 @@ void              xfce_randr_reload          (XfceRandr        *randr);
 
 void              xfce_randr_save_output     (XfceRandr        *randr,
                                               const gchar      *scheme,
-                                              XfconfChannel    *channel,
+                                              BlconfChannel    *channel,
                                               guint             output);
 
 void              xfce_randr_apply           (XfceRandr        *randr,
                                               const gchar      *scheme,
-                                              XfconfChannel    *channel);
+                                              BlconfChannel    *channel);
 
 void              xfce_randr_load            (XfceRandr        *randr,
                                               const gchar      *scheme,
-                                              XfconfChannel    *channel);
+                                              BlconfChannel    *channel);
 
 const XfceRRMode *xfce_randr_find_mode_by_id (XfceRandr        *randr,
                                               guint             output,

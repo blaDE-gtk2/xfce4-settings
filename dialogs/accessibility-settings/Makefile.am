@@ -1,4 +1,5 @@
 AM_CPPFLAGS = \
+	-DGLIB_DISABLE_DEPRECATION_WARNINGS \
 	-I${top_srcdir} \
 	-DDATADIR=\"$(datadir)\" \
 	-DSRCDIR=\"$(top_srcdir)\" \
@@ -15,7 +16,7 @@ xfce4_find_cursor_SOURCES = \
 
 xfce4_find_cursor_CFLAGS = \
 	$(GTK_CFLAGS) \
-	$(XFCONF_CFLAGS) \
+	$(BLCONF_CFLAGS) \
 	$(PLATFORM_CFLAGS) \
     -DGTK_DISABLE_SINGLE_INCLUDES \
     -DGDK_DISABLE_DEPRECATED \
@@ -30,7 +31,7 @@ xfce4_find_cursor_LDFLAGS = \
 
 xfce4_find_cursor_LDADD = \
 	$(GTK_LIBS) \
-	$(XFCONF_LIBS)
+	$(BLCONF_LIBS)
 
 xfce4_accessibility_settings_SOURCES = \
 	main.c \
@@ -38,8 +39,8 @@ xfce4_accessibility_settings_SOURCES = \
 
 xfce4_accessibility_settings_CFLAGS = \
 	$(GTK_CFLAGS) \
-	$(LIBXFCE4UI_CFLAGS) \
-	$(XFCONF_CFLAGS) \
+	$(LIBBLADEUI_CFLAGS) \
+	$(BLCONF_CFLAGS) \
 	$(PLATFORM_CFLAGS)
 
 xfce4_accessibility_settings_LDFLAGS = \
@@ -48,8 +49,8 @@ xfce4_accessibility_settings_LDFLAGS = \
 
 xfce4_accessibility_settings_LDADD = \
 	$(GTK_LIBS) \
-	$(LIBXFCE4UI_LIBS) \
-	$(XFCONF_LIBS)
+	$(LIBBLADEUI_LIBS) \
+	$(BLCONF_LIBS)
 
 if MAINTAINER_MODE
 
@@ -57,7 +58,7 @@ BUILT_SOURCES = \
 	accessibility-dialog_ui.h
 
 accessibility-dialog_ui.h: accessibility-dialog.glade
-	exo-csource --static --strip-comments --strip-content --name=accessibility_dialog_ui $< >$@
+	blxo-csource --static --strip-comments --strip-content --name=accessibility_dialog_ui $< >$@
 
 endif
 

@@ -240,7 +240,7 @@ msgstr "_Miš"
 #: ../dialogs/appearance-settings/main.c:116
 #: ../dialogs/display-settings/main.c:120
 #: ../dialogs/keyboard-settings/main.c:39 ../dialogs/mouse-settings/main.c:83
-#: ../xfce4-settings-editor/main.c:48
+#: ../blade-settings-editor/main.c:48
 msgid "Settings manager socket"
 msgstr "Priključak upravitelja postavkama"
 
@@ -248,7 +248,7 @@ msgstr "Priključak upravitelja postavkama"
 #: ../dialogs/appearance-settings/main.c:116
 #: ../dialogs/display-settings/main.c:120
 #: ../dialogs/keyboard-settings/main.c:39 ../dialogs/mouse-settings/main.c:83
-#: ../xfce4-settings-editor/main.c:48
+#: ../blade-settings-editor/main.c:48
 msgid "SOCKET ID"
 msgstr "SOCKET ID"
 
@@ -256,8 +256,8 @@ msgstr "SOCKET ID"
 #: ../dialogs/appearance-settings/main.c:117
 #: ../dialogs/display-settings/main.c:121
 #: ../dialogs/keyboard-settings/main.c:40 ../dialogs/mime-settings/main.c:40
-#: ../dialogs/mouse-settings/main.c:84 ../xfce4-settings-editor/main.c:49
-#: ../xfsettingsd/main.c:78 ../xfce4-settings-manager/main.c:40
+#: ../dialogs/mouse-settings/main.c:84 ../blade-settings-editor/main.c:49
+#: ../blsettingsd/main.c:78 ../blade-settings-manager/main.c:40
 msgid "Version information"
 msgstr "Inforemacija o verziji"
 
@@ -265,9 +265,9 @@ msgstr "Inforemacija o verziji"
 #: ../dialogs/appearance-settings/main.c:1488
 #: ../dialogs/display-settings/main.c:3029
 #: ../dialogs/keyboard-settings/main.c:77 ../dialogs/mime-settings/main.c:62
-#: ../dialogs/mouse-settings/main.c:1871 ../xfce4-settings-editor/main.c:119
-#: ../xfsettingsd/main.c:191 ../xfsettingsd/main.c:229
-#: ../xfce4-settings-manager/main.c:61
+#: ../dialogs/mouse-settings/main.c:1871 ../blade-settings-editor/main.c:119
+#: ../blsettingsd/main.c:191 ../blsettingsd/main.c:229
+#: ../blade-settings-manager/main.c:61
 #, c-format
 msgid "Type '%s --help' for usage."
 msgstr "Upiši '%s --help' za upotrebu."
@@ -276,8 +276,8 @@ msgstr "Upiši '%s --help' za upotrebu."
 #: ../dialogs/appearance-settings/main.c:1507
 #: ../dialogs/display-settings/main.c:3048
 #: ../dialogs/keyboard-settings/main.c:93 ../dialogs/mime-settings/main.c:81
-#: ../dialogs/mouse-settings/main.c:1890 ../xfce4-settings-editor/main.c:138
-#: ../xfsettingsd/main.c:207 ../xfce4-settings-manager/main.c:77
+#: ../dialogs/mouse-settings/main.c:1890 ../blade-settings-editor/main.c:138
+#: ../blsettingsd/main.c:207 ../blade-settings-manager/main.c:77
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce razvojni tim.Sva prava pridržana."
 
@@ -285,8 +285,8 @@ msgstr "Xfce razvojni tim.Sva prava pridržana."
 #: ../dialogs/appearance-settings/main.c:1508
 #: ../dialogs/display-settings/main.c:3049
 #: ../dialogs/keyboard-settings/main.c:94 ../dialogs/mime-settings/main.c:82
-#: ../dialogs/mouse-settings/main.c:1891 ../xfce4-settings-editor/main.c:139
-#: ../xfsettingsd/main.c:208 ../xfce4-settings-manager/main.c:78
+#: ../dialogs/mouse-settings/main.c:1891 ../blade-settings-editor/main.c:139
+#: ../blsettingsd/main.c:208 ../blade-settings-manager/main.c:78
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Prijavite probleme u <%s>."
@@ -622,7 +622,7 @@ msgstr "_Primarni zaslon"
 
 #: ../dialogs/display-settings/display-dialog.glade.h:10
 msgid ""
-"This is a hint for panels, docks and desktop to show on this display "
+"This is a hint for bars, docks and desktop to show on this display "
 "preferably."
 msgstr ""
 "Ovo je smjernica ploči, pokretačima i radnoj površini da je ovo preferirani "
@@ -1011,8 +1011,8 @@ msgstr "Nije moguće pokrenuti GTK +."
 
 #: ../dialogs/keyboard-settings/main.c:103
 #, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "Neuspješno spajanje na xfconf nadglednik. Razlog: %s"
+msgid "Failed to connect to blconf daemon. Reason: %s"
+msgstr "Neuspješno spajanje na blconf nadglednik. Razlog: %s"
 
 #: ../dialogs/keyboard-settings/main.c:114
 msgid "Could not create the settings dialog."
@@ -1453,178 +1453,178 @@ msgstr "Olovka (apsolutno)"
 msgid "Mouse (relative)"
 msgstr "Miš (relativno)"
 
-#: ../xfce4-settings-editor/main.c:162
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:1
+#: ../blade-settings-editor/main.c:162
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:1
 msgid "Settings Editor"
 msgstr "Uređivač postavki"
 
-#: ../xfce4-settings-editor/main.c:169
-msgid "Customize settings stored by Xfconf"
-msgstr "Prilagodi postavke koje je pohranio Xfconf"
+#: ../blade-settings-editor/main.c:169
+msgid "Customize settings stored by Blconf"
+msgstr "Prilagodi postavke koje je pohranio Blconf"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:243
+#: ../blade-settings-editor/blade-settings-editor-box.c:243
 msgid "Channel"
 msgstr "Kanal"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:277
+#: ../blade-settings-editor/blade-settings-editor-box.c:277
 msgid "Property"
 msgstr "Svojstvo"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:284
+#: ../blade-settings-editor/blade-settings-editor-box.c:284
 msgid "Type"
 msgstr "Tip"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:291
+#: ../blade-settings-editor/blade-settings-editor-box.c:291
 msgid "Locked"
 msgstr "Zaključano"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:298
+#: ../blade-settings-editor/blade-settings-editor-box.c:298
 msgid "Value"
 msgstr "Vrijednost"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:315
+#: ../blade-settings-editor/blade-settings-editor-box.c:315
 msgid "New property"
 msgstr "Novo svojstvo"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:326
+#: ../blade-settings-editor/blade-settings-editor-box.c:326
 msgid "Edit selected property"
 msgstr "Uredi odabrano svojstvo"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:334
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1022
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1365
+#: ../blade-settings-editor/blade-settings-editor-box.c:334
+#: ../blade-settings-editor/blade-settings-editor-box.c:1022
+#: ../blade-settings-editor/blade-settings-editor-box.c:1365
 msgid "_Reset"
 msgstr "_Ponovno postavi"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:337
+#: ../blade-settings-editor/blade-settings-editor-box.c:337
 msgid "Reset selected property"
 msgstr "Ponovno postavi odabrano svojstvo"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:444
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:535
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:654
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:90
+#: ../blade-settings-editor/blade-settings-editor-box.c:444
+#: ../blade-settings-editor/blade-settings-editor-box.c:535
+#: ../blade-settings-editor/blade-settings-editor-box.c:654
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:90
 msgid "Empty"
 msgstr "Prazno"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:447
+#: ../blade-settings-editor/blade-settings-editor-box.c:447
 msgid "Array"
 msgstr "Niz"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:452
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:91
+#: ../blade-settings-editor/blade-settings-editor-box.c:452
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:91
 msgid "String"
 msgstr "String"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:460
+#: ../blade-settings-editor/blade-settings-editor-box.c:460
 msgid "Integer"
 msgstr "Integer"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:463
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:92
+#: ../blade-settings-editor/blade-settings-editor-box.c:463
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:92
 msgid "Boolean"
 msgstr "Boolean"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:466
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:94
+#: ../blade-settings-editor/blade-settings-editor-box.c:466
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:94
 msgid "Double"
 msgstr "Dvostruko"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:800
+#: ../blade-settings-editor/blade-settings-editor-box.c:800
 msgid "_Reset Channel"
 msgstr "_Ponovno postavi kanal"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:801
+#: ../blade-settings-editor/blade-settings-editor-box.c:801
 msgid "Resetting a channel will permanently remove those custom settings."
 msgstr "Ponovno postavljanje kanala će trajno ukloniti prilagođene postavke."
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:802
+#: ../blade-settings-editor/blade-settings-editor-box.c:802
 #, c-format
 msgid "Are you sure you want to reset channel \"%s\" and all its properties?"
 msgstr ""
 "Jeste li sigurni da želite ponovno postaviti kanal \"%s\" i sve njegove "
 "postavke?"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:877
+#: ../blade-settings-editor/blade-settings-editor-box.c:877
 msgid "reset"
 msgstr "ponovno postavi"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:934
+#: ../blade-settings-editor/blade-settings-editor-box.c:934
 #, c-format
 msgid "Monitor %s"
 msgstr "Monitor %s"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:942
-msgid "Watch an Xfconf channel for property changes"
-msgstr "Prati Xfconf kanal radi promijene postavki"
+#: ../blade-settings-editor/blade-settings-editor-box.c:942
+msgid "Watch an Blconf channel for property changes"
+msgstr "Prati Blconf kanal radi promijene postavki"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:978
+#: ../blade-settings-editor/blade-settings-editor-box.c:978
 #, c-format
 msgid "start monitoring channel \"%s\""
 msgstr "započnite praćenje kanala \"%s\""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1032
+#: ../blade-settings-editor/blade-settings-editor-box.c:1032
 msgid "_Monitor"
 msgstr "_Monitor"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1366
+#: ../blade-settings-editor/blade-settings-editor-box.c:1366
 msgid "Resetting a property will permanently remove those custom settings."
 msgstr ""
 "Ponovno postavljanje svojstava će trajno ukloniti prilagođene postavke."
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1367
+#: ../blade-settings-editor/blade-settings-editor-box.c:1367
 #, c-format
 msgid "Are you sure you want to reset property \"%s\"?"
 msgstr "Jeste li sigurni da želite ponovno postaviti svojstva \"%s\"?"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:93
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:93
 msgid "Int"
 msgstr "Int"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:95
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:95
 msgid "Unsigned Int"
 msgstr "Ne-negativni Int"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:96
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:96
 msgid "Int64"
 msgstr "Int64"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:97
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:97
 msgid "Unsigned Int64"
 msgstr "Ne-negativni Int64"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:141
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:141
 msgid "New Property"
 msgstr "Novo svojstvo"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:158
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:158
 msgid "_Property:"
 msgstr "_Svojstvo:"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:173
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:173
 msgid "_Type:"
 msgstr "_Tip:"
 
 #. strings
 #. integers
 #. bool
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:204
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:215
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:227
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:204
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:215
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:227
 msgid "_Value:"
 msgstr "_Vrijednost:"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:385
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:385
 #, c-format
 msgid "Property names must start with a '/' character"
 msgstr "Imena svojstava moraju početi sa '/' znakom"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:396
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:396
 #, c-format
 msgid "The root element ('/') is not a valid property name"
 msgstr "Korijenski element ('/') nije valjano ime svojstva"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:413
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:413
 #, c-format
 msgid ""
 "Property names can only include the ASCII characters A-Z, a-z, 0-9, '_', "
@@ -1634,109 +1634,109 @@ msgstr ""
 "Imena svojstava mogu sadržavati samo ASCII znakove A-Z, a-z, 0-9, '_', '-', "
 "':', '.', ',', '[', ']', '{', '}', '<' and '>', kao i '/' kao razdjelnik"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:427
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:427
 #, c-format
 msgid "Property names cannot have two or more consecutive '/' characters"
 msgstr "Imena svojstva ne mogu imati dva ili više uzastopnih '/' znakova"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:441
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:441
 #, c-format
 msgid "Property names cannot end with a '/' character"
 msgstr "Imena svojstava ne mogu završavati sa '/' znakom"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:654
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:654
 msgid "Edit Property"
 msgstr "Uredi svojstvo"
 
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:2
-msgid "Graphical settings editor for Xfconf"
-msgstr "Grafički uređivač postavki za Xfconf"
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:2
+msgid "Graphical settings editor for Blconf"
+msgstr "Grafički uređivač postavki za Blconf"
 
-#: ../xfsettingsd/accessibility.c:412
+#: ../blsettingsd/accessibility.c:412
 msgid "Sticky keys are enabled"
 msgstr "Ljepljive tipke su omogućene"
 
-#: ../xfsettingsd/accessibility.c:414
+#: ../blsettingsd/accessibility.c:414
 msgid "Sticky keys are disabled"
 msgstr "Ljepljive tipke su onemogućene"
 
-#: ../xfsettingsd/accessibility.c:416
+#: ../blsettingsd/accessibility.c:416
 msgid "Sticky keys"
 msgstr "Ljepljive tipke"
 
-#: ../xfsettingsd/accessibility.c:421
+#: ../blsettingsd/accessibility.c:421
 msgid "Slow keys are enabled"
 msgstr "Omogućene su spore tipke"
 
-#: ../xfsettingsd/accessibility.c:423
+#: ../blsettingsd/accessibility.c:423
 msgid "Slow keys are disabled"
 msgstr "Onemogućene su spore tipke"
 
-#: ../xfsettingsd/accessibility.c:425
+#: ../blsettingsd/accessibility.c:425
 msgid "Slow keys"
 msgstr "Spore tipke"
 
-#: ../xfsettingsd/accessibility.c:430
+#: ../blsettingsd/accessibility.c:430
 msgid "Bounce keys are enabled"
 msgstr "Skočne tipke su omogućene"
 
-#: ../xfsettingsd/accessibility.c:432
+#: ../blsettingsd/accessibility.c:432
 msgid "Bounce keys are disabled"
 msgstr "Skočne tipke su onemogućene"
 
-#: ../xfsettingsd/accessibility.c:434
+#: ../blsettingsd/accessibility.c:434
 msgid "Bounce keys"
 msgstr "Skočne tipke"
 
-#: ../xfsettingsd/keyboard-shortcuts.c:244
+#: ../blsettingsd/keyboard-shortcuts.c:244
 #, c-format
 msgid "Failed to launch shortcut \"%s\""
 msgstr "Neuspješno pokretanje prečaca \"%s\""
 
-#: ../xfsettingsd/main.c:79
+#: ../blsettingsd/main.c:79
 msgid "Do not fork to the background"
 msgstr "Nemoj razdijeliti u pozadinu"
 
-#: ../xfsettingsd/main.c:80
+#: ../blsettingsd/main.c:80
 msgid "Replace running xsettings daemon (if any)"
 msgstr "Zamijeni pokrenuti xsettings nadglednik (ako postoji)"
 
-#. value in xfconf isn't a string, so make a default one
-#: ../xfsettingsd/workspaces.c:338 ../xfsettingsd/workspaces.c:396
+#. value in blconf isn't a string, so make a default one
+#: ../blsettingsd/workspaces.c:338 ../blsettingsd/workspaces.c:396
 #, c-format
 msgid "Workspace %d"
 msgstr "Radni prostor %d"
 
-#: ../xfsettingsd/xfsettingsd.desktop.in.h:1
+#: ../blsettingsd/blsettingsd.desktop.in.h:1
 msgid "The Xfce Settings Daemon"
 msgstr "Xfce nadglednik postavki"
 
-#: ../xfce4-settings-manager/main.c:41
+#: ../blade-settings-manager/main.c:41
 msgid "Settings dialog to show"
 msgstr "Pokaži dijalog postavki"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:193
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:193
 msgid "All _Settings"
 msgstr "Sve _postavke"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:390
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:390
 msgid "Settings"
 msgstr "Postavke"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:392
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:392
 msgid "Customize your desktop"
 msgstr "Prilagodite vašu radnu površinu"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:885
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:896
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:885
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:896
 #, c-format
 msgid "Unable to start \"%s\""
 msgstr "Ne mogu pokrenuti \"%s\""
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:1
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:1
 msgid "Settings Manager"
 msgstr "Upravitelj postavki"
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:2
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:2
 msgid "Graphical Settings Manager for Xfce 4"
 msgstr "Grafički upravitelj postavkama za Xfce 4"

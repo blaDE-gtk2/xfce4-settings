@@ -29,21 +29,21 @@ dialogs/mouse-settings/main.c
 dialogs/mouse-settings/mouse-dialog.glade
 dialogs/mouse-settings/xfce-mouse-settings.desktop.in
 
-xfce4-settings-editor/main.c
-xfce4-settings-editor/xfce-settings-cell-renderer.c
-xfce4-settings-editor/xfce-settings-editor-box.c
-xfce4-settings-editor/xfce-settings-prop-dialog.c
-xfce4-settings-editor/xfce4-settings-editor.desktop.in
+blade-settings-editor/main.c
+blade-settings-editor/blade-settings-cell-renderer.c
+blade-settings-editor/blade-settings-editor-box.c
+blade-settings-editor/blade-settings-prop-dialog.c
+blade-settings-editor/blade-settings-editor.desktop.in
 
-xfsettingsd/accessibility.c
-xfsettingsd/keyboard-layout.c
-xfsettingsd/keyboard-shortcuts.c
-xfsettingsd/main.c
-xfsettingsd/workspaces.c
-xfsettingsd/xsettings.c
-xfsettingsd/xfsettingsd.desktop.in
+blsettingsd/accessibility.c
+blsettingsd/keyboard-layout.c
+blsettingsd/keyboard-shortcuts.c
+blsettingsd/main.c
+blsettingsd/workspaces.c
+blsettingsd/xsettings.c
+blsettingsd/blsettingsd.desktop.in
 
-xfce4-settings-manager/main.c
-xfce4-settings-manager/xfce-settings-manager-dialog.c
-xfce4-settings-manager/xfce-settings-manager.desktop.in
-xfce4-settings-manager/xfce-text-renderer.c
+blade-settings-manager/main.c
+blade-settings-manager/blade-settings-manager-dialog.c
+blade-settings-manager/blade-settings-manager.desktop.in
+blade-settings-manager/xfce-text-renderer.c

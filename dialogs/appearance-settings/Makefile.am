@@ -1,4 +1,5 @@
 AM_CPPFLAGS = \
+	-DGLIB_DISABLE_DEPRECATION_WARNINGS \
 	-I${top_srcdir} \
 	-DDATADIR=\"$(datadir)\" \
 	-DSRCDIR=\"$(top_srcdir)\" \
@@ -17,8 +18,8 @@ xfce4_appearance_settings_SOURCES = \
 
 xfce4_appearance_settings_CFLAGS = \
 	$(GTK_CFLAGS) \
-	$(LIBXFCE4UI_CFLAGS) \
-	$(XFCONF_CFLAGS) \
+	$(LIBBLADEUI_CFLAGS) \
+	$(BLCONF_CFLAGS) \
 	$(PLATFORM_CFLAGS)
 
 xfce4_appearance_settings_LDFLAGS = \
@@ -27,8 +28,8 @@ xfce4_appearance_settings_LDFLAGS = \
 
 xfce4_appearance_settings_LDADD = \
 	$(GTK_LIBS) \
-	$(LIBXFCE4UI_LIBS) \
-	$(XFCONF_LIBS)
+	$(LIBBLADEUI_LIBS) \
+	$(BLCONF_LIBS)
 
 xfce4_appearance_scriptsdir = $(HELPER_PATH_PREFIX)/xfce4/settings
 xfce4_appearance_scripts_SCRIPTS = appearance-install-theme
@@ -39,7 +40,7 @@ BUILT_SOURCES = \
 	appearance-dialog_ui.h
 
 appearance-dialog_ui.h: appearance-dialog.glade
-	exo-csource --static --strip-comments --strip-content --name=appearance_dialog_ui $< >$@
+	blxo-csource --static --strip-comments --strip-content --name=appearance_dialog_ui $< >$@
 
 endif
 

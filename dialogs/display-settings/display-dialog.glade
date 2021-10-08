@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="2.24"/>
-  <!-- interface-requires libxfce4ui 4.5 -->
+  <!-- interface-requires libbladeui 4.5 -->
   <!-- interface-naming-policy toplevel-contextual -->
   <object class="XfceTitledDialog" id="display-dialog">
     <property name="can_focus">False</property>
@@ -211,7 +211,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
-                        <property name="tooltip_text" translatable="yes">This is a hint for panels, docks and desktop to show on this display preferably.</property>
+                        <property name="tooltip_text" translatable="yes">This is a hint for bars, docks and desktop to show on this display preferably.</property>
                         <property name="use_underline">True</property>
                         <property name="draw_indicator">True</property>
                       </object>

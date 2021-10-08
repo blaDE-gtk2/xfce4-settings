@@ -37,9 +37,9 @@
 #include <fcntl.h>
 #include <gtk/gtk.h>
 
-#include <libxfce4ui/libxfce4ui.h>
-#include <libxfce4util/libxfce4util.h>
-#include <xfconf/xfconf.h>
+#include <libbladeui/libbladeui.h>
+#include <libbladeutil/libbladeutil.h>
+#include <blconf/blconf.h>
 
 #include "appearance-dialog_ui.h"
 #include "images.h"
@@ -118,8 +118,8 @@ static GOptionEntry option_entries[] =
     { NULL }
 };
 
-/* Global xfconf channel */
-static XfconfChannel *xsettings_channel;
+/* Global blconf channel */
+static BlconfChannel *xsettings_channel;
 
 typedef struct
 {
@@ -504,7 +504,7 @@ cb_theme_tree_selection_changed (GtkTreeSelection *selection,
         gtk_tree_model_get (model, &iter, COLUMN_THEME_NAME, &name, -1);
 
         /* Store the new theme */
-        xfconf_channel_set_string (xsettings_channel, property, name);
+        blconf_channel_set_string (xsettings_channel, property, name);
 
         /* Cleanup */
         g_free (name);
@@ -534,7 +534,7 @@ cb_toolbar_style_combo_changed (GtkComboBox *combo)
     active = CLAMP (gtk_combo_box_get_active (combo), 0, (gint) G_N_ELEMENTS (toolbar_styles_array)-1);
 
     /* Save setting */
-    xfconf_channel_set_string (xsettings_channel, "/Gtk/ToolbarStyle", toolbar_styles_array[active]);
+    blconf_channel_set_string (xsettings_channel, "/Gtk/ToolbarStyle", toolbar_styles_array[active]);
 }
 
 static void
@@ -549,7 +549,7 @@ cb_antialias_check_button_toggled (GtkToggleButton *toggle)
     active = gtk_toggle_button_get_active (toggle) ? 1 : 0;
 
     /* Save setting */
-    xfconf_channel_set_int (xsettings_channel, "/Xft/Antialias", active);
+    blconf_channel_set_int (xsettings_channel, "/Xft/Antialias", active);
 }
 
 static void
@@ -561,10 +561,10 @@ cb_hinting_style_combo_changed (GtkComboBox *combo)
     active = CLAMP (gtk_combo_box_get_active (combo), 0, (gint) G_N_ELEMENTS (xft_hint_styles_array)-1);
 
     /* Save setting */
-    xfconf_channel_set_string (xsettings_channel, "/Xft/HintStyle", xft_hint_styles_array[active]);
+    blconf_channel_set_string (xsettings_channel, "/Xft/HintStyle", xft_hint_styles_array[active]);
 
     /* Also update /Xft/Hinting to match */
-    xfconf_channel_set_int (xsettings_channel, "/Xft/Hinting", active > 0 ? 1 : 0);
+    blconf_channel_set_int (xsettings_channel, "/Xft/Hinting", active > 0 ? 1 : 0);
 }
 
 static void
@@ -576,7 +576,7 @@ cb_rgba_style_combo_changed (GtkComboBox *combo)
     active = CLAMP (gtk_combo_box_get_active (combo), 0, (gint) G_N_ELEMENTS (xft_rgba_array)-1);
 
     /* Save setting */
-    xfconf_channel_set_string (xsettings_channel, "/Xft/RGBA", xft_rgba_array[active]);
+    blconf_channel_set_string (xsettings_channel, "/Xft/RGBA", xft_rgba_array[active]);
 }
 
 static void
@@ -588,14 +588,14 @@ cb_custom_dpi_check_button_toggled (GtkToggleButton *custom_dpi_toggle,
     if (gtk_toggle_button_get_active (custom_dpi_toggle))
     {
         /* Custom DPI is activated, so restore the last custom DPI we know about */
-        dpi = xfconf_channel_get_int (xsettings_channel, "/Xfce/LastCustomDPI", -1);
+        dpi = blconf_channel_get_int (xsettings_channel, "/Xfce/LastCustomDPI", -1);
 
         /* Unfortunately, we don't have a valid custom DPI value to use, so compute it */
         if (dpi <= 0)
             dpi = compute_xsettings_dpi (GTK_WIDGET (custom_dpi_toggle));
 
         /* Apply the computed custom DPI value */
-        xfconf_channel_set_int (xsettings_channel, "/Xft/DPI", dpi);
+        blconf_channel_set_int (xsettings_channel, "/Xft/DPI", dpi);
 
         gtk_widget_set_sensitive (GTK_WIDGET (custom_dpi_spin), TRUE);
     }
@@ -603,10 +603,10 @@ cb_custom_dpi_check_button_toggled (GtkToggleButton *custom_dpi_toggle,
     {
         /* Custom DPI is deactivated, so remember the current value as the last custom DPI */
         dpi = gtk_spin_button_get_value_as_int (custom_dpi_spin);
-        xfconf_channel_set_int (xsettings_channel, "/Xfce/LastCustomDPI", dpi);
+        blconf_channel_set_int (xsettings_channel, "/Xfce/LastCustomDPI", dpi);
 
-        /* Tell xfsettingsd to compute the value itself */
-        xfconf_channel_set_int (xsettings_channel, "/Xft/DPI", -1);
+        /* Tell blsettingsd to compute the value itself */
+        blconf_channel_set_int (xsettings_channel, "/Xft/DPI", -1);
 
         /* Make the spin button insensitive */
         gtk_widget_set_sensitive (GTK_WIDGET (custom_dpi_spin), FALSE);
@@ -622,11 +622,11 @@ cb_custom_dpi_spin_button_changed (GtkSpinButton   *custom_dpi_spin,
     if (GTK_WIDGET_IS_SENSITIVE (custom_dpi_spin) && gtk_toggle_button_get_active (custom_dpi_toggle))
     {
         /* Custom DPI is turned on and the spin button has changed, so remember the value */
-        xfconf_channel_set_int (xsettings_channel, "/Xfce/LastCustomDPI", dpi);
+        blconf_channel_set_int (xsettings_channel, "/Xfce/LastCustomDPI", dpi);
     }
 
-    /* Tell xfsettingsd to apply the custom DPI value */
-    xfconf_channel_set_int (xsettings_channel, "/Xft/DPI", dpi);
+    /* Tell blsettingsd to apply the custom DPI value */
+    blconf_channel_set_int (xsettings_channel, "/Xft/DPI", dpi);
 }
 
 #ifdef ENABLE_SOUND_SETTINGS
@@ -677,7 +677,7 @@ appearance_settings_load_icon_themes (preview_data *pd)
     tree_view = pd->tree_view;
 
     /* Determine current theme */
-    active_theme_name = xfconf_channel_get_string (xsettings_channel, "/Net/IconThemeName", "Rodent");
+    active_theme_name = blconf_channel_get_string (xsettings_channel, "/Net/IconThemeName", "Rodent");
 
     /* Determine directories to look in for icon themes */
     xfce_resource_push_path (XFCE_RESOURCE_ICONS, DATADIR G_DIR_SEPARATOR_S "icons");
@@ -842,7 +842,7 @@ appearance_settings_load_ui_themes (preview_data *pd)
     tree_view = pd->tree_view;
 
     /* Determine current theme */
-    active_theme_name = xfconf_channel_get_string (xsettings_channel, "/Net/ThemeName", "Default");
+    active_theme_name = blconf_channel_get_string (xsettings_channel, "/Net/ThemeName", "Default");
 
     /* Determine directories to look in for ui themes */
     xfce_resource_push_path (XFCE_RESOURCE_THEMES, DATADIR G_DIR_SEPARATOR_S "themes");
@@ -958,7 +958,7 @@ appearance_settings_load_ui_themes (preview_data *pd)
 }
 
 static void
-appearance_settings_dialog_channel_property_changed (XfconfChannel *channel,
+appearance_settings_dialog_channel_property_changed (BlconfChannel *channel,
                                                      const gchar   *property_name,
                                                      const GValue  *value,
                                                      GtkBuilder    *builder)
@@ -974,7 +974,7 @@ appearance_settings_dialog_channel_property_changed (XfconfChannel *channel,
 
     if (strcmp (property_name, "/Xft/RGBA") == 0)
     {
-        str = xfconf_channel_get_string (xsettings_channel, property_name, xft_rgba_array[0]);
+        str = blconf_channel_get_string (xsettings_channel, property_name, xft_rgba_array[0]);
         for (i = 0; i < G_N_ELEMENTS (xft_rgba_array); i++)
         {
             if (strcmp (str, xft_rgba_array[i]) == 0)
@@ -988,7 +988,7 @@ appearance_settings_dialog_channel_property_changed (XfconfChannel *channel,
     }
     else if (strcmp (property_name, "/Gtk/ToolbarStyle") == 0)
     {
-        str = xfconf_channel_get_string (xsettings_channel, property_name, toolbar_styles_array[2]);
+        str = blconf_channel_get_string (xsettings_channel, property_name, toolbar_styles_array[2]);
         for (i = 0; i < G_N_ELEMENTS (toolbar_styles_array); i++)
         {
             if (strcmp (str, toolbar_styles_array[i]) == 0)
@@ -1002,7 +1002,7 @@ appearance_settings_dialog_channel_property_changed (XfconfChannel *channel,
     }
     else if (strcmp (property_name, "/Xft/HintStyle") == 0)
     {
-        str = xfconf_channel_get_string (xsettings_channel, property_name, xft_hint_styles_array[0]);
+        str = blconf_channel_get_string (xsettings_channel, property_name, xft_hint_styles_array[0]);
         for (i = 0; i < G_N_ELEMENTS (xft_hint_styles_array); i++)
         {
             if (strcmp (str, xft_hint_styles_array[i]) == 0)
@@ -1017,7 +1017,7 @@ appearance_settings_dialog_channel_property_changed (XfconfChannel *channel,
     else if (strcmp (property_name, "/Xft/Antialias") == 0)
     {
         object = gtk_builder_get_object (builder, "xft_antialias_check_button");
-        antialias = xfconf_channel_get_int (xsettings_channel, property_name, -1);
+        antialias = blconf_channel_get_int (xsettings_channel, property_name, -1);
         switch (antialias)
         {
             case 1:
@@ -1036,8 +1036,8 @@ appearance_settings_dialog_channel_property_changed (XfconfChannel *channel,
     else if (strcmp (property_name, "/Xft/DPI") == 0)
     {
         /* The DPI has changed, so get its value and the last known custom value */
-        dpi = xfconf_channel_get_int (xsettings_channel, property_name, FALLBACK_DPI);
-        custom_dpi = xfconf_channel_get_int (xsettings_channel, "/Xfce/LastCustomDPI", -1);
+        dpi = blconf_channel_get_int (xsettings_channel, property_name, FALLBACK_DPI);
+        custom_dpi = blconf_channel_get_int (xsettings_channel, "/Xfce/LastCustomDPI", -1);
 
         /* Activate the check button if we're using a custom DPI */
         object = gtk_builder_get_object (builder, "xft_custom_dpi_check_button");
@@ -1078,7 +1078,7 @@ appearance_settings_dialog_channel_property_changed (XfconfChannel *channel,
 
             gtk_tree_model_get (model, &iter, COLUMN_THEME_NAME, &selected_name, -1);
 
-            new_name = xfconf_channel_get_string (channel, property_name, NULL);
+            new_name = blconf_channel_get_string (channel, property_name, NULL);
 
             reload = (strcmp (new_name, selected_name) != 0);
 
@@ -1118,7 +1118,7 @@ appearance_settings_dialog_channel_property_changed (XfconfChannel *channel,
 
             gtk_tree_model_get (model, &iter, COLUMN_THEME_NAME, &selected_name, -1);
 
-            new_name = xfconf_channel_get_string (channel, property_name, NULL);
+            new_name = blconf_channel_get_string (channel, property_name, NULL);
 
             reload = (strcmp (new_name, selected_name) != 0);
 
@@ -1390,27 +1390,27 @@ appearance_settings_dialog_configure_widgets (GtkBuilder *builder)
 
     /* Enable editable menu accelerators */
     object = gtk_builder_get_object (builder, "gtk_caneditaccels_check_button");
-    xfconf_g_property_bind (xsettings_channel, "/Gtk/CanChangeAccels", G_TYPE_BOOLEAN,
+    blconf_g_property_bind (xsettings_channel, "/Gtk/CanChangeAccels", G_TYPE_BOOLEAN,
                             G_OBJECT (object), "active");
 
     /* Show menu images */
     object = gtk_builder_get_object (builder, "gtk_menu_images_check_button");
-    xfconf_g_property_bind (xsettings_channel, "/Gtk/MenuImages", G_TYPE_BOOLEAN,
+    blconf_g_property_bind (xsettings_channel, "/Gtk/MenuImages", G_TYPE_BOOLEAN,
                             G_OBJECT (object), "active");
 
     /* Show button images */
     object = gtk_builder_get_object (builder, "gtk_button_images_check_button");
-    xfconf_g_property_bind (xsettings_channel, "/Gtk/ButtonImages", G_TYPE_BOOLEAN,
+    blconf_g_property_bind (xsettings_channel, "/Gtk/ButtonImages", G_TYPE_BOOLEAN,
                             G_OBJECT (object), "active");
 
     /* Font name */
     object = gtk_builder_get_object (builder, "gtk_fontname_button");
-    xfconf_g_property_bind (xsettings_channel,  "/Gtk/FontName", G_TYPE_STRING,
+    blconf_g_property_bind (xsettings_channel,  "/Gtk/FontName", G_TYPE_STRING,
                             G_OBJECT (object), "font-name");
 
     /* Monospace font name */
     object = gtk_builder_get_object (builder, "gtk_monospace_fontname_button");
-    xfconf_g_property_bind (xsettings_channel,  "/Gtk/MonospaceFontName", G_TYPE_STRING,
+    blconf_g_property_bind (xsettings_channel,  "/Gtk/MonospaceFontName", G_TYPE_STRING,
                             G_OBJECT (object), "font-name");
 
     /* Toolbar style */
@@ -1447,9 +1447,9 @@ appearance_settings_dialog_configure_widgets (GtkBuilder *builder)
     g_signal_connect (G_OBJECT (object), "toggled",
                       G_CALLBACK (cb_enable_event_sounds_check_button_toggled), object2);
 
-    xfconf_g_property_bind (xsettings_channel, "/Net/EnableEventSounds", G_TYPE_BOOLEAN,
+    blconf_g_property_bind (xsettings_channel, "/Net/EnableEventSounds", G_TYPE_BOOLEAN,
                             G_OBJECT (object), "active");
-    xfconf_g_property_bind (xsettings_channel, "/Net/EnableInputFeedbackSounds", G_TYPE_BOOLEAN,
+    blconf_g_property_bind (xsettings_channel, "/Net/EnableInputFeedbackSounds", G_TYPE_BOOLEAN,
                             G_OBJECT (object2), "active");
 
     gtk_widget_set_sensitive (GTK_WIDGET (object2), gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (object)));
@@ -1461,8 +1461,8 @@ appearance_settings_dialog_response (GtkWidget *dialog,
                                      gint       response_id)
 {
     if (response_id == GTK_RESPONSE_HELP)
-        xfce_dialog_show_help_with_version (GTK_WINDOW (dialog), "xfce4-settings", "appearance",
-                                            NULL, XFCE4_SETTINGS_VERSION_SHORT);
+        xfce_dialog_show_help_with_version (GTK_WINDOW (dialog), "blade-settings", "appearance",
+                                            NULL, BLADE_SETTINGS_VERSION_SHORT);
     else
         gtk_main_quit ();
 }
@@ -1511,21 +1511,21 @@ main (gint argc, gchar **argv)
         return EXIT_SUCCESS;
     }
 
-    /* initialize xfconf */
-    if (!xfconf_init (&error))
+    /* initialize blconf */
+    if (!blconf_init (&error))
     {
         /* print error and exit */
-        g_error ("Failed to connect to xfconf daemon: %s.", error->message);
+        g_error ("Failed to connect to blconf daemon: %s.", error->message);
         g_error_free (error);
 
         return EXIT_FAILURE;
     }
 
     /* open the xsettings channel */
-    xsettings_channel = xfconf_channel_new ("xsettings");
+    xsettings_channel = blconf_channel_new ("xsettings");
     if (G_LIKELY (xsettings_channel))
     {
-        /* hook to make sure the libxfce4ui library is linked */
+        /* hook to make sure the libbladeui library is linked */
         if (xfce_titled_dialog_get_type () == 0)
             return EXIT_FAILURE;
 
@@ -1589,8 +1589,8 @@ main (gint argc, gchar **argv)
         g_object_unref (G_OBJECT (xsettings_channel));
     }
 
-    /* shutdown xfconf */
-    xfconf_shutdown ();
+    /* shutdown blconf */
+    blconf_shutdown ();
 
     return EXIT_SUCCESS;
 }

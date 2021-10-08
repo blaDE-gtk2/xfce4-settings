@@ -35,10 +35,10 @@
 #include <gdk/gdkx.h>
 #include <gdk/gdkkeysyms.h>
 
-#include <xfconf/xfconf.h>
-#include <exo/exo.h>
-#include <libxfce4ui/libxfce4ui.h>
-#include <libxfce4util/libxfce4util.h>
+#include <blconf/blconf.h>
+#include <blxo/blxo.h>
+#include <libbladeui/libbladeui.h>
+#include <libbladeutil/libbladeutil.h>
 
 #include <X11/Xlib.h>
 #include <X11/extensions/Xrandr.h>
@@ -123,8 +123,8 @@ static GOptionEntry option_entries[] =
     { NULL }
 };
 
-/* Global xfconf channel */
-static XfconfChannel *display_channel;
+/* Global blconf channel */
+static BlconfChannel *display_channel;
 
 /* output currently selected in the combobox */
 static guint active_output;
@@ -1266,8 +1266,8 @@ display_settings_dialog_response (GtkDialog  *dialog,
                                   GtkBuilder *builder)
 {
     if (response_id == GTK_RESPONSE_HELP)
-        xfce_dialog_show_help_with_version (GTK_WINDOW (dialog), "xfce4-settings", "display",
-                                            NULL, XFCE4_SETTINGS_VERSION_SHORT);
+        xfce_dialog_show_help_with_version (GTK_WINDOW (dialog), "blade-settings", "display",
+                                            NULL, BLADE_SETTINGS_VERSION_SHORT);
     else
         gtk_main_quit ();
 }
@@ -1387,7 +1387,7 @@ display_settings_dialog_new (GtkBuilder *builder)
     g_signal_connect (G_OBJECT (combobox), "changed", G_CALLBACK (display_setting_rotations_changed), builder);
 
     check = gtk_builder_get_object (builder, "minimal-autoshow");
-    xfconf_g_property_bind (display_channel, "/Notify", G_TYPE_BOOLEAN, check,
+    blconf_g_property_bind (display_channel, "/Notify", G_TYPE_BOOLEAN, check,
                             "active");
 
     apply_button = GTK_WIDGET(gtk_builder_get_object (builder, "apply"));
@@ -3140,18 +3140,18 @@ main (gint argc, gchar **argv)
         return EXIT_FAILURE;
     }
 
-    /* Initialize xfconf */
-    if (!xfconf_init (&error))
+    /* Initialize blconf */
+    if (!blconf_init (&error))
     {
         /* Print error and exit */
-        g_error ("Failed to connect to xfconf daemon: %s.", error->message);
+        g_error ("Failed to connect to blconf daemon: %s.", error->message);
         g_error_free (error);
 
         return EXIT_FAILURE;
     }
 
     /* Open the xsettings channel */
-    display_channel = xfconf_channel_new ("displays");
+    display_channel = blconf_channel_new ("displays");
     if (G_LIKELY (display_channel))
     {
         /* Create a new xfce randr (>= 1.2) for this display
@@ -3190,7 +3190,7 @@ main (gint argc, gchar **argv)
             goto cleanup;
         }
 
-        /* Hook to make sure the libxfce4ui library is linked */
+        /* Hook to make sure the libbladeui library is linked */
         if (xfce_titled_dialog_get_type () == 0)
         {
             succeeded = FALSE;
@@ -3211,8 +3211,8 @@ cleanup:
     if (xfce_randr)
         xfce_randr_free (xfce_randr);
 
-    /* Shutdown xfconf */
-    xfconf_shutdown ();
+    /* Shutdown blconf */
+    blconf_shutdown ();
 
     return (succeeded ? EXIT_SUCCESS : EXIT_FAILURE);
 }

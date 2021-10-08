@@ -12,7 +12,7 @@ msgstr ""
 "POT-Creation-Date: 2017-02-15 18:30+0100\n"
 "PO-Revision-Date: 2017-09-23 19:02+0000\n"
 "Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
-"Language-Team: Indonesian (http://www.transifex.com/xfce/xfce4-settings/language/id/)\n"
+"Language-Team: Indonesian (http://www.transifex.com/xfce/blade-settings/language/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -209,7 +209,7 @@ msgstr "_Tetikus"
 #: ../dialogs/appearance-settings/main.c:118
 #: ../dialogs/display-settings/main.c:121
 #: ../dialogs/keyboard-settings/main.c:40 ../dialogs/mouse-settings/main.c:84
-#: ../xfce4-settings-editor/main.c:49
+#: ../blade-settings-editor/main.c:49
 msgid "Settings manager socket"
 msgstr "Pengaturan soket manajer"
 
@@ -217,7 +217,7 @@ msgstr "Pengaturan soket manajer"
 #: ../dialogs/appearance-settings/main.c:118
 #: ../dialogs/display-settings/main.c:121
 #: ../dialogs/keyboard-settings/main.c:40 ../dialogs/mouse-settings/main.c:84
-#: ../xfce4-settings-editor/main.c:49
+#: ../blade-settings-editor/main.c:49
 msgid "SOCKET ID"
 msgstr "ID SOKET"
 
@@ -225,8 +225,8 @@ msgstr "ID SOKET"
 #: ../dialogs/appearance-settings/main.c:119
 #: ../dialogs/display-settings/main.c:122
 #: ../dialogs/keyboard-settings/main.c:41 ../dialogs/mime-settings/main.c:40
-#: ../dialogs/mouse-settings/main.c:85 ../xfce4-settings-editor/main.c:50
-#: ../xfsettingsd/main.c:78 ../xfce4-settings-manager/main.c:43
+#: ../dialogs/mouse-settings/main.c:85 ../blade-settings-editor/main.c:50
+#: ../blsettingsd/main.c:78 ../blade-settings-manager/main.c:43
 msgid "Version information"
 msgstr "Informasi versi"
 
@@ -234,9 +234,9 @@ msgstr "Informasi versi"
 #: ../dialogs/appearance-settings/main.c:1303
 #: ../dialogs/display-settings/main.c:3018
 #: ../dialogs/keyboard-settings/main.c:78 ../dialogs/mime-settings/main.c:62
-#: ../dialogs/mouse-settings/main.c:1871 ../xfce4-settings-editor/main.c:120
-#: ../xfsettingsd/main.c:191 ../xfsettingsd/main.c:229
-#: ../xfce4-settings-manager/main.c:64
+#: ../dialogs/mouse-settings/main.c:1871 ../blade-settings-editor/main.c:120
+#: ../blsettingsd/main.c:191 ../blsettingsd/main.c:229
+#: ../blade-settings-manager/main.c:64
 #, c-format
 msgid "Type '%s --help' for usage."
 msgstr "Ketikkan '%s --help' untuk bantuan."
@@ -245,8 +245,8 @@ msgstr "Ketikkan '%s --help' untuk bantuan."
 #: ../dialogs/appearance-settings/main.c:1322
 #: ../dialogs/display-settings/main.c:3037
 #: ../dialogs/keyboard-settings/main.c:94 ../dialogs/mime-settings/main.c:81
-#: ../dialogs/mouse-settings/main.c:1890 ../xfce4-settings-editor/main.c:139
-#: ../xfsettingsd/main.c:207 ../xfce4-settings-manager/main.c:80
+#: ../dialogs/mouse-settings/main.c:1890 ../blade-settings-editor/main.c:139
+#: ../blsettingsd/main.c:207 ../blade-settings-manager/main.c:80
 msgid "The Xfce development team. All rights reserved."
 msgstr "Tim pengembang Xfce. Hak cipta dilindungi undang-undang."
 
@@ -254,8 +254,8 @@ msgstr "Tim pengembang Xfce. Hak cipta dilindungi undang-undang."
 #: ../dialogs/appearance-settings/main.c:1323
 #: ../dialogs/display-settings/main.c:3038
 #: ../dialogs/keyboard-settings/main.c:95 ../dialogs/mime-settings/main.c:82
-#: ../dialogs/mouse-settings/main.c:1891 ../xfce4-settings-editor/main.c:140
-#: ../xfsettingsd/main.c:208 ../xfce4-settings-manager/main.c:81
+#: ../dialogs/mouse-settings/main.c:1891 ../blade-settings-editor/main.c:140
+#: ../blsettingsd/main.c:208 ../blade-settings-manager/main.c:81
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Silakan laporkan kutu ke <%s>."
@@ -587,9 +587,9 @@ msgstr "Layar _utama"
 
 #: ../dialogs/display-settings/display-dialog.glade.h:10
 msgid ""
-"This is a hint for panels, docks and desktop to show on this display "
+"This is a hint for bars, docks and desktop to show on this display "
 "preferably."
-msgstr "Ini adalah miniatur panel, dok, dan destop untuk menunjukkan tampilan sesuai keinginan."
+msgstr "Ini adalah miniatur bar, dok, dan destop untuk menunjukkan tampilan sesuai keinginan."
 
 #: ../dialogs/display-settings/display-dialog.glade.h:11
 msgid "Configure _new displays when connected"
@@ -775,7 +775,7 @@ msgstr "Jalan Pintas Perintah"
 #: ../dialogs/mime-settings/xfce-mime-chooser.c:134
 #: ../dialogs/mime-settings/xfce-mime-chooser.c:382
 #: ../dialogs/mime-settings/xfce-mime-window.c:932
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:144
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:144
 msgid "Cancel"
 msgstr "Batal"
 
@@ -986,8 +986,8 @@ msgstr "Tak dapat menginisialisasi GTK+"
 
 #: ../dialogs/keyboard-settings/main.c:104
 #, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
-msgstr "Gagal menyambung ke jurik xfconf. Alasan: %s"
+msgid "Failed to connect to blconf daemon. Reason: %s"
+msgstr "Gagal menyambung ke jurik blconf. Alasan: %s"
 
 #: ../dialogs/keyboard-settings/main.c:115
 msgid "Could not create the settings dialog."
@@ -1411,200 +1411,200 @@ msgstr "Pratayang"
 msgid "_Theme"
 msgstr "_Tema"
 
-#: ../xfce4-settings-editor/main.c:163
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:1
+#: ../blade-settings-editor/main.c:163
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:1
 msgid "Settings Editor"
 msgstr "Penyunting Pengaturan"
 
-#: ../xfce4-settings-editor/main.c:170
-msgid "Customize settings stored by Xfconf"
-msgstr "Sesuaikan pengaturan yang disimpan oleh Xfconf"
+#: ../blade-settings-editor/main.c:170
+msgid "Customize settings stored by Blconf"
+msgstr "Sesuaikan pengaturan yang disimpan oleh Blconf"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:243
+#: ../blade-settings-editor/blade-settings-editor-box.c:243
 msgid "Channel"
 msgstr "Kanal"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:277
+#: ../blade-settings-editor/blade-settings-editor-box.c:277
 msgid "Property"
 msgstr "Properti"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:284
+#: ../blade-settings-editor/blade-settings-editor-box.c:284
 msgid "Type"
 msgstr "Tipe"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:291
+#: ../blade-settings-editor/blade-settings-editor-box.c:291
 msgid "Locked"
 msgstr "Terkunci"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:298
+#: ../blade-settings-editor/blade-settings-editor-box.c:298
 msgid "Value"
 msgstr "Nilai"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:312
+#: ../blade-settings-editor/blade-settings-editor-box.c:312
 msgid "New"
 msgstr "Baru"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:315
+#: ../blade-settings-editor/blade-settings-editor-box.c:315
 msgid "New property"
 msgstr "Properti baru"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:323
+#: ../blade-settings-editor/blade-settings-editor-box.c:323
 msgid "Edit"
 msgstr "Sunting"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:326
+#: ../blade-settings-editor/blade-settings-editor-box.c:326
 msgid "Edit selected property"
 msgstr "Sunting properti terpilih"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:334
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1021
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1356
+#: ../blade-settings-editor/blade-settings-editor-box.c:334
+#: ../blade-settings-editor/blade-settings-editor-box.c:1021
+#: ../blade-settings-editor/blade-settings-editor-box.c:1356
 msgid "_Reset"
 msgstr "_Atur Ulang"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:337
+#: ../blade-settings-editor/blade-settings-editor-box.c:337
 msgid "Reset selected property"
 msgstr "Atur ulang properti terpilih"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:444
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:535
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:654
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:90
+#: ../blade-settings-editor/blade-settings-editor-box.c:444
+#: ../blade-settings-editor/blade-settings-editor-box.c:535
+#: ../blade-settings-editor/blade-settings-editor-box.c:654
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:90
 msgid "Empty"
 msgstr "Kosong"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:447
+#: ../blade-settings-editor/blade-settings-editor-box.c:447
 msgid "Array"
 msgstr "Jajaran"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:452
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:91
+#: ../blade-settings-editor/blade-settings-editor-box.c:452
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:91
 msgid "String"
 msgstr "Benang"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:460
+#: ../blade-settings-editor/blade-settings-editor-box.c:460
 msgid "Integer"
 msgstr "Integer"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:463
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:92
+#: ../blade-settings-editor/blade-settings-editor-box.c:463
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:92
 msgid "Boolean"
 msgstr "Boolean"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:466
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:94
+#: ../blade-settings-editor/blade-settings-editor-box.c:466
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:94
 msgid "Double"
 msgstr "Ganda"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:800
+#: ../blade-settings-editor/blade-settings-editor-box.c:800
 msgid "_Reset Channel"
 msgstr "Atur Ulang Kanal"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:801
+#: ../blade-settings-editor/blade-settings-editor-box.c:801
 msgid "Resetting a channel will permanently remove those custom settings."
 msgstr "Mengatur ulang kanal akan secara permanen menghapus pengaturan suainya."
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:802
+#: ../blade-settings-editor/blade-settings-editor-box.c:802
 #, c-format
 msgid "Are you sure you want to reset channel \"%s\" and all its properties?"
 msgstr "Apakah anda yakin ingin mengatur ulang kanal \"%s\"? dan semua propertinya?"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:877
+#: ../blade-settings-editor/blade-settings-editor-box.c:877
 msgid "reset"
 msgstr "atur ulang"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:934
+#: ../blade-settings-editor/blade-settings-editor-box.c:934
 #, c-format
 msgid "Monitor %s"
 msgstr "Monitor %s"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:942
-msgid "Watch an Xfconf channel for property changes"
-msgstr "Pantau kanal Xfconf untuk perubahan properti"
+#: ../blade-settings-editor/blade-settings-editor-box.c:942
+msgid "Watch an Blconf channel for property changes"
+msgstr "Pantau kanal Blconf untuk perubahan properti"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:944
+#: ../blade-settings-editor/blade-settings-editor-box.c:944
 msgid "Clear"
 msgstr "Bersihkan"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:945
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:207
+#: ../blade-settings-editor/blade-settings-editor-box.c:945
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:207
 msgid "Close"
 msgstr "Tutup"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:978
+#: ../blade-settings-editor/blade-settings-editor-box.c:978
 #, c-format
 msgid "start monitoring channel \"%s\""
 msgstr "mulai pantau kanal \"%s\""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1027
+#: ../blade-settings-editor/blade-settings-editor-box.c:1027
 msgid "_Monitor"
 msgstr "_Monitor"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1037
+#: ../blade-settings-editor/blade-settings-editor-box.c:1037
 msgid "Refresh"
 msgstr "Segarkan"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1357
+#: ../blade-settings-editor/blade-settings-editor-box.c:1357
 msgid "Resetting a property will permanently remove those custom settings."
 msgstr "Mengatur ulang properti akan secara permanen menghapus pengaturan suainya."
 
-#: ../xfce4-settings-editor/xfce-settings-editor-box.c:1358
+#: ../blade-settings-editor/blade-settings-editor-box.c:1358
 #, c-format
 msgid "Are you sure you want to reset property \"%s\"?"
 msgstr "Apakah anda yakin ingin mengatur ulang properti \"%s\"?"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:93
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:93
 msgid "Int"
 msgstr "Int"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:95
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:95
 msgid "Unsigned Int"
 msgstr "Int Tak Ditugaskan"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:96
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:96
 msgid "Int64"
 msgstr "Int64"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:97
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:97
 msgid "Unsigned Int64"
 msgstr "Int64 Tak Ditugaskan"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:141
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:141
 msgid "New Property"
 msgstr "Properti Baru"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:145
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:145
 msgid "Save"
 msgstr "Simpan"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:158
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:158
 msgid "_Property:"
 msgstr "_Properti:"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:175
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:175
 msgid "_Type:"
 msgstr "_Tipe:"
 
 #. strings
 #. integers
 #. bool
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:208
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:218
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:229
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:208
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:218
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:229
 msgid "_Value:"
 msgstr "_Nilai:"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:386
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:386
 #, c-format
 msgid "Property names must start with a '/' character"
 msgstr "Nama properti harus dimulai dengan karakter '/'"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:397
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:397
 #, c-format
 msgid "The root element ('/') is not a valid property name"
 msgstr "Elemen root ('/') bukan mana properti yang sah"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:414
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:414
 #, c-format
 msgid ""
 "Property names can only include the ASCII characters A-Z, a-z, 0-9, '_', "
@@ -1612,113 +1612,113 @@ msgid ""
 "separator"
 msgstr "Nama properti hanya dapat mengandung karakter ASCII A-Z, a-z, 0-9, '_', '-', ':', '.', ',', '[', ']', '{', '}', '<' and '>'. Gunakan '/' sebagai separator."
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:428
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:428
 #, c-format
 msgid "Property names cannot have two or more consecutive '/' characters"
 msgstr "Nama properti tak dapat berisi dua atau lebih karakter '/' yang berurutan"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:442
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:442
 #, c-format
 msgid "Property names cannot end with a '/' character"
 msgstr "Nama properti tak dapat diakhiri dengan karakter '/'"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:655
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:655
 msgid "Edit Property"
 msgstr "Sunting Properti"
 
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:2
-msgid "Graphical settings editor for Xfconf"
-msgstr "Penyunting pengaturan grafis untuk Xfconf"
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:2
+msgid "Graphical settings editor for Blconf"
+msgstr "Penyunting pengaturan grafis untuk Blconf"
 
-#: ../xfsettingsd/accessibility.c:412
+#: ../blsettingsd/accessibility.c:412
 msgid "Sticky keys are enabled"
 msgstr "Tombol lekat diaktifkan"
 
-#: ../xfsettingsd/accessibility.c:414
+#: ../blsettingsd/accessibility.c:414
 msgid "Sticky keys are disabled"
 msgstr "Tombol lekat dinonaktifkan"
 
-#: ../xfsettingsd/accessibility.c:416
+#: ../blsettingsd/accessibility.c:416
 msgid "Sticky keys"
 msgstr "Tombol lekat"
 
-#: ../xfsettingsd/accessibility.c:421
+#: ../blsettingsd/accessibility.c:421
 msgid "Slow keys are enabled"
 msgstr "Tombol pelan diaktifkan"
 
-#: ../xfsettingsd/accessibility.c:423
+#: ../blsettingsd/accessibility.c:423
 msgid "Slow keys are disabled"
 msgstr "Tombol pelan dinonaktifkan"
 
-#: ../xfsettingsd/accessibility.c:425
+#: ../blsettingsd/accessibility.c:425
 msgid "Slow keys"
 msgstr "Tombol pelan"
 
-#: ../xfsettingsd/accessibility.c:430
+#: ../blsettingsd/accessibility.c:430
 msgid "Bounce keys are enabled"
 msgstr "Tombol pantul diaktifkan"
 
-#: ../xfsettingsd/accessibility.c:432
+#: ../blsettingsd/accessibility.c:432
 msgid "Bounce keys are disabled"
 msgstr "Tombol pantul dinonaktifkan"
 
-#: ../xfsettingsd/accessibility.c:434
+#: ../blsettingsd/accessibility.c:434
 msgid "Bounce keys"
 msgstr "Tombol pantul"
 
-#: ../xfsettingsd/keyboard-shortcuts.c:244
+#: ../blsettingsd/keyboard-shortcuts.c:244
 #, c-format
 msgid "Failed to launch shortcut \"%s\""
 msgstr "Gagal menjalankan jalan pintas \"%s\""
 
-#: ../xfsettingsd/main.c:79
+#: ../blsettingsd/main.c:79
 msgid "Do not fork to the background"
 msgstr "Jangan cabangkan di latar belakang"
 
-#: ../xfsettingsd/main.c:80
+#: ../blsettingsd/main.c:80
 msgid "Replace running xsettings daemon (if any)"
 msgstr "Ganti jurik xsettings yang berjalan (jika ada)"
 
-#. value in xfconf isn't a string, so make a default one
-#: ../xfsettingsd/workspaces.c:338 ../xfsettingsd/workspaces.c:396
+#. value in blconf isn't a string, so make a default one
+#: ../blsettingsd/workspaces.c:338 ../blsettingsd/workspaces.c:396
 #, c-format
 msgid "Workspace %d"
 msgstr "Ruang kerja %d"
 
-#: ../xfsettingsd/xfsettingsd.desktop.in.h:1
+#: ../blsettingsd/blsettingsd.desktop.in.h:1
 msgid "The Xfce Settings Daemon"
 msgstr "Jurik Pengaturan Xfce"
 
-#: ../xfce4-settings-manager/main.c:44
+#: ../blade-settings-manager/main.c:44
 msgid "Settings dialog to show"
 msgstr "Dialog pengaturan yang ditampilkan"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:194
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:194
 msgid "All _Settings"
 msgstr "_Semua Tata Aturan"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:204
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:204
 msgid "Help"
 msgstr "Bantuan"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:396
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:396
 msgid "Settings"
 msgstr "Pengaturan"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:398
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:398
 msgid "Customize your desktop"
 msgstr "Sesuaikan desktop anda"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:893
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:904
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:893
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:904
 #, c-format
 msgid "Unable to start \"%s\""
 msgstr "Tak dapat menjalankan \"%s\""
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:1
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:1
 msgid "Settings Manager"
 msgstr "Manajer Pengaturan"
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:2
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:2
 msgid "Graphical Settings Manager for Xfce 4"
 msgstr "Manajer Pengaturan Grafis untuk Xfce 4"

@@ -2,9 +2,9 @@ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 SUBDIRS = \
 	dialogs \
-	xfce4-settings-manager \
-	xfce4-settings-editor \
-	xfsettingsd \
+	blade-settings-manager \
+	blade-settings-editor \
+	blsettingsd \
 	po
 
 EXTRA_DIST = \

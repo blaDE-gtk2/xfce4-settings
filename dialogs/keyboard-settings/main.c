@@ -25,9 +25,9 @@
 
 #include <gtk/gtk.h>
 
-#include <libxfce4util/libxfce4util.h>
-#include <libxfce4ui/libxfce4ui.h>
-#include <xfconf/xfconf.h>
+#include <libbladeutil/libbladeutil.h>
+#include <libbladeui/libbladeui.h>
+#include <blconf/blconf.h>
 
 #include "xfce-keyboard-settings.h"
 
@@ -48,8 +48,8 @@ keyboard_settings_dialog_response (GtkWidget *dialog,
                                    gint       response_id)
 {
     if (response_id == GTK_RESPONSE_HELP)
-        xfce_dialog_show_help_with_version (GTK_WINDOW (dialog), "xfce4-settings", "keyboard",
-                                            NULL, XFCE4_SETTINGS_VERSION_SHORT);
+        xfce_dialog_show_help_with_version (GTK_WINDOW (dialog), "blade-settings", "keyboard",
+                                            NULL, BLADE_SETTINGS_VERSION_SHORT);
     else
         gtk_main_quit ();
 }
@@ -97,10 +97,10 @@ main (int    argc,
       return EXIT_SUCCESS;
     }
 
-  /* Initialize xfconf */
-  if (G_UNLIKELY (!xfconf_init (&error)))
+  /* Initialize blconf */
+  if (G_UNLIKELY (!blconf_init (&error)))
     {
-      g_error (_("Failed to connect to xfconf daemon. Reason: %s"), error->message);
+      g_error (_("Failed to connect to blconf daemon. Reason: %s"), error->message);
       g_error_free (error);
 
       return EXIT_FAILURE;
@@ -112,7 +112,7 @@ main (int    argc,
   if (G_UNLIKELY (settings == NULL))
     {
       g_error (_("Could not create the settings dialog."));
-      xfconf_shutdown ();
+      blconf_shutdown ();
       return EXIT_FAILURE;
     }
 
@@ -151,7 +151,7 @@ main (int    argc,
 
   g_object_unref (settings);
 
-  xfconf_shutdown ();
+  blconf_shutdown ();
 
   return EXIT_SUCCESS;
 }

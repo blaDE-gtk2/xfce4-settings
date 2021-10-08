@@ -1,4 +1,5 @@
 AM_CPPFLAGS = \
+	-DGLIB_DISABLE_DEPRECATION_WARNINGS \
 	-I${top_srcdir} \
 	-DDATADIR=\"$(datadir)\" \
 	-DSRCDIR=\"$(top_srcdir)\" \
@@ -15,11 +16,11 @@ xfce4_mouse_settings_SOURCES = \
 
 xfce4_mouse_settings_CFLAGS = \
 	$(GTK_CFLAGS) \
-	$(LIBXFCE4UTIL_CFLAGS) \
-	$(LIBXFCE4UI_CFLAGS) \
-	$(XFCONF_CFLAGS) \
+	$(LIBBLADEUTIL_CFLAGS) \
+	$(LIBBLADEUI_CFLAGS) \
+	$(BLCONF_CFLAGS) \
 	$(XI_CFLAGS) \
-	$(XFCONF_CFLAGS) \
+	$(BLCONF_CFLAGS) \
 	$(LIBX11_CFLAGS) \
 	$(LIBINPUT_CFLAGS) \
 	$(PLATFORM_CFLAGS)
@@ -30,9 +31,9 @@ xfce4_mouse_settings_LDFLAGS = \
 
 xfce4_mouse_settings_LDADD = \
 	$(GTK_LIBS) \
-	$(LIBXFCE4UTIL_LIBS) \
-	$(LIBXFCE4UI_LIBS) \
-	$(XFCONF_LIBS) \
+	$(LIBBLADEUTIL_LIBS) \
+	$(LIBBLADEUI_LIBS) \
+	$(BLCONF_LIBS) \
 	$(XI_LIBS) \
 	$(LIBX11_LIBS) \
 	$(LIBINPUT_LIBS) \
@@ -52,7 +53,7 @@ BUILT_SOURCES = \
 	mouse-dialog_ui.h
 
 mouse-dialog_ui.h: mouse-dialog.glade
-	exo-csource --static --strip-comments --strip-content --name=mouse_dialog_ui $< >$@
+	blxo-csource --static --strip-comments --strip-content --name=mouse_dialog_ui $< >$@
 
 endif
 

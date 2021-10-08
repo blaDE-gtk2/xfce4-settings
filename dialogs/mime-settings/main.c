@@ -27,8 +27,8 @@
 #include <glib.h>
 #include <gtk/gtk.h>
 
-#include <libxfce4util/libxfce4util.h>
-#include <xfconf/xfconf.h>
+#include <libbladeutil/libbladeutil.h>
+#include <blconf/blconf.h>
 
 #include "xfce-mime-window.h"
 
@@ -85,9 +85,9 @@ main (gint argc, gchar **argv)
         return EXIT_SUCCESS;
     }
 
-    if (!xfconf_init (&error))
+    if (!blconf_init (&error))
     {
-        g_critical ("Failed to initialize xfconf: %s", error->message);
+        g_critical ("Failed to initialize blconf: %s", error->message);
         g_error_free (error);
     }
 
@@ -98,7 +98,7 @@ main (gint argc, gchar **argv)
 
     gtk_main ();
 
-    xfconf_shutdown ();
+    blconf_shutdown ();
 
     return EXIT_SUCCESS;
 }

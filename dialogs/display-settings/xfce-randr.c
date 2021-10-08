@@ -27,7 +27,7 @@
 
 #include <glib.h>
 #include <gdk/gdkx.h>
-#include <libxfce4util/libxfce4util.h>
+#include <libbladeutil/libbladeutil.h>
 
 #include <X11/Xatom.h>
 
@@ -163,7 +163,7 @@ xfce_randr_populate (XfceRandr *randr,
     guint           m, connected;
     guint          *output_ids = NULL;
 
-    XfconfChannel *display_channel = xfconf_channel_new ("displays");
+    BlconfChannel *display_channel = blconf_channel_new ("displays");
 
     g_return_if_fail (randr != NULL);
     g_return_if_fail (randr->priv != NULL);
@@ -250,7 +250,7 @@ xfce_randr_populate (XfceRandr *randr,
         /* Update display info, primary display may have changed. */
         xfce_randr_save_output (randr, "Default", display_channel, m);
         
-        /* Replace spaces with underscore in name for xfconf compatibility */
+        /* Replace spaces with underscore in name for blconf compatibility */
         g_strcanon(randr->priv->output_info[m]->name, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_<>", '_');
     }
     /* populate mirrored details */
@@ -393,7 +393,7 @@ xfce_randr_reload (XfceRandr *randr)
 void
 xfce_randr_save_output (XfceRandr     *randr,
                         const gchar   *scheme,
-                        XfconfChannel *channel,
+                        BlconfChannel *channel,
                         guint          output)
 {
     gchar             property[512];
@@ -402,13 +402,13 @@ xfce_randr_save_output (XfceRandr     *randr,
     gint              degrees;
 
     g_return_if_fail (randr != NULL && scheme != NULL);
-    g_return_if_fail (XFCONF_IS_CHANNEL (channel));
+    g_return_if_fail (BLCONF_IS_CHANNEL (channel));
     g_return_if_fail (output < randr->noutput);
 
     /* save the device name */
     g_snprintf (property, sizeof (property), "/%s/%s", scheme,
                 randr->priv->output_info[output]->name);
-    xfconf_channel_set_string (channel, property, randr->friendly_name[output]);
+    blconf_channel_set_string (channel, property, randr->friendly_name[output]);
 
     /* find the resolution and refresh rate */
     mode = xfce_randr_find_mode_by_id (randr, output, randr->mode[output]);
@@ -416,7 +416,7 @@ xfce_randr_save_output (XfceRandr     *randr,
     /* if no resolution was found, mark it as inactive and stop */
     g_snprintf (property, sizeof (property), "/%s/%s/Active", scheme,
                 randr->priv->output_info[output]->name);
-    xfconf_channel_set_bool (channel, property, mode != NULL);
+    blconf_channel_set_bool (channel, property, mode != NULL);
 
     if (mode == NULL)
         return;
@@ -425,13 +425,13 @@ xfce_randr_save_output (XfceRandr     *randr,
     str_value = g_strdup_printf ("%dx%d", mode->width, mode->height);
     g_snprintf (property, sizeof (property), "/%s/%s/Resolution", scheme,
                 randr->priv->output_info[output]->name);
-    xfconf_channel_set_string (channel, property, str_value);
+    blconf_channel_set_string (channel, property, str_value);
     g_free (str_value);
 
     /* save the refresh rate */
     g_snprintf (property, sizeof (property), "/%s/%s/RefreshRate", scheme,
                 randr->priv->output_info[output]->name);
-    xfconf_channel_set_double (channel, property, mode->rate);
+    blconf_channel_set_double (channel, property, mode->rate);
 
     /* convert the rotation into degrees */
     switch (randr->rotation[output] & XFCE_RANDR_ROTATIONS_MASK)
@@ -445,7 +445,7 @@ xfce_randr_save_output (XfceRandr     *randr,
     /* save the rotation in degrees */
     g_snprintf (property, sizeof (property), "/%s/%s/Rotation", scheme,
                 randr->priv->output_info[output]->name);
-    xfconf_channel_set_int (channel, property, degrees);
+    blconf_channel_set_int (channel, property, degrees);
 
     /* convert the reflection into a string */
     switch (randr->rotation[output] & XFCE_RANDR_REFLECTIONS_MASK)
@@ -459,23 +459,23 @@ xfce_randr_save_output (XfceRandr     *randr,
     /* save the reflection string */
     g_snprintf (property, sizeof (property), "/%s/%s/Reflection", scheme,
                 randr->priv->output_info[output]->name);
-    xfconf_channel_set_string (channel, property, str_value);
+    blconf_channel_set_string (channel, property, str_value);
 
 #ifdef HAS_RANDR_ONE_POINT_THREE
     /* is it the primary output? */
     g_snprintf (property, sizeof (property), "/%s/%s/Primary", scheme,
                 randr->priv->output_info[output]->name);
-    xfconf_channel_set_bool (channel, property,
+    blconf_channel_set_bool (channel, property,
                              randr->status[output] == XFCE_OUTPUT_STATUS_PRIMARY);
 #endif
 
     /* save the position */
     g_snprintf (property, sizeof (property), "/%s/%s/Position/X", scheme,
                 randr->priv->output_info[output]->name);
-    xfconf_channel_set_int (channel, property, MAX (randr->position[output].x, 0));
+    blconf_channel_set_int (channel, property, MAX (randr->position[output].x, 0));
     g_snprintf (property, sizeof (property), "/%s/%s/Position/Y", scheme,
                 randr->priv->output_info[output]->name);
-    xfconf_channel_set_int (channel, property, MAX (randr->position[output].y, 0));
+    blconf_channel_set_int (channel, property, MAX (randr->position[output].y, 0));
 }
 
 
@@ -483,13 +483,13 @@ xfce_randr_save_output (XfceRandr     *randr,
 void
 xfce_randr_apply (XfceRandr     *randr,
                   const gchar   *scheme,
-                  XfconfChannel *channel)
+                  BlconfChannel *channel)
 {
     g_return_if_fail (randr != NULL && scheme != NULL);
-    g_return_if_fail (XFCONF_IS_CHANNEL (channel));
+    g_return_if_fail (BLCONF_IS_CHANNEL (channel));
 
     /* tell the helper to apply this theme */
-    xfconf_channel_set_string (channel, "/Schemes/Apply", scheme);
+    blconf_channel_set_string (channel, "/Schemes/Apply", scheme);
 }
 
 
@@ -497,7 +497,7 @@ xfce_randr_apply (XfceRandr     *randr,
 void
 xfce_randr_load (XfceRandr     *randr,
                  const gchar   *scheme,
-                 XfconfChannel *channel)
+                 BlconfChannel *channel)
 {
 
 }
@@ -550,7 +550,7 @@ xfce_randr_friendly_name (XfceRandr *randr,
     /* special case, a laptop */
     if (g_str_has_prefix (name, "LVDS")
         || g_str_has_prefix (name, "eDP")
-        || strcmp (name, "PANEL") == 0)
+        || strcmp (name, "BAR") == 0)
         return g_strdup (_("Laptop"));
 
     /* otherwise, get the vendor & size */

@@ -15,7 +15,7 @@
  * with this program; if not, write to the Free Software Foundation, Inc.,
  * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
  *
- * Parts of the code were takes from Thunar's chooser dialog and model:
+ * Parts of the code were takes from Fmb's chooser dialog and model:
  * Copyright (c) 2005-2006 Benedikt Meurer <benny@xfce.org>
  * Copyright (c) 2009 Jannis Pohlmann <jannis@xfce.org>
  */
@@ -30,8 +30,8 @@
 
 #include <gtk/gtk.h>
 #include <gio/gio.h>
-#include <libxfce4util/libxfce4util.h>
-#include <libxfce4ui/libxfce4ui.h>
+#include <libbladeutil/libbladeutil.h>
+#include <libbladeui/libbladeui.h>
 #include <gio/gdesktopappinfo.h>
 
 #include "xfce-mime-chooser.h"

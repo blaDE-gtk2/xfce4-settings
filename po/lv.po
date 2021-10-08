@@ -1,13 +1,13 @@
-# translation of xfce4-settings to Latvian
-# Latvian translations for xfce4-settings package.
+# translation of blade-settings to Latvian
+# Latvian translations for blade-settings package.
 # Copyright (C) 2003-2009 The Xfce development team.
-# This file is distributed under the same license as the xfce4-settings package.
+# This file is distributed under the same license as the blade-settings package.
 #
 # Rihards Prieditis <RPrieditis@gmail.com>, 2009.
 # Rihards Prieditis <rprieditis@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: xfce4-settings\n"
+"Project-Id-Version: blade-settings\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-11-20 17:53+0100\n"
 "PO-Revision-Date: 2009-09-18 18:16+0100\n"
@@ -250,8 +250,8 @@ msgstr "SOKETA ID"
 #: ../dialogs/appearance-settings/main.c:95
 #: ../dialogs/display-settings/main.c:137
 #: ../dialogs/keyboard-settings/main.c:40 ../dialogs/mime-settings/main.c:40
-#: ../dialogs/mouse-settings/main.c:80 ../xfce4-settings-editor/main.c:43
-#: ../xfsettingsd/main.c:77 ../xfce4-settings-manager/main.c:39
+#: ../dialogs/mouse-settings/main.c:80 ../blade-settings-editor/main.c:43
+#: ../blsettingsd/main.c:77 ../blade-settings-manager/main.c:39
 msgid "Version information"
 msgstr "Versijas informācija"
 
@@ -259,8 +259,8 @@ msgstr "Versijas informācija"
 #: ../dialogs/appearance-settings/main.c:966
 #: ../dialogs/display-settings/main.c:1926
 #: ../dialogs/keyboard-settings/main.c:76 ../dialogs/mime-settings/main.c:62
-#: ../dialogs/mouse-settings/main.c:1597 ../xfce4-settings-editor/main.c:63
-#: ../xfsettingsd/main.c:187 ../xfce4-settings-manager/main.c:60
+#: ../dialogs/mouse-settings/main.c:1597 ../blade-settings-editor/main.c:63
+#: ../blsettingsd/main.c:187 ../blade-settings-manager/main.c:60
 #, c-format
 msgid "Type '%s --help' for usage."
 msgstr "Ievadiet \"%s --help\", lai iegūtu lietošanas informāciju"
@@ -269,8 +269,8 @@ msgstr "Ievadiet \"%s --help\", lai iegūtu lietošanas informāciju"
 #: ../dialogs/appearance-settings/main.c:985
 #: ../dialogs/display-settings/main.c:1945
 #: ../dialogs/keyboard-settings/main.c:92 ../dialogs/mime-settings/main.c:81
-#: ../dialogs/mouse-settings/main.c:1616 ../xfce4-settings-editor/main.c:82
-#: ../xfsettingsd/main.c:203 ../xfce4-settings-manager/main.c:76
+#: ../dialogs/mouse-settings/main.c:1616 ../blade-settings-editor/main.c:82
+#: ../blsettingsd/main.c:203 ../blade-settings-manager/main.c:76
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce izstrādes komanda. Visas tiesības paturētas."
 
@@ -278,8 +278,8 @@ msgstr "Xfce izstrādes komanda. Visas tiesības paturētas."
 #: ../dialogs/appearance-settings/main.c:986
 #: ../dialogs/display-settings/main.c:1946
 #: ../dialogs/keyboard-settings/main.c:93 ../dialogs/mime-settings/main.c:82
-#: ../dialogs/mouse-settings/main.c:1617 ../xfce4-settings-editor/main.c:83
-#: ../xfsettingsd/main.c:204 ../xfce4-settings-manager/main.c:77
+#: ../dialogs/mouse-settings/main.c:1617 ../blade-settings-editor/main.c:83
+#: ../blsettingsd/main.c:204 ../blade-settings-manager/main.c:77
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr "Lūdzu ziņojiet par kļūdām uz <%s>."
@@ -977,13 +977,13 @@ msgstr "Salikt taustiņu pozīciju"
 #: ../dialogs/keyboard-settings/keyboard-dialog.glade.h:29
 #, fuzzy
 msgid "Move currently selected item up by one row"
-msgstr "Noņemt pašreiz atlasīto paneli"
+msgstr "Noņemt pašreiz atlasīto bari"
 
 # Automatically copied. Please review and remove fuzzy flag.
 #: ../dialogs/keyboard-settings/keyboard-dialog.glade.h:30
 #, fuzzy
 msgid "Move currently selected item down by one row"
-msgstr "Noņemt pašreiz atlasīto paneli"
+msgstr "Noņemt pašreiz atlasīto bari"
 
 #: ../dialogs/keyboard-settings/keyboard-dialog.glade.h:31
 #, fuzzy
@@ -1000,7 +1000,7 @@ msgstr "Nevarēja inicializēt GTK+."
 
 #: ../dialogs/keyboard-settings/main.c:102
 #, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
+msgid "Failed to connect to blconf daemon. Reason: %s"
 msgstr "Neizdevās savienoties ar xconf dēmonu. Iemesls: %s"
 
 #: ../dialogs/keyboard-settings/main.c:113
@@ -1455,160 +1455,160 @@ msgstr ""
 msgid "Counterclockwise"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:184
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:1
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:184
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:1
 msgid "Settings Editor"
 msgstr "Uzstādījumu redaktors"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:185
-msgid "Customize settings stored by Xfconf"
-msgstr "Pielāgot uzstādījumus, kurus glabā Xfconf"
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:185
+msgid "Customize settings stored by Blconf"
+msgstr "Pielāgot uzstādījumus, kurus glabā Blconf"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:230
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:230
 msgid "Channel"
 msgstr "Kanāls"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:264
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:264
 msgid "Property"
 msgstr "Īpašība"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:271
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:271
 msgid "Type"
 msgstr "Tips"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:278
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:278
 msgid "Locked"
 msgstr "Slēgts"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:285
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:285
 msgid "Value"
 msgstr "Vērtība"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:302
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:302
 msgid "New property"
 msgstr "Jauna īpašība"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:313
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:313
 #, fuzzy
 msgid "Edit selected property"
 msgstr "Rediģēt īpašībās"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:321
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:1026
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:1369
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:321
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:1026
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:1369
 msgid "_Reset"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:324
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:324
 #, fuzzy
 msgid "Reset selected property"
 msgstr "Atiestatīt/noņemt īpašību"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:448
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:539
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:658
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:90
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:448
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:539
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:658
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:90
 msgid "Empty"
 msgstr "Tukšs"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:451
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:451
 msgid "Array"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:456
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:91
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:456
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:91
 #, fuzzy
 msgid "String"
 msgstr "Uzstādījumi"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:464
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:464
 msgid "Integer"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:467
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:92
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:467
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:92
 msgid "Boolean"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:470
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:94
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:470
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:94
 #, fuzzy
 msgid "Double"
 msgstr "<b>Dubultklilšķis</b>"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:804
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:804
 #, fuzzy
 msgid "_Reset Channel"
 msgstr "Kanāls"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:805
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:805
 msgid "Resetting a channel will permanently remove those custom settings."
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:806
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:806
 #, fuzzy, c-format
 msgid "Are you sure you want to reset channel \"%s\" and all its properties?"
 msgstr "Esat drošs, ka vēlaties atstatīt īpašību \"<b>%s</b>\"?"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:881
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:881
 msgid "reset"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:938
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:938
 #, fuzzy, c-format
 msgid "Monitor %s"
 msgstr "Monitors"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:946
-msgid "Watch an Xfconf channel for property changes"
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:946
+msgid "Watch an Blconf channel for property changes"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:982
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:982
 #, c-format
 msgid "start monitoring channel \"%s\""
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:1036
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:1036
 #, fuzzy
 msgid "_Monitor"
 msgstr "Monitors"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:1370
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:1370
 msgid "Resetting a property will permanently remove those custom settings."
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:1371
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:1371
 #, fuzzy, c-format
 msgid "Are you sure you want to reset property \"%s\"?"
 msgstr "Esat drošs, ka vēlaties atstatīt īpašību \"<b>%s</b>\"?"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:93
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:93
 msgid "Int"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:95
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:95
 msgid "Unsigned Int"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:96
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:96
 msgid "Int64"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:97
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:97
 msgid "Unsigned Int64"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:141
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:141
 #, fuzzy
 msgid "New Property"
 msgstr "Jauna īpašība"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:158
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:158
 #, fuzzy
 msgid "_Property:"
 msgstr "Īpašība"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:173
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:173
 #, fuzzy
 msgid "_Type:"
 msgstr "Tips:"
@@ -1616,136 +1616,136 @@ msgstr "Tips:"
 #. strings
 #. integers
 #. bool
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:204
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:215
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:227
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:204
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:215
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:227
 #, fuzzy
 msgid "_Value:"
 msgstr "Vērtība:"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:385
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:385
 #, c-format
 msgid "Property names must start with a '/' character"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:396
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:396
 #, c-format
 msgid "The root element ('/') is not a valid property name"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:412
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:412
 #, c-format
 msgid ""
 "Property names can only include the ASCII characters A-Z, a-z, 0-9, '_', "
 "'-', '<' and '>', as well as '/' as a separator"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:425
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:425
 #, c-format
 msgid "Property names cannot have two or more consecutive '/' characters"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:439
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:439
 #, c-format
 msgid "Property names cannot end with a '/' character"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:652
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:652
 msgid "Edit Property"
 msgstr "Rediģēt īpašībās"
 
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:2
-msgid "Graphical settings editor for Xfconf"
-msgstr "Grafiskais uzstādījumu redaktors priekš Xfconf"
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:2
+msgid "Graphical settings editor for Blconf"
+msgstr "Grafiskais uzstādījumu redaktors priekš Blconf"
 
-#: ../xfsettingsd/accessibility.c:412
+#: ../blsettingsd/accessibility.c:412
 msgid "Sticky keys are enabled"
 msgstr "Lipīgie taustiņi ir ieslēgti"
 
-#: ../xfsettingsd/accessibility.c:414
+#: ../blsettingsd/accessibility.c:414
 msgid "Sticky keys are disabled"
 msgstr "Lipīgie taustiņi ir izslēgti"
 
-#: ../xfsettingsd/accessibility.c:416
+#: ../blsettingsd/accessibility.c:416
 msgid "Sticky keys"
 msgstr "Lipīgie taustiņi"
 
-#: ../xfsettingsd/accessibility.c:421
+#: ../blsettingsd/accessibility.c:421
 msgid "Slow keys are enabled"
 msgstr "Lēnie taustiņi ir ieslēgti"
 
-#: ../xfsettingsd/accessibility.c:423
+#: ../blsettingsd/accessibility.c:423
 msgid "Slow keys are disabled"
 msgstr "Lēnie taustiņi ir izslēgti"
 
-#: ../xfsettingsd/accessibility.c:425
+#: ../blsettingsd/accessibility.c:425
 msgid "Slow keys"
 msgstr "Lēnie taustiņi"
 
-#: ../xfsettingsd/accessibility.c:430
+#: ../blsettingsd/accessibility.c:430
 msgid "Bounce keys are enabled"
 msgstr "Lecošie taustiņi ir ieslēgti"
 
-#: ../xfsettingsd/accessibility.c:432
+#: ../blsettingsd/accessibility.c:432
 msgid "Bounce keys are disabled"
 msgstr "Lecošie taustiņi ir ieslēgti"
 
-#: ../xfsettingsd/accessibility.c:434
+#: ../blsettingsd/accessibility.c:434
 msgid "Bounce keys"
 msgstr "Lecošie taustiņi"
 
-#: ../xfsettingsd/keyboard-shortcuts.c:244
+#: ../blsettingsd/keyboard-shortcuts.c:244
 #, fuzzy, c-format
 msgid "Failed to launch shortcut \"%s\""
 msgstr "Neizdevās palaist \"%s\""
 
-#: ../xfsettingsd/main.c:78
+#: ../blsettingsd/main.c:78
 #, fuzzy
 msgid "Do not fork to the background"
 msgstr "Sākt atkļūdošanas režīmā (ne zaroties fonā)"
 
-#: ../xfsettingsd/main.c:79
+#: ../blsettingsd/main.c:79
 msgid "Replace running xsettings daemon (if any)"
 msgstr "Aizvietot skrejošo xsettings dēmonu (ja kāds ir)"
 
-#: ../xfsettingsd/workspaces.c:385
+#: ../blsettingsd/workspaces.c:385
 #, c-format
 msgid "Workspace %d"
 msgstr "Darbavieta %d"
 
-#: ../xfsettingsd/xfsettingsd.desktop.in.h:1
+#: ../blsettingsd/blsettingsd.desktop.in.h:1
 #, fuzzy
 msgid "The Xfce Settings Daemon"
 msgstr "Xfce 4 uzstādījumu pārvaldnieks"
 
-#: ../xfce4-settings-manager/main.c:40
+#: ../blade-settings-manager/main.c:40
 msgid "Settings dialog to show"
 msgstr "Kurus uzstādījumu dialogus rādīt"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:186
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:186
 #, fuzzy
 msgid "All _Settings"
 msgstr "_Uzstādījumi"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:366
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:366
 msgid "Settings"
 msgstr "Uzstādījumi"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:368
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:368
 msgid "Customize your desktop"
 msgstr "Pielāgot savu darbvirsmu"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:858
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:869
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:858
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:869
 #, c-format
 msgid "Unable to start \"%s\""
 msgstr "Neizdevās palaist \"%s\""
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:1
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:1
 msgid "Settings Manager"
 msgstr "Uzstādījumu pārvaldnieks"
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:2
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:2
 msgid "Graphical Settings Manager for Xfce 4"
 msgstr "Grafiskais uzstādījumu pārvaldnieks priekš Xfce 4"
 
@@ -1790,8 +1790,8 @@ msgstr "Grafiskais uzstādījumu pārvaldnieks priekš Xfce 4"
 #~ msgid "Name:"
 #~ msgstr "Nosaukums:"
 
-#~ msgid "Xfconf channels"
-#~ msgstr "Xfconf kanāls"
+#~ msgid "Blconf channels"
+#~ msgstr "Blconf kanāls"
 
 #~ msgid "_Overview"
 #~ msgstr "_Pārskats"
@@ -1971,10 +1971,10 @@ msgstr "Grafiskais uzstādījumu pārvaldnieks priekš Xfce 4"
 
 #~ msgid ""
 #~ "Sticky Keys can be disabled automatically (without using this settings "
-#~ "panel) by pressing two keys at the same time."
+#~ "bar) by pressing two keys at the same time."
 #~ msgstr ""
 #~ "Lipīgie taustiņi var tikt izslēgti automātiski (neizmantojot uzstādijuma "
-#~ "paneli) nospiežot divus taustiņus vienlaicīgi."
+#~ "bari) nospiežot divus taustiņus vienlaicīgi."
 
 #~ msgid ""
 #~ "Slow Keys causes key presses not to be accepted unless the key is held "

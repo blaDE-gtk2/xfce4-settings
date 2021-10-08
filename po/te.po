@@ -223,8 +223,8 @@ msgstr "సాకెట్ ఐడి"
 #: ../dialogs/appearance-settings/main.c:96
 #: ../dialogs/display-settings/main.c:138
 #: ../dialogs/keyboard-settings/main.c:40 ../dialogs/mime-settings/main.c:40
-#: ../dialogs/mouse-settings/main.c:80 ../xfce4-settings-editor/main.c:43
-#: ../xfsettingsd/main.c:77 ../xfce4-settings-manager/main.c:40
+#: ../dialogs/mouse-settings/main.c:80 ../blade-settings-editor/main.c:43
+#: ../blsettingsd/main.c:77 ../blade-settings-manager/main.c:40
 msgid "Version information"
 msgstr "రూపాంతర సమాచారం"
 
@@ -232,8 +232,8 @@ msgstr "రూపాంతర సమాచారం"
 #: ../dialogs/appearance-settings/main.c:1006
 #: ../dialogs/display-settings/main.c:1994
 #: ../dialogs/keyboard-settings/main.c:76 ../dialogs/mime-settings/main.c:62
-#: ../dialogs/mouse-settings/main.c:1611 ../xfce4-settings-editor/main.c:63
-#: ../xfsettingsd/main.c:187 ../xfce4-settings-manager/main.c:61
+#: ../dialogs/mouse-settings/main.c:1611 ../blade-settings-editor/main.c:63
+#: ../blsettingsd/main.c:187 ../blade-settings-manager/main.c:61
 #, c-format
 msgid "Type '%s --help' for usage."
 msgstr "వినియోగం కోసం '%s --help' టంకించండి."
@@ -242,8 +242,8 @@ msgstr "వినియోగం కోసం '%s --help' టంకించం�
 #: ../dialogs/appearance-settings/main.c:1025
 #: ../dialogs/display-settings/main.c:2013
 #: ../dialogs/keyboard-settings/main.c:92 ../dialogs/mime-settings/main.c:81
-#: ../dialogs/mouse-settings/main.c:1630 ../xfce4-settings-editor/main.c:82
-#: ../xfsettingsd/main.c:203 ../xfce4-settings-manager/main.c:77
+#: ../dialogs/mouse-settings/main.c:1630 ../blade-settings-editor/main.c:82
+#: ../blsettingsd/main.c:203 ../blade-settings-manager/main.c:77
 msgid "The Xfce development team. All rights reserved."
 msgstr "Xfce అభివృద్ధి బృందం. అన్ని హక్కులు చెందినవి."
 
@@ -251,8 +251,8 @@ msgstr "Xfce అభివృద్ధి బృందం. అన్ని హక
 #: ../dialogs/appearance-settings/main.c:1026
 #: ../dialogs/display-settings/main.c:2014
 #: ../dialogs/keyboard-settings/main.c:93 ../dialogs/mime-settings/main.c:82
-#: ../dialogs/mouse-settings/main.c:1631 ../xfce4-settings-editor/main.c:83
-#: ../xfsettingsd/main.c:204 ../xfce4-settings-manager/main.c:78
+#: ../dialogs/mouse-settings/main.c:1631 ../blade-settings-editor/main.c:83
+#: ../blsettingsd/main.c:204 ../blade-settings-manager/main.c:78
 #, c-format
 msgid "Please report bugs to <%s>."
 msgstr ""
@@ -919,7 +919,7 @@ msgstr ""
 
 #: ../dialogs/keyboard-settings/main.c:102
 #, c-format
-msgid "Failed to connect to xfconf daemon. Reason: %s"
+msgid "Failed to connect to blconf daemon. Reason: %s"
 msgstr ""
 
 #: ../dialogs/keyboard-settings/main.c:113
@@ -1337,283 +1337,283 @@ msgstr ""
 msgid "Mouse (relative)"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:184
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:1
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:184
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:1
 msgid "Settings Editor"
 msgstr "అమరికల కూర్పరి"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:185
-msgid "Customize settings stored by Xfconf"
-msgstr "Xfconf చే భద్రపరుచబడిన అమరికలను అనురూపించు"
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:185
+msgid "Customize settings stored by Blconf"
+msgstr "Blconf చే భద్రపరుచబడిన అమరికలను అనురూపించు"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:230
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:230
 msgid "Channel"
 msgstr "ఛానల్"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:264
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:264
 msgid "Property"
 msgstr "లక్షణం"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:271
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:271
 msgid "Type"
 msgstr "రకం"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:278
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:278
 msgid "Locked"
 msgstr "తాళంవేయబడింది"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:285
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:285
 msgid "Value"
 msgstr "విలువ"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:302
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:302
 msgid "New property"
 msgstr "కొత్త లక్షణం"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:313
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:313
 msgid "Edit selected property"
 msgstr "ఎంపికచేసిన లక్షణాన్ని సవరించు"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:321
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:1026
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:1369
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:321
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:1026
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:1369
 msgid "_Reset"
 msgstr "తిరిగి అమర్చు (_R)"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:324
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:324
 msgid "Reset selected property"
 msgstr "ఎంపికచేసిన లక్షణాన్ని తిరిగి అమర్చు"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:448
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:539
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:658
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:90
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:448
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:539
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:658
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:90
 msgid "Empty"
 msgstr "ఖాళీ"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:451
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:451
 msgid "Array"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:456
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:91
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:456
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:91
 msgid "String"
 msgstr "పదబందం"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:464
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:464
 msgid "Integer"
 msgstr "పూర్ణాంకం"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:467
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:92
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:467
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:92
 msgid "Boolean"
 msgstr "బూలియన్"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:470
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:94
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:470
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:94
 msgid "Double"
 msgstr "రెండు"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:804
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:804
 msgid "_Reset Channel"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:805
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:805
 msgid "Resetting a channel will permanently remove those custom settings."
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:806
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:806
 #, c-format
 msgid "Are you sure you want to reset channel \"%s\" and all its properties?"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:881
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:881
 msgid "reset"
 msgstr "తిరిగి అమర్చు"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:938
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:938
 #, c-format
 msgid "Monitor %s"
 msgstr "మానిటర్ %s"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:946
-msgid "Watch an Xfconf channel for property changes"
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:946
+msgid "Watch an Blconf channel for property changes"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:982
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:982
 #, c-format
 msgid "start monitoring channel \"%s\""
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:1036
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:1036
 msgid "_Monitor"
 msgstr "మానిటర్ (_M)"
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:1370
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:1370
 msgid "Resetting a property will permanently remove those custom settings."
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-editor-dialog.c:1371
+#: ../blade-settings-editor/blade-settings-editor-dialog.c:1371
 #, c-format
 msgid "Are you sure you want to reset property \"%s\"?"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:93
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:93
 msgid "Int"
 msgstr "Int"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:95
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:95
 msgid "Unsigned Int"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:96
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:96
 msgid "Int64"
 msgstr "Int64"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:97
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:97
 msgid "Unsigned Int64"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:141
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:141
 msgid "New Property"
 msgstr "కొత్త లక్షణం"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:158
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:158
 msgid "_Property:"
 msgstr "లక్షణం (_P):"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:173
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:173
 msgid "_Type:"
 msgstr "రకం (_T):"
 
 #. strings
 #. integers
 #. bool
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:204
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:215
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:227
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:204
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:215
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:227
 msgid "_Value:"
 msgstr "విలువ (_V):"
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:385
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:385
 #, c-format
 msgid "Property names must start with a '/' character"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:396
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:396
 #, c-format
 msgid "The root element ('/') is not a valid property name"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:412
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:412
 #, c-format
 msgid ""
 "Property names can only include the ASCII characters A-Z, a-z, 0-9, '_', "
 "'-', '<' and '>', as well as '/' as a separator"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:425
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:425
 #, c-format
 msgid "Property names cannot have two or more consecutive '/' characters"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:439
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:439
 #, c-format
 msgid "Property names cannot end with a '/' character"
 msgstr ""
 
-#: ../xfce4-settings-editor/xfce-settings-prop-dialog.c:652
+#: ../blade-settings-editor/blade-settings-prop-dialog.c:652
 msgid "Edit Property"
 msgstr "లక్షణాన్ని సవరించు"
 
-#: ../xfce4-settings-editor/xfce4-settings-editor.desktop.in.h:2
-msgid "Graphical settings editor for Xfconf"
-msgstr "Xfconf కొరకు గ్రాఫికల్ అమరికల కూర్పకం"
+#: ../blade-settings-editor/blade-settings-editor.desktop.in.h:2
+msgid "Graphical settings editor for Blconf"
+msgstr "Blconf కొరకు గ్రాఫికల్ అమరికల కూర్పకం"
 
-#: ../xfsettingsd/accessibility.c:412
+#: ../blsettingsd/accessibility.c:412
 msgid "Sticky keys are enabled"
 msgstr ""
 
-#: ../xfsettingsd/accessibility.c:414
+#: ../blsettingsd/accessibility.c:414
 msgid "Sticky keys are disabled"
 msgstr ""
 
-#: ../xfsettingsd/accessibility.c:416
+#: ../blsettingsd/accessibility.c:416
 msgid "Sticky keys"
 msgstr "అంటివుండే మీటలు"
 
-#: ../xfsettingsd/accessibility.c:421
+#: ../blsettingsd/accessibility.c:421
 msgid "Slow keys are enabled"
 msgstr ""
 
-#: ../xfsettingsd/accessibility.c:423
+#: ../blsettingsd/accessibility.c:423
 msgid "Slow keys are disabled"
 msgstr ""
 
-#: ../xfsettingsd/accessibility.c:425
+#: ../blsettingsd/accessibility.c:425
 msgid "Slow keys"
 msgstr "నెమ్మది మీటలు"
 
-#: ../xfsettingsd/accessibility.c:430
+#: ../blsettingsd/accessibility.c:430
 msgid "Bounce keys are enabled"
 msgstr ""
 
-#: ../xfsettingsd/accessibility.c:432
+#: ../blsettingsd/accessibility.c:432
 msgid "Bounce keys are disabled"
 msgstr ""
 
-#: ../xfsettingsd/accessibility.c:434
+#: ../blsettingsd/accessibility.c:434
 msgid "Bounce keys"
 msgstr "బౌన్స్ మీటలు"
 
-#: ../xfsettingsd/keyboard-shortcuts.c:244
+#: ../blsettingsd/keyboard-shortcuts.c:244
 #, c-format
 msgid "Failed to launch shortcut \"%s\""
 msgstr ""
 
-#: ../xfsettingsd/main.c:78
+#: ../blsettingsd/main.c:78
 msgid "Do not fork to the background"
 msgstr ""
 
-#: ../xfsettingsd/main.c:79
+#: ../blsettingsd/main.c:79
 msgid "Replace running xsettings daemon (if any)"
 msgstr ""
 
-#: ../xfsettingsd/workspaces.c:385
+#: ../blsettingsd/workspaces.c:385
 #, c-format
 msgid "Workspace %d"
 msgstr "కార్యక్షేత్రం %d"
 
-#: ../xfsettingsd/xfsettingsd.desktop.in.h:1
+#: ../blsettingsd/blsettingsd.desktop.in.h:1
 msgid "The Xfce Settings Daemon"
 msgstr "Xfce అమరికల డెమోన్"
 
-#: ../xfce4-settings-manager/main.c:41
+#: ../blade-settings-manager/main.c:41
 msgid "Settings dialog to show"
 msgstr "చూపించవలసిన అమరికల సంవాదం"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:192
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:192
 msgid "All _Settings"
 msgstr "అన్ని అమరికలు (_S)"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:386
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:386
 msgid "Settings"
 msgstr "అమరికలు"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:388
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:388
 msgid "Customize your desktop"
 msgstr "మీ డెస్క్‌టాపును అనురూపించుకోండి"
 
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:878
-#: ../xfce4-settings-manager/xfce-settings-manager-dialog.c:889
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:878
+#: ../blade-settings-manager/blade-settings-manager-dialog.c:889
 #, c-format
 msgid "Unable to start \"%s\""
 msgstr "\"%s\" ప్రారంభించలేకపోతుంది"
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:1
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:1
 msgid "Settings Manager"
 msgstr "అమరికల నిర్వాహకం"
 
-#: ../xfce4-settings-manager/xfce-settings-manager.desktop.in.h:2
+#: ../blade-settings-manager/blade-settings-manager.desktop.in.h:2
 msgid "Graphical Settings Manager for Xfce 4"
 msgstr "Xfce 4 కొరకు రేఖాచిత్ర అమరికల నిర్వాహకం"
