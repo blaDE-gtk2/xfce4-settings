@@ -43,9 +43,9 @@ dialogs/display-settings/identity-popup_ui.h
 dialogs/display-settings/minimal-display-dialog_ui.h
 dialogs/keyboard-settings/keyboard-dialog_ui.h
 dialogs/mouse-settings/mouse-dialog_ui.h
-xfce4-settings-editor/xfce-settings-marshal.c
-xfce4-settings-editor/xfce-settings-marshal.h
-xfce4-settings-*.tar.bz2
+blade-settings-editor/blade-settings-marshal.c
+blade-settings-editor/blade-settings-marshal.h
+blade-settings-*.tar.bz2
 *~
 *.tgz
 
@@ -57,6 +57,6 @@ dialogs/display-settings/xfce4-display-settings
 dialogs/keyboard-settings/xfce4-keyboard-settings
 dialogs/mime-settings/xfce4-mime-settings
 dialogs/mouse-settings/xfce4-mouse-settings
-xfce4-settings-editor/xfce4-settings-editor
-xfce4-settings-manager/xfce4-settings-manager
-xfsettingsd/xfsettingsd
+blade-settings-editor/blade-settings-editor
+blade-settings-manager/blade-settings-manager
+blsettingsd/blsettingsd
